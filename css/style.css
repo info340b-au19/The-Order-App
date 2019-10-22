@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .wrapper {
     display: flex;
     align-items: stretch;
@@ -47,4 +51,53 @@ body {
     transition: all 0.3s;
     margin-left: 275px;
     overflow-x: hidden;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    margin: 16px;
+}
+
+.flexcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+img {
+    object-fit: contain;
+}
+
+.img-fluid {
+    max-height: 100%;
+    height: auto;
+}
+
+.checked {
+    color: orange;
+}
+
+button {
+    background-color: #d3d3d3;
+    border: none;
+    padding: 15px 45px;
 }

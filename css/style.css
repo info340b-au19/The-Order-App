@@ -9,7 +9,7 @@
 }
 
 body {
-    background: #F4F5F8;
+    background-color: #F4F5F8;
 }
 
 #sidebar {
@@ -100,4 +100,5 @@ button {
     background-color: #d3d3d3;
     border: none;
     padding: 15px 45px;
+    box-shadow: 1px 1px 1px black;
 }

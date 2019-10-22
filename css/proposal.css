@@ -1,0 +1,30 @@
+header {
+    padding: 1rem 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+    text-align: center;
+}
+  
+section {
+    margin: .5rem 0;
+    padding: .5rem;
+    border: 1px solid gray;
+}
+  
+footer {
+    padding-top: 1rem;
+    font-size: 80%;
+}
+
+body {
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    width: 75%;
+    margin: auto;
+}
+
+a {
+    font-size: 1.25em;
+}

@@ -1,6 +1,19 @@
 * {
   box-sizing: border-box;
 }
+header
+{
+    height:100px;
+}
+content
+{
+    position:absolute;
+    top: 80px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    overflow-y:scroll;        
+}​
 #hamburger-menu {
     margin: 1rem;
 }
@@ -22,8 +35,8 @@ body {
 }
 
 #sidebar {
-    min-width: 275px;
-    max-width: 275px;
+    min-width: 20%;
+    max-width: 25%;
     min-height: 100vh;
     background-color: #ff6666;
     position: fixed;
@@ -59,7 +72,8 @@ body {
     padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
-    margin-left: 325px;
+    margin-left: 22%;
+    margin-right: -5% !important;
     overflow-x: hidden;
 }
 
@@ -110,17 +124,28 @@ img {
 button {
   background-color: #f2f5f8;
   border: none;
-  padding: 15px 45px;
+  padding: 15px 25px;
   box-shadow: 1px 1px 1px black;
+  max-width: 15em !important;
+  margin: 5px !important;
 }
 
 button:hover {
   background-color: #ff6666;
   color: white;
 }
+@media (max-width: 598px) {
+
+.card .button {
+    display:none;
+}
+}
 
 @media (min-width: 598px) {
 
+    .card .button {
+        display:block;
+    }
 
 }
 

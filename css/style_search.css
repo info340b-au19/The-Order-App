@@ -1,0 +1,32 @@
+/* css for search.html */
+button.btn.login, btn.signup, btn.search {
+    text-align: center;
+    padding: 1px;
+    width: 90px;
+    font: helvetica;
+    line-height: 2;
+    border-radius: 10px;
+  }
+  
+  body.search {
+    background-image: url("../img/bg-white-01.png");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+  
+  .search-textbox {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20vh;
+  }
+  
+  footer {
+    background-color: #ffec38;
+    height: 10vh;
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+  }

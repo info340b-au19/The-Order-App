@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta name="author" content="Eric Ng and Mingyi Yang">
     <meta name="description" content="stage1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>App</title>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/mdb.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
@@ -14,6 +16,7 @@
     <!-- add favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 </head>
+
 <body>
     <div class="wrapper">
         <nav id="sidebar">
@@ -42,9 +45,15 @@
     </div>
 
     <div id="content">
+        <nav class="navbar navbar-dark red lighten-1 mb-4" id="topnav">
+            <div class="container-fluid">
+                <span class="navbar-toggler-icon" id="sidebutton"></span>
+            </div>
+        </nav>
+
         <div class="flexcontainer">
             <div class="row">
-                <div class="card col-lg col-md-2 col-sm-12">
+                <div class="card col-lg col-mg-2 col-sm-4">
                     <img src="img/bacon qpc.jpeg" alt="burger" class="img-fluid">
                     <div class="star">
                         <span class="fa fa-star checked"></span>
@@ -56,12 +65,12 @@
 
                     <p>Bacon QFC</p>
                     <div>
-                        <button class>Order</button>
-                        <a href = "index1.html" ><button>Reviews</button></a>
+                        <button class="desktop">Order</button>
+                        <a href="index1.html"><button class="desktop">Reviews</button></a>
                     </div>
                 </div>
 
-                <div class="card col-lg col-md-2 col-sm-12">
+                <div class="card col-lg col-mg-2 col-sm-4">
                     <img src="img/double bacon qpc.jpeg" alt="burger" class="img-fluid">
                     <div class="star">
                         <span class="fa fa-star checked"></span>
@@ -73,12 +82,12 @@
 
                     <p>Double Bacon QPC</p>
                     <div>
-                        <button>Order</button>
-                        <button>Reviews</button>
+                        <button class="desktop">Order</button>
+                        <button class="desktop">Reviews</button>
                     </div>
                 </div>
 
-                <div class="card col-lg col-md-2 col-sm-12">
+                <div class="card col-lg col-mg-2 col-sm-4">
                     <img src="img/qpc.jpeg" alt="burger" class="img-fluid">
                     <div class="star">
                         <span class="fa fa-star checked"></span>
@@ -90,170 +99,170 @@
 
                     <p>QFC</p>
                     <div>
-                        <button>Order</button>
-                        <button>Reviews</button>
+                        <button class="desktop">Order</button>
+                        <button class="desktop">Reviews</button>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                    <div class="card col-lg col-mg-2 d-flex">
-                            <img src="img/4 piece spicy.jpeg" alt="fries" class="img-fluid">
-                            <div class="star">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-        
-                            <p>4 Piece Spicy BBQ Tenders</p>
-                            <div>
-                                <button>Order</button>
-                                <button>Reviews</button>
-                            </div>
-                        </div>
-    
-                    <div class="card col-lg col-mg-2">
-                        <img src="img/big mac.jpeg" alt="burger" class="img-fluid">
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-    
-                        <p>Big Mac</p>
-                        <div>
-                            <button>Order</button>
-                            <button>Reviews</button>
-                        </div>
+                <div class="card col-lg col-mg-2 col-sm-4">
+                    <img src="img/4 piece spicy.jpeg" alt="fries" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
                     </div>
-    
-                    <div class="card col-lg col-mg-2">
-                        <img src="img/20mcnuggets.jpeg" alt="fries" class="img-fluid">
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-    
-                        <p>20 Piece McNuggets</p>
-                        <div>
-                            <button>Order</button>
-                            <button>Reviews</button>
-                        </div>
+
+                    <p>4 Piece Spicy BBQ Tenders</p>
+                    <div>
+                        <button class="desktop">Order</button>
+                        <button class="desktop">Reviews</button>
                     </div>
                 </div>
 
-                <div class="row">
-                        <div class="card col-lg col-mg-2">
-                            <img src="img/cheeseburger.jpeg" alt="burger" class="img-fluid">
-                            <div class="star">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-        
-                            <p>Cheeseburger</p>
-                            <div>
-                                <button>Order</button>
-                                <button>Reviews</button>
-                            </div>
-                        </div>
-        
-                        <div class="card col-lg col-mg-2">
-                            <img src="img/double cheeseburger.jpeg" alt="burger" class="img-fluid">
-                            <div class="star">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-        
-                            <p>Double Cheeseburger</p>
-                            <div>
-                                <button>Order</button>
-                                <button>Reviews</button>
-                            </div>
-                        </div>
-        
-                        <div class="card col-lg col-mg-2">
-                            <img src="img/triple cheeseburger.jpeg" alt="burger" class="img-fluid">
-                            <div class="star">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-        
-                            <p>Triple Cheeseburger</p>
-                            <div>
-                                <button>Order</button>
-                                <button>Reviews</button>
-                            </div>
-                        </div>
+                <div class="card col-lg col-mg-2 col-sm-4">
+                    <img src="img/big mac.jpeg" alt="burger" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
                     </div>
 
-                    <div class="row">
-                            <div class="card col-lg col-mg-2">
-                                <img src="img/chicken tenders.jpeg" alt="fries" class="img-fluid">
-                                <div class="star">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                </div>
-            
-                                <p>Chicken Tenders</p>
-                                <div>
-                                    <button>Order</button>
-                                    <button>Reviews</button>
-                                </div>
-                            </div>
-            
-                            <div class="card col-lg col-mg-2">
-                                <img src="img/bacon mcdouble.jpeg" alt="burger" class="img-fluid">
-                                <div class="star">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                </div>
-            
-                                <p>Bacon McDouble</p>
-                                <div>
-                                    <button>Order</button>
-                                    <button>Reviews</button>
-                                </div>
-                            </div>
-            
-                            <div class="card col-lg">
-                                <img src="img/mcchicken.jpeg" alt="burger" class="img-fluid">
-                                <div class="star">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                </div>
-            
-                                <p>McChicken</p>
-                                <div>
-                                    <button>Order</button>
-                                    <button>Reviews</button>
-                                </div>
-                            </div>
-                        </div>
+                    <p>Big Mac</p>
+                    <div>
+                        <button class="desktop">Order</button>
+                        <button class="desktop">Reviews</button>
+                    </div>
+                </div>
+
+                <div class="card col-lg col-mg-2 col-sm-4">
+                    <img src="img/20mcnuggets.jpeg" alt="fries" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                    <p>20 Piece McNuggets</p>
+                    <div>
+                        <button class="desktop">Order</button>
+                        <button class="desktop">Reviews</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card col-lg col-mg-2 col-sm-4">
+                    <img src="img/cheeseburger.jpeg" alt="burger" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                    <p>Cheeseburger</p>
+                    <div>
+                        <button class="desktop">Order</button>
+                        <button class="desktop">Reviews</button>
+                    </div>
+                </div>
+
+                <div class="card col-lg col-mg-2 col-sm-4">
+                    <img src="img/double cheeseburger.jpeg" alt="burger" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                    <p>Double Cheeseburger</p>
+                    <div>
+                        <button class="desktop">Order</button>
+                        <button class="desktop">Reviews</button>
+                    </div>
+                </div>
+
+                <div class="card col-lg col-mg-2 col-sm-4">
+                    <img src="img/triple cheeseburger.jpeg" alt="burger" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                    <p>Triple Cheeseburger</p>
+                    <div>
+                        <button class="desktop">Order</button>
+                        <button class="desktop">Reviews</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card col-lg col-mg-2 col-sm-4">
+                    <img src="img/chicken tenders.jpeg" alt="fries" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+
+                    <p>Chicken Tenders</p>
+                    <div>
+                        <button class="desktop">Order</button>
+                        <button class="desktop">Reviews</button>
+                    </div>
+                </div>
+
+                <div class="card col-lg col-mg-2 col-sm-4">
+                    <img src="img/bacon mcdouble.jpeg" alt="burger" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                    <p>Bacon McDouble</p>
+                    <div>
+                        <button class="desktop">Order</button>
+                        <button class="desktop">Reviews</button>
+                    </div>
+                </div>
+
+                <div class="card col-lg col-mg-2 col-sm-4">
+                    <img src="img/mcchicken.jpeg" alt="burger" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+
+                    <p>McChicken</p>
+                    <div>
+                        <button class="desktop">Order</button>
+                        <button class="desktop">Reviews</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

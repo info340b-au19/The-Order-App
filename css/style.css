@@ -9,51 +9,50 @@
 }
 
 body {
-    background-color: #f4f5f8 !important;
-    font-family: 'Open Sans', san-serif !important;
+  background-color: #f4f5f8 !important;
+  font-family: 'Open Sans', san-serif !important;
 }
 
 #sidebar {
-    min-width: 20%;
-    max-width: 25%;
-    min-height: 100vh;
-    background-color: #ff6666;
-    position: fixed;
-    overflow-x: hidden;
-    box-shadow: 5px 5px 5px grey;
+  min-width: 20%;
+  max-width: 25%;
+  min-height: 100vh;
+  background-color: #ff6666;
+  position: fixed;
+  overflow-x: hidden;
+  box-shadow: 5px 5px 5px grey;
 }
 
 .sb-head {
-    padding: 20px;
-    text-align: center;
-    background-color: #ff5050;
-    color: white;
+  padding: 20px;
+  text-align: center;
+  background-color: #ff5050;
+  color: white;
 }
 
 #menu {
-    background-color: #ff5050;
+  background-color: #ff5050;
 }
 
 .sblink {
-    padding: 30px;
-    font-size: 2em;
-    color: white;
-    display: block;
-    font-family: 'Open Sans', san-serif !important;
+  padding: 30px;
+  font-size: 2em;
+  color: white;
+  display: block;
+  font-family: 'Open Sans', san-serif !important;
 }
 #sidebar ul li a:hover {
-    color: #ff5050;
-    background: #fff;
+  color: #ff5050;
+  background: #fff;
 }
 
 #content {
-    width: 75%;
-    padding: 20px;
-    min-height: 100vh;
-    transition: all 0.3s;
-    margin-left: 22%;
-    margin-right: -5% !important;
-    overflow-x: hidden;
+  min-width: 75%;
+  max-width: 80%;
+  min-height: 100vh;
+  transition: all 0.3s;
+  margin-left: 22%;
+  overflow-x: hidden;
 }
 
 .column {
@@ -100,7 +99,7 @@ img {
   color: orange;
 }
 
-button {
+.desktop {
   background-color: #f2f5f8;
   border: none;
   padding: 15px 25px;
@@ -109,12 +108,45 @@ button {
   margin: 5px !important;
 }
 
-button:hover {
+.desktop:hover {
   background-color: #ff6666;
   color: white;
 }
 
+#topnav {
+  visibility: hidden;
+  height: 50px;
+}
 
+#sidebutton span {
+  background-color: transparent;
+}
+
+@media (max-width: 1250px) {
+  .desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  #sidebar {
+    margin-left: -25%;
+  }
+  
+  #content {
+    width: 100%;
+    margin-left: 10%;
+  }
+
+  #topnav {
+    visibility: visible;
+  }
+  
+  #sidebutton:hover {
+    background-color: #ff6666;
+    color: white;
+  }
+}
 
 
 /* css for search.html */

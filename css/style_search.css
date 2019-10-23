@@ -1,5 +1,5 @@
 /* css for search.html */
-button.btn.login, btn.signup, btn.search {
+.btn{
     text-align: center;
     padding: 1px;
     width: 90px;

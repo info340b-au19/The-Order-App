@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Eric Ng and Mingyi Yang">
+    <meta name="description" content="stage1">
+    <title>App</title>
+    <link href="css/style1.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- add favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sb-head">
+                <h1>McDonalds</h1>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#" class="sblink">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="sblink" id="menu">Menu</a>
+                </li>
+                <li>
+                    <a href="#" class="sblink">My Order</a>
+                </li>
+                <li>
+                    <a href="#" class="sblink">Service</a>
+                </li>
+                <li>
+                    <a href="#" class="sblink">Bill</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="content">
+        <div class="flexcontainer" id="cont">
+            <div class="row">
+                <div class="column card">
+                    <img src="img/bacon qpc.jpeg" alt="burger" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                    <p>Bacon QFC</p>
+                    <div>
+                        <button>Order</button>
+                        <button>Reviews</button>
+                    </div>
+                </div>
+
+                <div class="column card">
+                    <img src="img/double bacon qpc.jpeg" alt="burger" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                    <p>Double Bacon QPC</p>
+                    <div>
+                        <button>Order</button>
+                        <button>Reviews</button>
+                    </div>
+                </div>
+
+                <div class="column card">
+                    <img src="img/qpc.jpeg" alt="burger" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+
+                    <p>QFC</p>
+                    <div>
+                        <button>Order</button>
+                        <button>Reviews</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column card">
+                    <img src="img/4 piece spicy.jpeg" alt="fries" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                    <p>4 Piece Spicy BBQ Chicken Tender</p>
+                    <div>
+                        <button>Order</button>
+                        <button>Reviews</button>
+                    </div>
+                </div>
+
+                <div class="column card">
+                    <img src="img/big mac.jpeg" alt="burger" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                    <p>Big Mac</p>
+                    <div>
+                        <button>Order</button>
+                        <button>Reviews</button>
+                    </div>
+                </div>
+
+                <div class="column card">
+                    <img src="img/20mcnuggets.jpeg" alt="fries" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                    <p>20 Piece McNuggets</p>
+                    <div>
+                        <button>Order</button>
+                        <button>Reviews</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column card">
+                    <img src="img/cheeseburger.jpeg" alt="burger" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                    <p>Cheeseburger</p>
+                    <div>
+                        <button>Order</button>
+                        <button>Reviews</button>
+                    </div>
+                </div>
+
+                <div class="column card">
+                    <img src="img/double cheeseburger.jpeg" alt="burger" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                    <p>Double Cheeseburger</p>
+                    <div>
+                        <button>Order</button>
+                        <button>Reviews</button>
+                    </div>
+                </div>
+
+                <div class="column card">
+                    <img src="img/triple cheeseburger.jpeg" alt="burger" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                    <p>Triple Cheeseburger</p>
+                    <div>
+                        <button>Order</button>
+                        <button>Reviews</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column card">
+                    <img src="img/chicken tenders.jpeg" alt="fries" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+
+                    <p>Chicken Tenders</p>
+                    <div>
+                        <button>Order</button>
+                        <button>Reviews</button>
+                    </div>
+                </div>
+
+                <div class="column card">
+                    <img src="img/bacon mcdouble.jpeg" alt="burger" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                    <p>Bacon McDouble</p>
+                    <div>
+                        <button>Order</button>
+                        <button>Reviews</button>
+                    </div>
+                </div>
+
+                <div class="column card">
+                    <img src="img/mcchicken.jpeg" alt="burger" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+
+                    <p>McChicken</p>
+                    <div>
+                        <button>Order</button>
+                        <button>Reviews</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="overlay">
+            <div id="review">
+                <img src="img/bacon qpc.jpeg" id="review-image">
+                <span class="heading">User Rating</span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <h3>Bacon QPC</h3>
+                <p>4.1 average based on 254 reviews.</p>
+                <hr style="border:3px solid #f1f1f1">
+
+                <div class="review-row">
+                    <div class="rate">
+                        <div>5 <span class="fa fa-star checked"></span></div>
+                        <div class="bar">
+                            <div class="bar-5"></div>
+                        </div>
+                    </div>
+                    <div class="rate">
+                        <div>4 <span class="fa fa-star checked"></span></div>
+                        <div class="bar">
+                            <div class="bar-4"></div>
+                        </div>
+                    </div>
+                    <div class="rate">
+                        <div>3 <span class="fa fa-star checked"></span></div>
+                        <div class="bar">
+                            <div class="bar-3"></div>
+                        </div>
+                    </div>
+                    <div class="rate">
+                        <div>2 <span class="fa fa-star checked"></span></div>
+                        <div class="bar">
+                            <div class="bar-2"></div>
+                        </div>
+                    </div>
+                    <div class="rate">
+                        <div>1 <span class="fa fa-star checked"></span></div>
+                        <div class="bar">
+                            <div class="bar-1"></div>
+                        </div>
+                    </div>
+
+                    <hr style="border:3px solid #f1f1f1">
+
+                    <div class="review-row">
+                        <div class="side">
+                            <div>
+                                <img src="img/default-profile.png" alt="profile picture" class="profile">
+                                <p class="name">Joshua Kim</p>
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <p>
+                                My favorite burger that is on the menu, you can get this with a side of fries
+                                and a coke for such a cheap price. This burger tops their McChicken and McNuggets
+                                any day :)!
+                            </p>
+
+                        </div>
+                        <div class="side right">
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-row">
+                            <div class="side">
+                                <div>
+                                    <img src="img/default-profile.png" alt="profile picture" class="profile">
+                                    <p class="name">Victoria Quan</p>
+                                </div>
+                            </div>
+                            <div class="middle">
+                                <p>
+                                    It is okay.
+                                </p>
+    
+                            </div>
+                            <div class="side right">
+                                <div>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="review-row">
+                                <div class="side">
+                                    <div>
+                                        <img src="img/default-profile.png" alt="profile picture" class="profile">
+                                        <p class="name">Victor Rolnaldo</p>
+                                    </div>
+                                </div>
+                                <div class="middle">
+                                    <p>
+                                        Do not get this burger!!! It came out raw in the middle and the server did
+                                        not give me a new one when I asked for one medium rare. Maybe it was in the
+                                        moment but I did not have a good time with this one.
+                                    </p>
+        
+                                </div>
+                                <div class="side right">
+                                    <div>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="review-row">
+                                    <div class="side">
+                                        <div>
+                                            <img src="img/default-profile.png" alt="profile picture" class="profile">
+                                            <p class="name">Moe Walters</p>
+                                        </div>
+                                    </div>
+                                    <div class="middle">
+                                        <p>
+                                            AMAZINGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG! 10/10 would order again
+                                        </p>
+            
+                                    </div>
+                                    <div class="side right">
+                                        <div>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="review-row">
+                                        <div class="side">
+                                            <div>
+                                                <img src="img/default-profile.png" alt="profile picture" class="profile">
+                                                <p class="name">Bill Gates</p>
+                                            </div>
+                                        </div>
+                                        <div class="middle">
+                                            <p>
+                                                Decent burger with enough meat and vegetables as a balance. Always great with
+                                                the fries and a soda on the side. Would get this again as a midnight snack.
+                                            </p>
+                
+                                        </div>
+                                        <div class="side right">
+                                            <div>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

@@ -1,46 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="author" content="Eric Ng and Mingyi Yang">
     <meta name="description" content="stage1">
-    <title>App</title> 
+    <title>App</title>
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- add favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 </head>
+
 <body>
-        <div class="wrapper">
-                <nav id="sidebar">
-                    <div class="sb-head">
-                        <h1>Restaurant Name</h1>
-                    </div>
-            
-                    <ul class="list-unstyled components">
-                        <li class="active">
-                            <a href="#" class="sblink">Home</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sblink" id="menu">Menu</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sblink">My Order</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sblink">Service</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sblink">Bill</a>
-                        </li>
-                    </ul>
-                </nav>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sb-head">
+                <h1>Restaurant Name</h1>
             </div>
 
-            <div id="content">
-                <div>
-                    
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#" class="sblink">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="sblink" id="menu">Menu</a>
+                </li>
+                <li>
+                    <a href="#" class="sblink">My Order</a>
+                </li>
+                <li>
+                    <a href="#" class="sblink">Service</a>
+                </li>
+                <li>
+                    <a href="#" class="sblink">Bill</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="content">
+        <div class="flexcontainer">
+            <div class="row">
+                <div class="column card">
+                    <img src="img/bacon qpc.jpeg" alt="burger" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                    <p>Bacon QFC</p>
+                    <div>
+                        <button>Order</button>
+                        <button>Reviews</button>
+                    </div>
+                </div>
+
+                <div class="column card">
+                    <img src="img/double bacon qpc.jpeg" alt="burger" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                    <p>Double Bacon QPC</p>
+                    <div>
+                        <button>Order</button>
+                        <button>Reviews</button>
+                    </div>
+                </div>
+
+                <div class="column card">
+                    <img src="img/qpc.jpeg" alt="burger" class="img-fluid">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+
+                    <p>QFC</p>
+                    <div>
+                        <button>Order</button>
+                        <button>Reviews</button>
+                    </div>
                 </div>
             </div>
 
+            <div class="row">
+                    <div class="column card">
+                        <img src="img/4 piece spicy.jpeg" alt="burger" class="img-fluid">
+                        <div class="star">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+    
+                        <p>4 Piece Spicy BBQ Chicken Tender</p>
+                        <div>
+                            <button>Order</button>
+                            <button>Reviews</button>
+                        </div>
+                    </div>
+    
+                    <div class="column card">
+                        <img src="img/big mac.jpeg" alt="burger" class="img-fluid">
+                        <div class="star">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+    
+                        <p>Big Mac</p>
+                        <div>
+                            <button>Order</button>
+                            <button>Reviews</button>
+                        </div>
+                    </div>
+    
+                    <div class="column card">
+                        <img src="img/20mcnuggets.jpeg" alt="burger" class="img-fluid">
+                        <div class="star">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+    
+                        <p>20 Piece McNuggets</p>
+                        <div>
+                            <button>Order</button>
+                            <button>Reviews</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                        <div class="column card">
+                            <img src="img/bacon qpc.jpeg" alt="burger" class="img-fluid">
+                            <div class="star">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+        
+                            <p>Bacon QFC</p>
+                            <div>
+                                <button>Order</button>
+                                <button>Reviews</button>
+                            </div>
+                        </div>
+        
+                        <div class="column card">
+                            <img src="img/double bacon qpc.jpeg" alt="burger" class="img-fluid">
+                            <div class="star">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+        
+                            <p>Double Bacon QPC</p>
+                            <div>
+                                <button>Order</button>
+                                <button>Reviews</button>
+                            </div>
+                        </div>
+        
+                        <div class="column card">
+                            <img src="img/cheeseburger.jpeg" alt="burger" class="img-fluid">
+                            <div class="star">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+        
+                            <p>QFC</p>
+                            <div>
+                                <button>Order</button>
+                                <button>Reviews</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                            <div class="column card">
+                                <img src="img/double cheeseburger.jpeg" alt="burger" class="img-fluid">
+                                <div class="star">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+            
+                                <p>Bacon QFC</p>
+                                <div>
+                                    <button>Order</button>
+                                    <button>Reviews</button>
+                                </div>
+                            </div>
+            
+                            <div class="column card">
+                                <img src="img/triple cheeseburger.jpeg" alt="burger" class="img-fluid">
+                                <div class="star">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+            
+                                <p>Double Bacon QPC</p>
+                                <div>
+                                    <button>Order</button>
+                                    <button>Reviews</button>
+                                </div>
+                            </div>
+            
+                            <div class="column card">
+                                <img src="img/qpc.jpeg" alt="burger" class="img-fluid">
+                                <div class="star">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+            
+                                <p>QFC</p>
+                                <div>
+                                    <button>Order</button>
+                                    <button>Reviews</button>
+                                </div>
+                            </div>
+                        </div>
+        </div>
+    </div>
+
 </body>
+
 </html>

@@ -22,9 +22,13 @@ content {
   bottom: 0px;
   overflow-y: scroll;
 }
+
+
 ​ .wrapper {
   display: flex;
   align-items: stretch;
+  height: 100%;
+  height: auto !important;
   width: 100%;
 }
 
@@ -135,9 +139,10 @@ img {
 
 footer {
   background-color: #ffec38;
-  height: 10vh;
+  width:100%;
+  /* position: absolute; */
   bottom: 0;
-  position:absolute;
+  height: 7vh;
   width: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
 }

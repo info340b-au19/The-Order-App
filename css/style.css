@@ -2,7 +2,27 @@
   box-sizing: border-box;
 }
 
-.wrapper {
+.btn {
+  text-align: center;
+  padding: 1px;
+  width: 90px;
+  font: helvetica;
+  line-height: 2;
+  border-radius: 10px;
+}
+
+header {
+  height: 70px;
+}
+content {
+  position: absolute;
+  top: 70px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow-y: scroll;
+}
+​ .wrapper {
   display: flex;
   align-items: stretch;
   width: 100%;
@@ -10,7 +30,7 @@
 
 body {
   background-color: #f4f5f8 !important;
-  font-family: 'Open Sans', san-serif !important;
+  font-family: "Open Sans", san-serif !important;
 }
 
 #sidebar {
@@ -39,7 +59,7 @@ body {
   font-size: 2em;
   color: white;
   display: block;
-  font-family: 'Open Sans', san-serif !important;
+  font-family: "Open Sans", san-serif !important;
 }
 #sidebar ul li a:hover {
   color: #ff5050;
@@ -62,12 +82,12 @@ body {
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    margin: 16px;
-    border: .25px solid #ff6666 !important;
-    font-family: 'Open Sans', san-serif !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  margin: 16px;
+  border: 0.25px solid #ff6666 !important;
+  font-family: "Open Sans", san-serif !important;
 }
 
 .flexcontainer {
@@ -113,6 +133,15 @@ img {
   background-color: transparent;
 }
 
+footer {
+  background-color: #ffec38;
+  height: 10vh;
+  bottom: 0;
+  position:absolute;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+}
+
 @media (max-width: 1250px) {
   .desktop {
     display: none;
@@ -123,7 +152,7 @@ img {
   #sidebar {
     margin-left: -25%;
   }
-  
+
   #content {
     width: 100%;
     margin-left: 10%;
@@ -132,44 +161,9 @@ img {
   #topnav {
     visibility: visible;
   }
-  
+
   #sidebutton:hover {
     background-color: #ff6666;
     color: white;
   }
 }
-
-
-/* css for search.html */
-button.btn.login, btn.signup, btn.search {
-  text-align: center;
-  padding: 1px;
-  width: 90px;
-  font: helvetica;
-  line-height: 2;
-  border-radius: 10px;
-}
-
-body.search {
-  background-image: url("../img/bg-white-01.png");
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-}
-
-.search-textbox {
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 20vh;
-}
-
-footer {
-  background-color: #ffec38;
-  height: 10vh;
-  bottom: 0px;
-  position: fixed;
-  width: 100%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
-}
-   

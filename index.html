@@ -6,7 +6,7 @@
     <meta name="author" content="Eric Ng and Mingyi Yang">
     <meta name="description" content="stage1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>App</title>
+    <title>Menu</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/mdb.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -18,38 +18,44 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <nav id="sidebar">
-            <div class="sb-head">
-                <h1>McDonalds</h1>
-            </div>
+    <header class='container'>
+        <img class="mt-3" style="width: 120px;" src="img/logo_text-01.png" alt="logo" />
+        <!-- <button class="float-right mt-4 btn btn-dark">Sign Up</button>
+        <button class="float-right mr-3 mt-4 btn btn-outline-dark">Log In</button> -->
+    </header>
+    <content>
+        <div class="wrapper">
+            <nav id="sidebar">
+                <div class="sb-head">
+                    <h1>McDonalds</h1>
+                </div>
 
-            <ul class="list-unstyled components">
-                <li class="active">
-                    <a href="#" class="sblink">Home</a>
-                </li>
-                <li>
-                    <a href="#" class="sblink" id="menu">Menu</a>
-                </li>
-                <li>
-                    <a href="#" class="sblink">My Order</a>
-                </li>
-                <li>
-                    <a href="#" class="sblink">Service</a>
-                </li>
-                <li>
-                    <a href="#" class="sblink">Bill</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#" class="sblink">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="sblink" id="menu">Menu</a>
+                    </li>
+                    <li>
+                        <a href="#" class="sblink">My Order</a>
+                    </li>
+                    <li>
+                        <a href="#" class="sblink">Service</a>
+                    </li>
+                    <li>
+                        <a href="#" class="sblink">Bill</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-    <div id="content">
-        <nav class="navbar navbar-dark red lighten-1 mb-4" id="topnav">
-            <div class="container-fluid">
-                <span class="navbar-toggler-icon" id="sidebutton"></span>
-            </div>
-        </nav>
+        <div id="content">
+            <nav class="navbar navbar-dark red lighten-1 mb-4" id="topnav">
+                <div class="container-fluid">
+                    <span class="navbar-toggler-icon" id="sidebutton"></span>
+                </div>
+            </nav>
 
         <div class="flexcontainer">
             <div class="row">
@@ -63,12 +69,12 @@
                         <span class="fa fa-star"></span>
                     </div>
 
-                    <p>Bacon QFC</p>
-                    <div>
-                        <button class="desktop">Order</button>
-                        <a href="index1.html"><button class="desktop">Reviews</button></a>
+                        <p>Bacon QFC</p>
+                        <div>
+                            <button class="desktop">Order</button>
+                            <a href="index1.html"><button class="desktop">Reviews</button></a>
+                        </div>
                     </div>
-                </div>
 
                 <div class="card col-lg col-mg-2 col-sm-4">
                     <img src="img/double bacon qpc.jpeg" alt="burger" class="img-fluid">
@@ -80,12 +86,12 @@
                         <span class="fa fa-star"></span>
                     </div>
 
-                    <p>Double Bacon QPC</p>
-                    <div>
-                        <button class="desktop">Order</button>
-                        <button class="desktop">Reviews</button>
+                        <p>Double Bacon QPC</p>
+                        <div>
+                            <button class="desktop">Order</button>
+                            <button class="desktop">Reviews</button>
+                        </div>
                     </div>
-                </div>
 
                 <div class="card col-lg col-mg-2 col-sm-4">
                     <img src="img/qpc.jpeg" alt="burger" class="img-fluid">
@@ -97,13 +103,13 @@
                         <span class="fa fa-star checked"></span>
                     </div>
 
-                    <p>QFC</p>
-                    <div>
-                        <button class="desktop">Order</button>
-                        <button class="desktop">Reviews</button>
+                        <p>QFC</p>
+                        <div>
+                            <button class="desktop">Order</button>
+                            <button class="desktop">Reviews</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
             <div class="row">
                 <div class="card col-lg col-mg-2 col-sm-4">
@@ -116,12 +122,12 @@
                         <span class="fa fa-star"></span>
                     </div>
 
-                    <p>4 Piece Spicy BBQ Tenders</p>
-                    <div>
-                        <button class="desktop">Order</button>
-                        <button class="desktop">Reviews</button>
+                        <p>4 Piece Spicy BBQ Tenders</p>
+                        <div>
+                            <button class="desktop">Order</button>
+                            <button class="desktop">Reviews</button>
+                        </div>
                     </div>
-                </div>
 
                 <div class="card col-lg col-mg-2 col-sm-4">
                     <img src="img/big mac.jpeg" alt="burger" class="img-fluid">
@@ -133,12 +139,12 @@
                         <span class="fa fa-star"></span>
                     </div>
 
-                    <p>Big Mac</p>
-                    <div>
-                        <button class="desktop">Order</button>
-                        <button class="desktop">Reviews</button>
+                        <p>Big Mac</p>
+                        <div>
+                            <button class="desktop">Order</button>
+                            <button class="desktop">Reviews</button>
+                        </div>
                     </div>
-                </div>
 
                 <div class="card col-lg col-mg-2 col-sm-4">
                     <img src="img/20mcnuggets.jpeg" alt="fries" class="img-fluid">
@@ -150,13 +156,13 @@
                         <span class="fa fa-star"></span>
                     </div>
 
-                    <p>20 Piece McNuggets</p>
-                    <div>
-                        <button class="desktop">Order</button>
-                        <button class="desktop">Reviews</button>
+                        <p>20 Piece McNuggets</p>
+                        <div>
+                            <button class="desktop">Order</button>
+                            <button class="desktop">Reviews</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
             <div class="row">
                 <div class="card col-lg col-mg-2 col-sm-4">
@@ -169,12 +175,12 @@
                         <span class="fa fa-star"></span>
                     </div>
 
-                    <p>Cheeseburger</p>
-                    <div>
-                        <button class="desktop">Order</button>
-                        <button class="desktop">Reviews</button>
+                        <p>Cheeseburger</p>
+                        <div>
+                            <button class="desktop">Order</button>
+                            <button class="desktop">Reviews</button>
+                        </div>
                     </div>
-                </div>
 
                 <div class="card col-lg col-mg-2 col-sm-4">
                     <img src="img/double cheeseburger.jpeg" alt="burger" class="img-fluid">
@@ -186,12 +192,12 @@
                         <span class="fa fa-star"></span>
                     </div>
 
-                    <p>Double Cheeseburger</p>
-                    <div>
-                        <button class="desktop">Order</button>
-                        <button class="desktop">Reviews</button>
+                        <p>Double Cheeseburger</p>
+                        <div>
+                            <button class="desktop">Order</button>
+                            <button class="desktop">Reviews</button>
+                        </div>
                     </div>
-                </div>
 
                 <div class="card col-lg col-mg-2 col-sm-4">
                     <img src="img/triple cheeseburger.jpeg" alt="burger" class="img-fluid">
@@ -203,13 +209,13 @@
                         <span class="fa fa-star"></span>
                     </div>
 
-                    <p>Triple Cheeseburger</p>
-                    <div>
-                        <button class="desktop">Order</button>
-                        <button class="desktop">Reviews</button>
+                        <p>Triple Cheeseburger</p>
+                        <div>
+                            <button class="desktop">Order</button>
+                            <button class="desktop">Reviews</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
             <div class="row">
                 <div class="card col-lg col-mg-2 col-sm-4">
@@ -222,12 +228,12 @@
                         <span class="fa fa-star checked"></span>
                     </div>
 
-                    <p>Chicken Tenders</p>
-                    <div>
-                        <button class="desktop">Order</button>
-                        <button class="desktop">Reviews</button>
+                        <p>Chicken Tenders</p>
+                        <div>
+                            <button class="desktop">Order</button>
+                            <button class="desktop">Reviews</button>
+                        </div>
                     </div>
-                </div>
 
                 <div class="card col-lg col-mg-2 col-sm-4">
                     <img src="img/bacon mcdouble.jpeg" alt="burger" class="img-fluid">
@@ -239,12 +245,12 @@
                         <span class="fa fa-star"></span>
                     </div>
 
-                    <p>Bacon McDouble</p>
-                    <div>
-                        <button class="desktop">Order</button>
-                        <button class="desktop">Reviews</button>
+                        <p>Bacon McDouble</p>
+                        <div>
+                            <button class="desktop">Order</button>
+                            <button class="desktop">Reviews</button>
+                        </div>
                     </div>
-                </div>
 
                 <div class="card col-lg col-mg-2 col-sm-4">
                     <img src="img/mcchicken.jpeg" alt="burger" class="img-fluid">
@@ -256,16 +262,20 @@
                         <span class="fa fa-star checked"></span>
                     </div>
 
-                    <p>McChicken</p>
-                    <div>
-                        <button class="desktop">Order</button>
-                        <button class="desktop">Reviews</button>
+                        <p>McChicken</p>
+                        <div>
+                            <button class="desktop">Order</button>
+                            <button class="desktop">Reviews</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </content>
+
+    <footer>
+        <p class="float-right mt-3 mr-3">Copyright © 2019 Order Inc. </p>
+        <p class="float-right mt-3 mr-3">Author: Eric Ng, Mingyi Yang </p>
+    </footer>
 
 </body>
-
-</html>

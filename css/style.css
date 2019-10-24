@@ -2,11 +2,22 @@
   box-sizing: border-box;
 }
 
+#cart {
+  width: 60px;
+}
+
+#logo {
+  width: 120px;
+}
+
+#prof {
+  width: 50px;
+}
+
 .btn {
   text-align: center;
   padding: 1px;
   width: 90px;
-  font: helvetica;
   line-height: 2;
   border-radius: 10px;
 }
@@ -24,7 +35,6 @@ content {
   overflow-y: scroll;
 }
 
-
 ​ .wrapper {
   display: flex;
   align-items: stretch;
@@ -35,7 +45,6 @@ content {
 
 body {
   background-color: #f4f5f8 !important;
-  font-family: "Open Sans", san-serif !important;
 }
 
 #sidebar {
@@ -64,7 +73,6 @@ body {
   font-size: 2em;
   color: white;
   display: block;
-  font-family: "Open Sans", san-serif !important;
 }
 #sidebar ul li a:hover {
   color: #ff5050;
@@ -91,7 +99,6 @@ body {
   text-align: center;
   margin: 16px;
   border: 0.25px solid #ff6666 !important;
-  font-family: "Open Sans", san-serif !important;
 }
 
 .flexcontainer {
@@ -103,6 +110,10 @@ body {
 
 img {
   object-fit: contain;
+}
+
+.break {
+  border: 3px solid #f1f1f1;
 }
 
 .img-fluid {
@@ -128,10 +139,12 @@ img {
   color: white;
 }
 
+/*
 #topnav {
   visibility: hidden;
   height: 50px;
 }
+*/
 
 #sidebutton span {
   background-color: transparent;
@@ -143,7 +156,6 @@ footer {
   /* position: absolute; */
   bottom: 0;
   height: 7vh;
-  width: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
 }
 

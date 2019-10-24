@@ -9,7 +9,7 @@
   }
   
   body.search {
-    background-image: url("../img/bg-white-01.png");
+    background-image: url("../img/bg-landscape.png");
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -30,3 +30,25 @@
     width: 100%;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
   }
+
+  @media all and (orientation:landscape) {
+
+    
+ }
+ 
+ @media all and (orientation:portrait) {
+    /* body.search {
+        background-color: white;
+      } */
+
+      body.search {
+        background-image: url("../img/bg-portrait.png");
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+      }
+
+    
+ }
+ 

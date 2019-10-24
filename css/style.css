@@ -70,17 +70,8 @@ body {
   min-width: 75%;
   max-width: 80%;
   min-height: 100vh;
-  transition: all 0.3s;
   margin-left: 22%;
   overflow-x: hidden;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  flex-basis: 100%;
-  flex: 1;
 }
 
 .row {

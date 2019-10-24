@@ -1,5 +1,7 @@
-# Course Project
+# Food App Project
 
-This repository contains code for an interactive web app, created for the _Client-Side Web Development_ course at the UW iSchool.
+INFO 340 Eric Ng and Mingyi Yang
 
-The site can be viewed at <https://info340a-au19.github.io/project-yourusername/>
+An order app for customers to order and review dishes at restaurants by using their phone.
+
+

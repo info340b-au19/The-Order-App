@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!-- add favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
 </head>
 
 <body>
@@ -29,40 +32,173 @@
         <div class="wrapper">
             <nav id="sidebar">
                 <div class="sb-head">
-                    <h1>McDonalds</h1>
+                    <h1 class="hidden">McDonalds</h1>
                 </div>
 
                 <ul class="list-unstyled components">
-                    <li class="active">
-                        <a href="#" class="sblink">Home</a>
+                    <li>
+                        <a href="#" class="sblink current">Home</a>
                     </li>
                     <li>
-                        <a href="#" class="sblink" id="menu">Menu</a>
+                        <a href="#" class="sblink">Overview</a>
                     </li>
                     <li>
-                        <a href="#" class="sblink">My Order</a>
+                        <a href="#" class="sblink">Menu</a>
                     </li>
                     <li>
                         <a href="#" class="sblink">Service</a>
                     </li>
                     <li>
-                        <a href="#" class="sblink">Bill</a>
+                        <a href="#" class="sblink">My Order</a>
                     </li>
                 </ul>
             </nav>
         </div>
 
-        <div id="content">
-            <!--<nav class="navbar navbar-dark red lighten-1 mb-4" id="topnav">
-                <div class="container-fluid">
-                    <span class="navbar-toggler-icon" id="sidebutton"></span>
+        <!-- HOME CONTENT -->
+        <div id="home" class="content">
+            <div class="flexcontainer">
+                <h2>Restaurants around your Location</h2>
+                <div class="row">
+                    <div class="card home-card col-lg col-sm-4">
+                        <img src="img/mcd-home.jpeg" alt="restaurant" class="home-img img-fluid">
+                        <div class="home-info">
+                            <h3>McDonalds</h3>
+                            <p class="extra-info">Wait-time: 5-10 mins</p>
+                            <div class="star" aria-label="4 out of 5">
+                                <span>(4)</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="extra-info">Delivery: Available</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card home-card col-lg col-sm-4 closed-overlay">
+                        <img src="img/bokabok-home.jpg" alt="restaurant" class="home-img img-fluid">
+                        <div class="home-info">
+                            <h3>Bok a Bok Chicken</h3>
+                            <p class="extra-info">Wait-time: 17-24 mins</p>
+                            <div class="star" aria-label="5 out of 5">
+                                <span>(5)</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="extra-info">Delivery: Unavailable</span>
+                            </div>
+                        </div>
+                        <div class="closed">
+                            <div class="closed-text">UNAVAILABLE</div>
+                        </div>
+                    </div>
                 </div>
-            </nav> -->
+                <a href="#" class="expand">expand</a>
+                <hr class="space-break">
 
+                <h2>New Restaurants to Try</h2>
+                <div class="row">
+                    <div class="card home-card col-lg col-sm-4 closed-overlay">
+                        <img src="img/thaigerroom-home" alt="restaurant" class="home-img img-fluid">
+                        <div class="home-info">
+                            <h3>Thaiger Room</h3>
+                            <p class="extra-info">Wait-time: 8-15 mins</p>
+                            <div class="star" aria-label="2 out of 5">
+                                <span>(2)</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="extra-info">Delivery: Unavailable</span>
+                            </div>
+                        </div>
+                        <div class="closed">
+                            <div class="closed-text">UNAVAILABLE</div>
+                        </div>
+                    </div>
+                    <div class="card home-card col-lg col-sm-4 closed-overlay">
+                        <img src="img/denny-home.jpg" alt="restaurant" class="home-img img-fluid">
+                        <div class="home-info">
+                            <h3>Dennys</h3>
+                            <p class="extra-info">Wait-time: 5-12 mins</p>
+                            <div class="star" aria-label="5 out of 5">
+                                <span>(5)</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="extra-info">Delivery: Unavailable</span>
+                            </div>
+                        </div>
+                        <div class="closed">
+                            <div class="closed-text">UNAVAILABLE</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="expand">expand</a>
+                <hr class="space-break">
+
+                <h2>Go Back to the Classics</h2>
+                <div class="row">
+                    <div class="card home-card col-lg col-sm-4 closed-overlay">
+                        <img src="img/meesum-home.jpg" alt="restaurant" class="home-img img-fluid">
+                        <div class="home-info">
+                            <h3>Mee Sum</h3>
+                            <p class="extra-info">Wait-time: 20-30 mins</p>
+                            <div class="star" aria-label="3 out of 5">
+                                <span>(3)</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="extra-info">Delivery: Available</span>
+                            </div>
+                        </div>
+                        <div class="closed">
+                            <div class="closed-text">UNAVAILABLE</div>
+                        </div>
+                    </div>
+                    <div class="card home-card col-lg col-sm-4 closed-overlay">
+                        <img src="img/starbucks-home" alt="restaurant" class="home-img img-fluid">
+                        <div class="home-info">
+                            <h3>Starbucks</h3>
+                            <p class="extra-info">Wait-time: 0-5 mins</p>
+                            <div class="star" aria-label="5 out of 5">
+                                <span>(4)</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="extra-info">Delivery: Available</span>
+                            </div>
+                        </div>
+                        <div class="closed">
+                            <div class="closed-text">UNAVAILABLE</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="expand">expand</a>
+                <hr class="space-break">
+            </div>
+        </div>
+
+        <!-- OVERVIEW CONTENT -->
+        <div id="overview" class="content">
+        </div>
+
+        <!-- MENU CONTENT -->
+        <div id="menu" class="content">
             <div class="flexcontainer">
                 <div class="row">
-                    <div class="card col-lg col-mg-2 col-sm-4">
-                        <img src="img/bacon qpc.jpeg" alt="burger" class="img-fluid">
+                    <div class="card menu-card col-lg col-mg-2 col-sm-4">
+                        <img src="img/bacon qpc.jpeg" alt="burger" class="menu-img img-fluid">
                         <div class="star" aria-label="3 out of 5">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -78,8 +214,8 @@
                         </div>
                     </div>
 
-                    <div class="card col-lg col-mg-2 col-sm-4">
-                        <img src="img/double bacon qpc.jpeg" alt="burger" class="img-fluid">
+                    <div class="card menu-card col-lg col-mg-2 col-sm-4">
+                        <img src="img/double bacon qpc.jpeg" alt="burger" class="menu-img img-fluid">
                         <div class="star" aria-label="4 out of 5">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -95,8 +231,8 @@
                         </div>
                     </div>
 
-                    <div class="card col-lg col-mg-2 col-sm-4">
-                        <img src="img/qpc.jpeg" alt="burger" class="img-fluid">
+                    <div class="card menu-card col-lg col-mg-2 col-sm-4">
+                        <img src="img/qpc.jpeg" alt="burger" class="menu-img img-fluid">
                         <div class="star" aria-label="5 out of 5">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -114,8 +250,8 @@
                 </div>
 
                 <div class="row">
-                    <div class="card col-lg col-mg-2 col-sm-4">
-                        <img src="img/4 piece spicy.jpeg" alt="fries" class="img-fluid">
+                    <div class="card menu-card col-lg col-mg-2 col-sm-4">
+                        <img src="img/4 piece spicy.jpeg" alt="fries" class="menu-img img-fluid">
                         <div class="star" aria-label="3 out of 5">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -131,8 +267,8 @@
                         </div>
                     </div>
 
-                    <div class="card col-lg col-mg-2 col-sm-4">
-                        <img src="img/big mac.jpeg" alt="burger" class="img-fluid">
+                    <div class="card menu-card col-lg col-mg-2 col-sm-4">
+                        <img src="img/big mac.jpeg" alt="burger" class="menu-img img-fluid">
                         <div class="star" aria-label="4 out of 5">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -148,8 +284,8 @@
                         </div>
                     </div>
 
-                    <div class="card col-lg col-mg-2 col-sm-4">
-                        <img src="img/20mcnuggets.jpeg" alt="fries" class="img-fluid">
+                    <div class="card menu-card col-lg col-mg-2 col-sm-4">
+                        <img src="img/20mcnuggets.jpeg" alt="fries" class="menu-img img-fluid">
                         <div class="star" aria-label="2 out of 5">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -167,8 +303,8 @@
                 </div>
 
                 <div class="row">
-                    <div class="card col-lg col-mg-2 col-sm-4">
-                        <img src="img/cheeseburger.jpeg" alt="burger" class="img-fluid">
+                    <div class="card menu-card col-lg col-mg-2 col-sm-4">
+                        <img src="img/cheeseburger.jpeg" alt="burger" class="menu-img img-fluid">
                         <div class="star" aria-label="3 out of 5">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -184,8 +320,8 @@
                         </div>
                     </div>
 
-                    <div class="card col-lg col-mg-2 col-sm-4">
-                        <img src="img/double cheeseburger.jpeg" alt="burger" class="img-fluid">
+                    <div class="card menu-card col-lg col-mg-2 col-sm-4">
+                        <img src="img/double cheeseburger.jpeg" alt="burger" class="menu-img img-fluid">
                         <div class="star" aria-label="3 out of 5">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -201,8 +337,8 @@
                         </div>
                     </div>
 
-                    <div class="card col-lg col-mg-2 col-sm-4">
-                        <img src="img/triple cheeseburger.jpeg" alt="burger" class="img-fluid">
+                    <div class="card menu-card col-lg col-mg-2 col-sm-4">
+                        <img src="img/triple cheeseburger.jpeg" alt="burger" class="menu-img img-fluid">
                         <div class="star" aria-label="3 out of 5">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -220,8 +356,8 @@
                 </div>
 
                 <div class="row">
-                    <div class="card col-lg col-mg-2 col-sm-4">
-                        <img src="img/chicken tenders.jpeg" alt="fries" class="img-fluid">
+                    <div class="card menu-card col-lg col-mg-2 col-sm-4">
+                        <img src="img/chicken tenders.jpeg" alt="fries" class="menu-img img-fluid">
                         <div class="star" aria-label="5 out of 5">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -237,8 +373,8 @@
                         </div>
                     </div>
 
-                    <div class="card col-lg col-mg-2 col-sm-4">
-                        <img src="img/bacon mcdouble.jpeg" alt="burger" class="img-fluid">
+                    <div class="card menu-card col-lg col-mg-2 col-sm-4">
+                        <img src="img/bacon mcdouble.jpeg" alt="burger" class="menu-img img-fluid">
                         <div class="star" aria-label="4 out of 5">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -254,8 +390,8 @@
                         </div>
                     </div>
 
-                    <div class="card col-lg col-mg-2 col-sm-4">
-                        <img src="img/mcchicken.jpeg" alt="burger" class="img-fluid">
+                    <div class="card menu-card col-lg col-mg-2 col-sm-4">
+                        <img src="img/mcchicken.jpeg" alt="burger" class="menu-img img-fluid">
                         <div class="star" aria-label="5 out of 5">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -271,14 +407,22 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
-        <footer>
-                <p class="float-right mt-3 mr-3">Copyright © 2019 Order Inc. </p>
-                <p class="float-right mt-3 mr-3">Author: Eric Ng, Mingyi Yang </p>
-            </footer>
-    </content>
 
+        <!-- OVERVIEW CONTENT -->
+        <div id="overview" class="content">
+        </div>
+
+        <!-- MY ORDER CONTENT -->
+        <div id="my-order" class="content">
+        </div>
+
+        <footer>
+            <p class="float-right mt-3 mr-3">Copyright © 2019 Order Inc. </p>
+            <p class="float-right mt-3 mr-3">Author: Eric Ng, Mingyi Yang </p>
+        </footer>
+    </content>
 </body>
 </html>

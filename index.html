@@ -35,30 +35,30 @@
 
                 <ul class="list-unstyled components">
                     <li>
-                        <button class="sbbutton current"><i class="fas fa-utensils"></i>     Restaurants</button>
+                        <button class="sbbutton current"><i class="fas fa-utensils"></i> Restaurants</button>
                     </li>
                     <li>
-                        <button class="sbbutton"><i class="fas fa-home"></i>     Home</button>
+                        <button class="sbbutton"><i class="fas fa-home"></i> Home</button>
                     </li>
                     <li>
-                        <button class="sbbutton"><i class="fas fa-list-ul"></i>     Menu</button>
+                        <button id="sbmenu" class="sbbutton"><i class="fas fa-list-ul"></i> Menu</button>
                     </li>
                     <li>
-                        <button class="sbbutton"><i class="fas fa-user-tie"></i>     Service</button>
+                        <button class="sbbutton"><i class="fas fa-user-tie"></i> Service</button>
                     </li>
                     <li>
-                        <button class="sbbutton"><i class="fas fa-money-bill-alt"></i>    My Order</button>
+                        <button class="sbbutton"><i class="fas fa-money-bill-alt"></i> My Order</button>
                     </li>
                 </ul>
             </nav>
         </div>
 
-        <!-- HOME CONTENT -->
+        <!-- RESTAURANT CONTENT -->
         <div id="restaurants" class="content">
             <div class="flexcontainer">
                 <h2>Restaurants around your Location</h2>
                 <div class="row">
-                    <div class="card home-card col-lg col-sm-4">
+                    <div id="mcd" class="card home-card col-lg col-sm-4">
                         <img src="img/mcd-home.jpeg" alt="restaurant" class="home-img img-fluid">
                         <div class="home-info">
                             <h3>McDonalds</h3>
@@ -189,6 +189,48 @@
 
         <!-- HOME CONTENT -->
         <div id="home" class="content hide">
+            <div class="flexcontainer">
+                <div class="row">
+                    <div class="card queue-card col-lg col-sm-4">
+                        <div class="row">
+                            <div class="col-lg">
+                                <div class="queue-inside">Groups in queue</div>
+                                <div class="whitespace queue-inside">white</div>
+                                <div id="queue-number" class="queue-inside">9</div>
+                            </div>
+                            <div class="col-lg queue-inside">
+                                <div class="center">
+                                    <input id="group-number" placeholder="# of people">
+                                </div>
+                            </div>
+                            <div class="col-lg queue-inside">
+                                <div class="center">
+                                    <button id="queue" class="home-button">Queue Up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="space-break">
+
+                <div class="row">
+                    <div class="card queue-card col-lg col-mg-2 col-sm-4">
+                        <div class="queue-inside">Wait-time (mins)</div>
+                        <div class="whitespace queue-inside">white</div>
+                        <div id="queue-wait" class="queue-inside">15</div>
+                    </div>
+                    <div class="card queue-card col-lg col-mg-2 col-sm-4">
+
+                        <button id="home-delivery" class="home-button dhover">DINE IN</button>
+
+                    </div>
+                    <div class="card queue-card col-lg col-mg-2 col-sm-4">
+                        <button id="home-menu" class="home-button">MENU</button>
+                    </div>
+                </div>
+
+                <hr class="space-break">
+            </div>
         </div>
 
         <!-- MENU CONTENT -->
@@ -406,6 +448,246 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+
+        <div id="overlay" class="hidden">
+            <div id="review">
+                <div>
+                    <img src="img/bacon qpc.jpeg" alt="burger" id="review-image">
+
+                    <div aria-label="4 out of 5">
+                        <span class="heading">User Rating</span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                    <h1>Bacon QPC</h1>
+                    <p>4.1 average based on 254 reviews.</p>
+                    <button class="mobile">Order</button>
+                </div>
+
+                <hr class="break">
+
+
+                <div class="review-row">
+                    <div class="rate">
+                        <div>5 <span class="fa fa-star checked"></span></div>
+                        <div class="bar">
+                            <div class="bar-5" aria-label="160 5 star reviews"></div>
+                        </div>
+                    </div>
+                    <div class="rate">
+                        <div>4 <span class="fa fa-star checked"></span></div>
+                        <div class="bar">
+                            <div class="bar-4" aria-label="127 4 star reviews"></div>
+                        </div>
+                    </div>
+                    <div class="rate">
+                        <div>3 <span class="fa fa-star checked"></span></div>
+                        <div class="bar">
+                            <div class="bar-3" aria-label="52 3 star reviews"></div>
+                        </div>
+                    </div>
+                    <div class="rate">
+                        <div>2 <span class="fa fa-star checked"></span></div>
+                        <div class="bar">
+                            <div class="bar-2" aria-label="21 2 star reviews"></div>
+                        </div>
+                    </div>
+                    <div class="rate">
+                        <div>1 <span class="fa fa-star checked"></span></div>
+                        <div class="bar">
+                            <div class="bar-1" aria-label="44 1 star reviews"></div>
+                        </div>
+                    </div>
+
+                    <hr class="break">
+
+                    <div class="review-row">
+                        <div class="side">
+                            <div>
+                                <img src="img/joshua.jpg" alt="profile picture" class="profile">
+                                <p class="name">Joshua Kim</p>
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <div class="mobile-head">
+                                <h3><img src="img/joshua.jpg" alt="profile picture" class="mobile-profile">
+                                    Joshua Kim</h3>
+                                <div aria-label="4 out of 5">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                            </div>
+                            <p>
+                                My favorite burger that is on the menu, you can get this with a side of fries
+                                and a coke for such a cheap price. This burger tops their McChicken and McNuggets
+                                any day :)!
+
+                            </p>
+
+                        </div>
+                        <div class="side right">
+                            <div aria-label="4 out of 5">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="break">
+                    <div class="review-row">
+                        <div class="side">
+                            <div>
+                                <img src="img/victoria.jpg" alt="profile picture" class="profile">
+                                <p class="name">Victoria Quan</p>
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <div class="mobile-head">
+                                <h3><img src="img/victoria.jpg" alt="profile picture" class="mobile-profile"> Victoria
+                                    Quan</h3>
+                                <div aria-label="3 out of 5">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                            </div>
+                            <p>
+                                It is okay.
+                            </p>
+
+                        </div>
+                        <div class="side right">
+                            <div aria-label="3 out of 5">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="break">
+                    <div class="review-row">
+                        <div class="side">
+                            <div>
+                                <img src="img/victor.jpeg" alt="profile picture" class="profile">
+                                <p class="name">Victor Rolnaldo</p>
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <div class="mobile-head">
+                                <h3><img src="img/victor.jpeg" alt="profile picture" class="mobile-profile"> Victor
+                                    Rolnaldo</h3>
+                                <div aria-label="1 out of 5">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                            </div>
+                            <p>
+                                Do not get this burger!!! It came out raw in the middle and the server did
+                                not give me a new one when I asked for one medium rare. Maybe it was in the
+                                moment but I did not have a good time with this one.
+                            </p>
+
+                        </div>
+                        <div class="side right">
+                            <div aria-label="1 out of 5">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="break">
+                    <div class="review-row">
+                        <div class="side">
+                            <div>
+                                <img src="img/jennie.jpg" alt="profile picture" class="profile">
+                                <p class="name">Jennie Kim</p>
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <div class="mobile-head">
+                                <h3><img src="img/jennie.jpg" alt="profile picture" class="mobile-profile"> Jennie Kim
+                                </h3>
+                                <div aria-label="5 out of 5">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                            </div>
+                            <p>
+                                AMAZINGGggg! 10/10 would order again. Probably the best meal I had in ages.
+                            </p>
+
+                        </div>
+                        <div class="side right">
+                            <div aria-label="5 out of 5">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="breakx">
+                    <div class="review-row">
+                        <div class="side">
+                            <div>
+                                <img src="img/bill.jpg" alt="profile picture" class="profile">
+                                <p class="name">Bill Gates</p>
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <div class="mobile-head">
+                                <h3><img src="img/bill.jpg" alt="profile picture" class="mobile-profile"> Bill Gates
+                                </h3>
+                                <div aria-label="4 out of 5">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                            </div>
+                            <p>
+                                Decent burger with enough meat and vegetables as a balance. Always great with
+                                the fries and a soda on the side. Would get this again as a midnight snack.
+                            </p>
+
+                        </div>
+                        <div class="side right">
+                            <div aria-label="4 out of 5">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

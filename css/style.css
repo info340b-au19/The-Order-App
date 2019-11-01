@@ -78,7 +78,7 @@ content {
 
 .sbbutton:hover {
   color: #ff5050;
-  background: #fff;
+  background: #fff !important;
   transition: .5s ease;
 }
 
@@ -110,68 +110,7 @@ content {
   color: orange;
 }
 
-/* MENU CONTENT */
-
-​ .wrapper {
-  display: flex;
-  align-items: stretch;
-  height: 100%;
-  height: auto !important;
-  width: 100%;
-}
-
-.menu-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  margin: 16px;
-  border: 0.25px solid #ff6666 !important;
-}
-
-.menu-img {
-  object-fit: contain;
-}
-
-.break {
-  border: 3px solid #f1f1f1;
-}
-
-.img-fluid {
-  max-height: 100%;
-  height: auto;
-}
-
-.desktop {
-  background-color: #f2f5f8;
-  border: none;
-  padding: 15px 25px;
-  box-shadow: 1px 1px 1px black;
-  max-width: 15em !important;
-  margin: 5px !important;
-}
-
-.desktop:hover {
-  background-color: #ff6666;
-  color: white;
-  transition: .5s ease;
-}
-
-#sidebutton span {
-  background-color: transparent;
-}
-
-/* FOOTER */
-
-footer {
-  background-color: #ffec38;
-  width:100%;
-  /* position: absolute; */
-  bottom: 0;
-  height: 7vh;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
-}
-
-/* Home CSS */
+/* Restaurants CSS */
 
 .home-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -242,9 +181,292 @@ footer {
   transition: .5s ease;
 }
 
+#mcd {
+  cursor: pointer;
+}
 
+/* HOME CONTENT */
 
-/* hide */
+.queue-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px !important;
+  margin: 16px;
+  margin-left: 2% !important;
+  height: 350px;
+  padding-bottom: 10px !important;
+}
+
+.queue-inside {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.whitespace {
+  color: white;
+  margin-bottom: -20px !important;
+}
+
+#queue-number {
+  font-size: 100px;
+}
+
+.home-button:hover, #home-menu:hover {
+  background-color: #ff5050;
+  transition: .5s ease;
+}
+
+.center {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.queue-active {
+  background-color: #ff5050 !important;
+}
+
+#group-number {
+  width: 220px;
+  height: 220px;
+  font-size: 100px !important;
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  font-size: 30px;
+  color: black;
+}
+
+#queue-wait {
+  font-size: 80px;
+}
+
+.home-button {
+  font-size: 50px;
+  width:100%;
+  height: 100%;
+  background-color: #ff6666;
+  color: white;
+  border: 3px solid #ff5050;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.5) !important;
+}
+
+.delivery {
+  background-color: #64e764;
+  border: 3px solid #4ee44e;
+}
+
+.delivery:hover {
+  background-color: #4ee44e;
+  transition: .5s ease;
+}
+
+.dhover:hover {
+  background-color: #ff5050;
+  transition: .5s ease;
+}
+
+#queue {
+  height: 220px;
+  width: 300px;
+}
+
+/* MENU CONTENT */
+
+​ .wrapper {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+  height: auto !important;
+  width: 100%;
+}
+
+.menu-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  margin: 16px;
+}
+
+.menu-img {
+  object-fit: contain;
+}
+
+.break {
+  border: 3px solid #f1f1f1;
+}
+
+.img-fluid {
+  max-height: 100%;
+  height: auto;
+}
+
+.desktop {
+  background-color: #ff6666;
+  color: #fff;
+  border: 1px solid #ff5050;
+  width: 125px;
+  height: 50px;
+  font-weight: bold;
+  box-shadow: 1px 1px 1px black;
+  max-width: 15em !important;
+  margin: 5px !important;
+}
+
+.desktop:hover {
+  background-color: #ff5050;
+  transition: .5s ease;
+}
+
+#sidebutton span {
+  background-color: transparent;
+}
+
+/* REVIEW */
+
+#overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5) !important;
+  z-index: 2;
+  overflow-y: scroll;
+}
+
+#review-image {
+  width: 100px;
+  height: 100px;
+}
+.rate {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.review-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#review {
+  background-color: white;
+  width: 90%;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 2px solid grey !important;
+  font-family: 'Open Sans', san-serif !important;
+  overflow: visible !important;
+  position: static !important;
+}
+
+.bar {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+.bar-5 {
+  width: 80%; height: 18px; background-color: #ff6961;
+}
+.bar-4 {
+  width: 60%; height: 18px; background-color: #778ecb;
+}
+.bar-3 {
+  width: 20%; height: 18px; background-color: #ffb347;
+}
+.bar-2 {
+  width: 2%; height: 18px; background-color: #add8e6;
+}
+.bar-1 {
+  width: 10%; height: 18px; background-color: #77dd77;
+}
+
+.side {
+  float: left;
+  width: 15%;
+  margin-top: 10px;
+}
+
+.middle {
+  float: left;
+  width: 70%;
+  margin-top: 10px;
+}
+
+.profile {
+  width: 100px;
+}
+
+.right {
+  text-align: right;
+}
+
+.name {
+  margin-left: 2px;
+}
+
+.mobile {
+  margin-bottom: 25px;
+  padding: 10px 40px;
+  font-size: 30px;
+  width: 100%;
+  display: none;
+}
+
+.mobile-profile {
+  width: 40px;
+}
+
+.mobile-head {
+  display: none;
+}
+
+@media (max-width:1000px) {
+  .mobile {
+      display: block;
+  }
+
+  .right {
+      display: none;
+  }
+
+  .middle {
+      width: 85%;
+  }
+
+  .side {
+      display: none;
+  }
+
+  .mobile-head {
+      display: block;
+  }
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #ffec38;
+  width:100%;
+  /* position: absolute; */
+  bottom: 0;
+  height: 7vh;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+}
+
+/* HIDE */
+
 .hidden {
   visibility: hidden;
 }
@@ -252,6 +474,8 @@ footer {
 .hide {
   display: none;
 }
+
+/* MEDIA CSS */
 
 @media (max-width: 1250px) {
   .desktop {

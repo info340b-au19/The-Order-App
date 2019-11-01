@@ -87,10 +87,33 @@ $(function () {
       deliveryButton.removeClass("delivery");
       deliveryButton.addClass("dhover");
       deliveryButton.html("DINE IN");
+
+      // DINE-IN MODE
+      $("#queue-header").html("Groups in queue");
+      $("#queue-number").html("9");
+      $("#group-number").removeClass("hide");
+      $("#queue-wait").html("15");
+      $("#queue").removeClass("delivery");
+      $("#queue").addClass("dhover");
+      $("#home-menu").removeClass("delivery");
+      $("#home-menu").addClass("dhover");
+
     } else {
+      // DELIVERY BUTTON
       deliveryButton.addClass("delivery");
       deliveryButton.removeClass("dhover");
       deliveryButton.html("DELIVERY");
+
+      // DELIVERY MODE
+      $("#queue-header").html("Delivery queue");
+      $("#queue-number").html("3");
+      $("#group-number").addClass("hide");
+      $("#queue-wait").html("5");
+      $("#queue").addClass("delivery");
+      $("#queue").removeClass("dhover");
+      $("#home-menu").addClass("delivery");
+      $("#home-menu").removeClass("dhover");
+
     }
   }
 

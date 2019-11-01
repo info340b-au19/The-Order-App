@@ -211,11 +211,6 @@ content {
   font-size: 100px;
 }
 
-.home-button:hover, #home-menu:hover {
-  background-color: #ff5050;
-  transition: .5s ease;
-}
-
 .center {
   position: absolute;
   top: 25%;

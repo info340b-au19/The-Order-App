@@ -17,40 +17,25 @@
 </head>
 
 <body>
+    <!-- header bar -->
     <header class="container mt-3">
-        
-        <div>
-        <!-- <a id="nav-toggle" href="#">&#9776;</a> -->
-
-        <!-- <img class="mt-3" id="logo" src="img/logo_text-01.png" alt="logo">
-        <span class = "text-center">
-        <input type="text" class = "form-control-inline " placeholder="Search..">
-        </span>
-        <a><img class="float-right mt-3" id="cart" src="img/cart.png" alt="cart"></a>
-        <a><img class="float-right mt-3 mr-4" id="prof" src="img/joshua.jpg" alt="profile pic"></a> -->
-
-        <!-- <button class="float-right mt-4 btn btn-dark">Sign Up</button>
-        <button class="float-right mr-3 mt-4 btn btn-outline-dark">Log In</button> -->
-        
-    </div>
-
-    <div class="input-group">
+        <div class="input-group">
             <!-- <a id="nav-toggle" href="#">&#9776;</a> -->
-    
             <img id="logo" src="img/logo_text-01.png" alt="logo">
 
             <input type="text" class="form-control mt-2 ml-3 mr-4" placeholder="Search restaurants... ">
 
-            <a><img id="prof" class = "float-right mr-4 mt-1" src="img/joshua.jpg" alt="profile pic"></a>
-            <a><img id="cart" class = "float-right mt-1"src="img/cart.png" alt="cart"></a>
-            
-    
+            <a><img id="prof" class="float-right mr-4 mt-1" src="img/joshua.jpg" alt="profile pic"></a>
+            <a><img id="cart" class="float-right mt-1" src="img/cart.png" alt="cart"></a>
+
             <!-- <button class="float-right mt-4 btn btn-dark">Sign Up</button>
             <button class="float-right mr-3 mt-4 btn btn-outline-dark">Log In</button> -->
-            
         </div>
     </header>
+
+    
     <content>
+        <!-- navi bar -->
         <div class="wrapper">
             <nav id="sidebar">
                 <div class="sb-head">
@@ -273,7 +258,7 @@
 
                         <p>Bacon QFC</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button id="rbutton" class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -290,7 +275,7 @@
 
                         <p>Double Bacon QPC</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop" > Order</button>
                             <button class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -307,7 +292,7 @@
 
                         <p>QFC</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -326,7 +311,7 @@
 
                         <p>4 Piece Spicy BBQ Tenders</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -343,7 +328,7 @@
 
                         <p>Big Mac</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -360,7 +345,7 @@
 
                         <p>20 Piece McNuggets</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -379,7 +364,7 @@
 
                         <p>Cheeseburger</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -396,7 +381,7 @@
 
                         <p>Double Cheeseburger</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -413,7 +398,7 @@
 
                         <p>Triple Cheeseburger</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -432,7 +417,7 @@
 
                         <p>Chicken Tenders</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -449,7 +434,7 @@
 
                         <p>Bacon McDouble</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -466,7 +451,7 @@
 
                         <p>McChicken</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -475,7 +460,7 @@
             </div>
         </div>
 
-        <div id="overlay" class="hidden">
+        <!-- <div id="overlay" class="hidden">
             <div id="review">
                 <div>
                     <img src="img/placeholder.png" alt="placeholder" id="review-image">
@@ -532,7 +517,7 @@
                     <hr class="break">
 
                     <div id="review-review"></div>
-                </div>
+                </div> -->
                 <!--
         <div id="overlay" class="hidden">
             <div id="review">
@@ -774,18 +759,37 @@
             </div>
         </div>
 -->
-                <!-- SERVICE CONTENT -->
-                <div id="service" class="content hide">
+        
+
+        <!-- SERVICE CONTENT -->
+        <div id="service" class="content hide">
+            <div class="flexcontainer">
+
+                <div class="row">
+                    <div class="card queue-card col-lg col-mg-2 col-sm-4">
+                        <button id="check-out" class="home-button dhover">CHECK OUT</button>
+                    </div>
+                    <div class="card queue-card col-lg col-mg-2 col-sm-4">
+                        <button id="water" class="home-button dhover">ADD WATER</button>
+                    </div>
+                    <div class="card queue-card col-lg col-mg-2 col-sm-4">
+                        <button id="other-service" class="home-button dhover">OTHERS</button>
+                    </div>
                 </div>
 
-                <!-- MY ORDER CONTENT -->
-                <div id="myorder" class="content hide">
-                </div>
+                <hr class="space-break">
+            </div>
+        </div>
 
-                <footer>
-                    <p class="float-right mt-3 mr-3">Copyright © 2019 Order Inc. </p>
-                    <p class="float-right mt-3 mr-3">Author: Eric Ng, Mingyi Yang </p>
-                </footer>
+        <!-- MY ORDER CONTENT -->
+        <div id="myorder" class="content hide">
+        </div>
+        
+        <!-- footer -->
+        <footer class="hide">
+            <p class="float-right mt-3 mr-3">Copyright © 2019 Order Inc. </p>
+            <p class="float-right mt-3 mr-3">Author: Eric Ng, Mingyi Yang </p>
+        </footer>
     </content>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

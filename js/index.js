@@ -31,9 +31,7 @@ $(function () {
     }
   }
 
-  // ------------------------------------------
-
-  // RESTAURANT CONTENT FUNCTIONALITY
+  // -----------RESTAURANTS FUNCTIONALITY------------------------------
 
   $("#mcd").click(homeScreen);
 
@@ -45,7 +43,7 @@ $(function () {
   }
 
 
-  // HOME CONTENT FUNCTIONALITY
+  // -----------HOME FUNCTIONALITY------------------------------
 
   // QUEUE BUTTON
 
@@ -155,9 +153,8 @@ $(function () {
     $("#sbmenu").addClass("current");
   }
 
-  // ------------------------------------------
+  // -----------MENU FUNCTIONALITY------------------------------
 
-  // MENU FUNCTIONALITY
 
   // MENU - REVIEWS
   $("#rbutton").click(review);
@@ -251,5 +248,23 @@ $(function () {
 
     //FINISH LATER
   }
+
+  // MENU - ORDER
+  $("#orderBt").click(order);
+  function order() {
+    var newOrder = $('p');
+    var dishName = $(this).parent().parent().find('p').text();
+    console.log(dishName);
+
+    newOrder.val(dishName) 
+    $("myorder").append(newOrder)
+  }
+  //-----------SERVICE FUNCTIONALITY-------------------------
+
+
+  // ------------ORDER FUNCTIONALITY------------------------------
+
+  
+
 
 });

@@ -17,6 +17,10 @@ body {
 */
 
 /* TOP BAR */
+header {
+  height: 70px;
+}
+
 #cart {
   width: 40px;
 }
@@ -25,12 +29,9 @@ body {
   width: 120px;
 }
 
+
 #prof {
   width: 40px;
-}
-
-header {
-  height: 70px;
 }
 
 content {
@@ -535,4 +536,54 @@ footer {
     color: white;
     transition: .5s ease;
   }
+}
+
+
+/* css for search.html */
+.btn{
+  text-align: center;
+  padding: 1px;
+  width: 90px;
+  font: helvetica;
+  line-height: 2;
+  border-radius: 10px;
+}
+  
+#logo {
+  width: 120px;
+}
+
+body.search {
+  background-image: url("../img/bg-landscape.png");
+  background-position: center top;
+  background-size: cover;
+  background-color: white !important;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.search-textbox {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20vh;
+}
+
+footer {
+  background-color: #ffeb3886;
+  height: 7vh;
+  bottom: 0px;
+  position: fixed;
+  width: 100%;
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23); */
+}
+
+::placeholder {
+  font-size: 1rem;
+}
+
+@media all and (orientation:portrait) {
+
+  body.search {
+    background-image: url("../img/bg-portrait.png");
+  }  
 }

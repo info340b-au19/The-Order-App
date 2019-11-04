@@ -1,0 +1,49 @@
+[{
+    "id": "1",
+    "info": {
+        "foodName": "Bacon QPC",
+        "src": "bacon qpc.jpeg",
+        "alt": "burger",
+        "averageRating": "4.1",
+        "ratingCount": "254",
+        "ratings": {
+            "fivestar": "80",
+            "fourstar": "60",
+            "threestar": "20",
+            "twostar": "2",
+            "onestar": "10" 
+        }
+    },
+    "review": [
+        {
+            "picture": "joshua.jpg",
+            "name": "Joshua Kim",
+            "review": "My favorite burger that is on the menu, you can get this with a side of fries and a coke for such a cheap price. This burger tops their McChicken and McNuggets any day :)!",
+            "rating": "4"
+        },
+        {
+            "picture": "victoria.jpg",
+            "name": "Victoria Quan",
+            "review": "It is okay.",
+            "rating": "3"
+        },
+        {
+            "picture": "victor.jpeg",
+            "name": "Victor Rolnaldo",
+            "review": "Do not get this burger!!! It came out raw in the middle and the server did not give me a new one when I asked for one medium rare. Maybe it was in the moment but I did not have a good time with this one.",
+            "rating": "1"
+        },
+        {
+            "picture": "jennie.jpg",
+            "name": "Jennie Kim",
+            "review": "AMAZINGGggg! 10/10 would order again. Probably the best meal I had in ages.",
+            "rating": "5"
+        },
+        {
+            "picture": "bill.jpg",
+            "name": "Bill Gates",
+            "review": "Decent burger with enough meat and vegetables as a balance. Always great with the fries and a soda on the side. Would get this again as a midnight snack.",
+            "rating": "4"
+        }
+    ]
+}]

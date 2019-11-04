@@ -154,6 +154,7 @@ content {
 
 .closed-overlay:hover .closed {
   opacity: 1;
+  transition: .5s ease;
 }
 
 .closed-text {
@@ -224,6 +225,10 @@ content {
   background-color: #ff5050 !important;
 }
 
+.queue-dactive {
+  background-color: #1ec71e !important;
+}
+
 #group-number {
   width: 220px;
   height: 220px;
@@ -252,11 +257,11 @@ content {
 
 .delivery {
   background-color: #64e764;
-  border: 3px solid #4ee44e;
+  border: 3px solid #1ec71e;
 }
 
 .delivery:hover {
-  background-color: #4ee44e;
+  background-color: #1ec71e;
   transition: .5s ease;
 }
 
@@ -346,6 +351,15 @@ content {
   margin-top: 5px;
 }
 
+#review-name {
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: -10px !important;
+  margin-bottom: -5px !important;
+  margin-left: -5px !important;
+  padding: 0px;
+}
+
 .review-row:after {
   content: "";
   display: table;
@@ -359,9 +373,21 @@ content {
   margin: 0 auto;
   margin-top: 20px;
   border: 2px solid grey !important;
-  font-family: 'Open Sans', san-serif !important;
   overflow: visible !important;
   position: static !important;
+}
+
+.back {
+  background-color: #ff6666;
+  color: #fff;
+  width: 80px;
+  height: 40px;
+  border: 1px solid #ff5050;
+}
+
+.back:hover {
+  background-color: #ff5050;
+  transition: .5s ease;
 }
 
 .bar {
@@ -372,19 +398,31 @@ content {
 }
 
 .bar-5 {
-  width: 80%; height: 18px; background-color: #ff6961;
+  width: 0%; 
+  height: 18px; 
+  background-color: #ff6961;
 }
 .bar-4 {
-  width: 60%; height: 18px; background-color: #778ecb;
+  width: 0%; 
+  height: 18px; 
+  background-color: #778ecb;
 }
+
 .bar-3 {
-  width: 20%; height: 18px; background-color: #ffb347;
+  width: 0%; 
+  height: 18px; 
+  background-color: #ffb347;
 }
+
 .bar-2 {
-  width: 2%; height: 18px; background-color: #add8e6;
+  width: 0%; 
+  height: 18px; 
+  background-color: #add8e6;
 }
+
 .bar-1 {
-  width: 10%; height: 18px; background-color: #77dd77;
+  width: 0%; 
+  height: 18px; background-color: #77dd77;
 }
 
 .side {
@@ -495,5 +533,6 @@ footer {
   #sidebutton:hover {
     background-color: #ff6666;
     color: white;
+    transition: .5s ease;
   }
 }

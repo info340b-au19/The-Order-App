@@ -38,7 +38,7 @@
                         <button class="sbbutton current"><i class="fas fa-utensils"></i> Restaurants</button>
                     </li>
                     <li>
-                        <button class="sbbutton"><i class="fas fa-home"></i> Home</button>
+                        <button id="sbhome" class="sbbutton"><i class="fas fa-home"></i> Home</button>
                     </li>
                     <li>
                         <button id="sbmenu" class="sbbutton"><i class="fas fa-list-ul"></i> Menu</button>
@@ -250,7 +250,7 @@
                         <p>Bacon QFC</p>
                         <div>
                             <button class="desktop">Order</button>
-                            <a href="index1.html"><button class="desktop">Reviews</button></a>
+                            <button id="rbutton" class="desktop">Reviews</button>
                         </div>
                     </div>
 
@@ -454,8 +454,67 @@
         <div id="overlay" class="hidden">
             <div id="review">
                 <div>
-                    <img src="img/bacon qpc.jpeg" alt="burger" id="review-image">
+                    <img src="img/placeholder.png" alt="placeholder" id="review-image">
+                    <button class="back pull-right"><i class="fas fa-arrow-left"></i></button>
+                    <div id="review-rating">
+                        <span class="heading">User Rating</span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
 
+                    <p id="review-name">NAME</p>
+                    <p id="review-description">REVIEW AVERAGE</p>
+                    <button class="mobile">Order</button>
+                </div>
+
+                <hr class="break">
+
+
+                <div class="review-row">
+                    <div class="rate">
+                        <div>5 <span class="fa fa-star checked"></span></div>
+                        <div class="bar">
+                            <div class="bar-5"></div>
+                        </div>
+                    </div>
+                    <div class="rate">
+                        <div>4 <span class="fa fa-star checked"></span></div>
+                        <div class="bar">
+                            <div class="bar-4"></div>
+                        </div>
+                    </div>
+                    <div class="rate">
+                        <div>3 <span class="fa fa-star checked"></span></div>
+                        <div class="bar">
+                            <div class="bar-3"></div>
+                        </div>
+                    </div>
+                    <div class="rate">
+                        <div>2 <span class="fa fa-star checked"></span></div>
+                        <div class="bar">
+                            <div class="bar-2"></div>
+                        </div>
+                    </div>
+                    <div class="rate">
+                        <div>1 <span class="fa fa-star checked"></span></div>
+                        <div class="bar">
+                            <div class="bar-1"></div>
+                        </div>
+                    </div>
+
+                    <hr class="break">
+
+                    <div id="review-review"></div>
+                </div>
+                <!--
+        <div id="overlay" class="hidden">
+            <div id="review">
+                <div>
+                    <img src="img/bacon qpc.jpeg" alt="burger" id="review-image">
+                    <button class="back pull-right"><i class="fas fa-arrow-left"></i></button>
                     <div aria-label="4 out of 5">
                         <span class="heading">User Rating</span>
                         <span class="fa fa-star checked"></span>
@@ -690,23 +749,26 @@
                 </div>
             </div>
         </div>
+-->
+                <!-- SERVICE CONTENT -->
+                <div id="service" class="content hide">
+                </div>
 
-        <!-- SERVICE CONTENT -->
-        <div id="service" class="content hide">
-        </div>
+                <!-- MY ORDER CONTENT -->
+                <div id="myorder" class="content hide">
+                </div>
 
-        <!-- MY ORDER CONTENT -->
-        <div id="myorder" class="content hide">
-        </div>
-
-        <footer>
-            <p class="float-right mt-3 mr-3">Copyright © 2019 Order Inc. </p>
-            <p class="float-right mt-3 mr-3">Author: Eric Ng, Mingyi Yang </p>
-        </footer>
+                <footer>
+                    <p class="float-right mt-3 mr-3">Copyright © 2019 Order Inc. </p>
+                    <p class="float-right mt-3 mr-3">Author: Eric Ng, Mingyi Yang </p>
+                </footer>
     </content>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
 </body>
 
 

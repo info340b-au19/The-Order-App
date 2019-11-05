@@ -340,16 +340,30 @@ $(function () {
   }
 
   // MENU - ORDER
-  $("#orderBt").click(order);
-  function order() {
+  $(".orderBt").click(order);
+  function order(event) {
+    $(".noItemAlert").addClass("hide");
+    $(".total-price, table").removeClass("hide");
     
-    var dishName = $(this).parent().parent().find('p#dishName').text();
-    var dishPrice = $(this).parent().parent().find('p#dishPrice').text();
-    console.log(dishPrice);
-    var newOrderDish = $('<p id="orderedDish">').text(dishName+" "+dishPrice);
-
+    var dishName = $(event.target).parent().parent().find('.dishName').text();
+    var dishPrice = $(event.target).parent().parent().find('.dishPrice').text();
+    // console.log(dishPrice);
+    var newOrderDish = $("<tr></tr>");
+    newOrderDish.append($('<td></td>').text(dishName));
+    newOrderDish.append($('<td></td>').text(1));
+    newOrderDish.append($('<td></td>').text(dishPrice));
     // newOrder.text(dishName); 
-    $("#myorder").append(newOrderDish);
+    $("#myorder tbody").append(newOrderDish);
+    // console.log($("tbody td:last-child").text().length);
+    
+    // var totalPrice = 0;
+    // for each (var item in $("tr:last-child")) {
+    // totalPrice += item.text();
+    // }
+    
+    
+    // $(".total-price").text("Total Price: "+totalPrice);
+
   }
   //-----------SERVICE FUNCTIONALITY-------------------------
 

@@ -35,6 +35,7 @@ $(function () {
     }
   }
 
+<<<<<<< HEAD
   $("#hamburger").click(openSidebar);
 
   function openSidebar() {
@@ -54,6 +55,9 @@ $(function () {
   // ------------------------------------------
 
   // RESTAURANT CONTENT FUNCTIONALITY
+=======
+  // -----------RESTAURANTS FUNCTIONALITY------------------------------
+>>>>>>> 7785af2f0923c9e3d952c106225563716d5edd0b
 
   $("#mcd").click(homeScreen);
 
@@ -65,7 +69,7 @@ $(function () {
   }
 
 
-  // HOME CONTENT FUNCTIONALITY
+  // -----------HOME FUNCTIONALITY------------------------------
 
   // QUEUE BUTTON
 
@@ -175,9 +179,8 @@ $(function () {
     $("#sbmenu").addClass("current");
   }
 
-  // ------------------------------------------
+  // -----------MENU FUNCTIONALITY------------------------------
 
-  // MENU FUNCTIONALITY
 
   // MENU - REVIEWS
 
@@ -311,5 +314,23 @@ $(function () {
 
     }
   }
+
+  // MENU - ORDER
+  $("#orderBt").click(order);
+  function order() {
+    var newOrder = $('p');
+    var dishName = $(this).parent().parent().find('p').text();
+    console.log(dishName);
+
+    newOrder.val(dishName) 
+    $("myorder").append(newOrder)
+  }
+  //-----------SERVICE FUNCTIONALITY-------------------------
+
+
+  // ------------ORDER FUNCTIONALITY------------------------------
+
+  
+
 
 });

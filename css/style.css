@@ -53,7 +53,6 @@ content {
   position: fixed;
   overflow-x: hidden;
   box-shadow: 5px 5px 5px grey;
-  z-index: 9999;
 }
 
 .sb-head {
@@ -119,12 +118,12 @@ content {
 }
 
 #hamburger {
-  margin-top: 15px;
   margin-right: 40px;
   background-color: #ff6666;
   border: 1px solid #ff5050;
   width: 60px;
   height: 40px;
+  display: none;
 }
 
 #hamburger:hover {
@@ -548,6 +547,14 @@ content {
 
   .card {
     cursor: pointer;
+  }
+
+  #sidebar {
+    z-index: 9999;
+  }
+
+  #hamburger {
+    display: block;
   }
 }
 

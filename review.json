@@ -80,37 +80,6 @@
         ]
     },
     {
-        "id": "2",
-        "info": {
-            "foodName": "Double Bacon QPC",
-            "src": "double bacon qpc.jpeg",
-            "alt": "burger",
-            "averageRating": "4.2",
-            "ratingCount": "351",
-            "ratings": {
-                "fivestar": "43",
-                "fourstar": "77",
-                "threestar": "30",
-                "twostar": "24",
-                "onestar": "1"
-            }
-        },
-        "review": [
-            {
-                "picture": "andrew.jpg",
-                "name": "Andrew Chu",
-                "review": "aaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaa",
-                "rating": "3"
-            },
-            {
-                "picture": "barack.jpg",
-                "name": "Barack Obama",
-                "review": "would give it a 10 if there was an option for a 10",
-                "rating": "5"
-            }
-        ]
-    },
-    {
         "id": "3",
         "info": {
             "foodName": "QPC",
@@ -211,6 +180,191 @@
     },
     {
         "id": "6",
+        "info": {
+            "foodName": "20 McNuggets",
+            "src": "20mcnuggets.jpeg",
+            "alt": "burger",
+            "averageRating": "2.2",
+            "ratingCount": "59",
+            "ratings": {
+                "fivestar": "12",
+                "fourstar": "32",
+                "threestar": "34",
+                "twostar": "49",
+                "onestar": "38"
+            }
+        },
+        "review": [
+            {
+                "picture": "kevin.jpg",
+                "name": "Kevin Nguyen",
+                "review": "It looked half alive when it came out",
+                "rating": "1"
+            },
+            {
+                "picture": "tiffany.jpg",
+                "name": "Tiffany Zhu",
+                "review": "Same as the last guy",
+                "rating": "2"
+            },
+            {
+                "picture": "momo.jpg",
+                "name": "Momo",
+                "review": "Same as the last girl.",
+                "rating": "1"
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "info": {
+            "foodName": "Cheeseburger",
+            "src": "cheeseburger.jpeg",
+            "alt": "burger",
+            "averageRating": "4.6",
+            "ratingCount": "574",
+            "ratings": {
+                "fivestar": "42",
+                "fourstar": "22",
+                "threestar": "64",
+                "twostar": "31",
+                "onestar": "10"
+            }
+        },
+        "review": [
+            {
+                "picture": "justin.jpg",
+                "name": "Justin Bieber",
+                "review": "It is a pretty basic burger but it gets the job done... after eating like 3 of them",
+                "rating": "3"
+            },
+            {
+                "picture": "jacksonw.jpg",
+                "name": "Jackson Wang",
+                "review": "Ay this burger comes with so many different condiments and extras that you can put on the burger",
+                "rating": "2"
+            },
+            {
+                "picture": "david.jpg",
+                "name": "David Beckham",
+                "review": "Good good good good good good good good, pretty nice",
+                "rating": "4"
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "info": {
+            "foodName": "Double Cheeseburger",
+            "src": "double cheeseburger.jpeg",
+            "alt": "burger",
+            "averageRating": "1.9",
+            "ratingCount": "43",
+            "ratings": {
+                "fivestar": "12",
+                "fourstar": "26",
+                "threestar": "16",
+                "twostar": "62",
+                "onestar": "31"
+            }
+        },
+        "review": [
+            {
+                "picture": "lisa.jpeg",
+                "name": "Lisa",
+                "review": "I am running out of things to say so this burger was not bad but not good",
+                "rating": "3"
+            },
+            {
+                "picture": "jisoo.jpg",
+                "name": "Jisoo Zhang",
+                "review": "I rather take my money else where than buy this burger again",
+                "rating": "2"
+            },
+            {
+                "picture": "chen.jpg",
+                "name": "Kit Chen",
+                "review": "made me so mad, don't spend your money on this one",
+                "rating": "1"
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "info": {
+            "foodName": "20 McNuggets",
+            "src": "triple cheeseburger.jpeg",
+            "alt": "burger",
+            "averageRating": "4.1",
+            "ratingCount": "286",
+            "ratings": {
+                "fivestar": "46",
+                "fourstar": "51",
+                "threestar": "21",
+                "twostar": "5",
+                "onestar": "12"
+            }
+        },
+        "review": [
+            {
+                "picture": "chanyeol.jpg",
+                "name": "Chanyeol Park",
+                "review": "Triple cheese burgers have 3 patties while cheeseburgers have only 1",
+                "rating": "4"
+            },
+            {
+                "picture": "taylor.jpg",
+                "name": "Taylor Swift",
+                "review": "TRUE",
+                "rating": "5"
+            },
+            {
+                "picture": "ariana.jpg",
+                "name": "Ariana Grande",
+                "review": "Triple is one more than the double cheeseburger",
+                "rating": "3"
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "info": {
+            "foodName": "Chicken Tenders",
+            "src": "chicken tenders.jpeg",
+            "alt": "burger",
+            "averageRating": "3.6",
+            "ratingCount": "124",
+            "ratings": {
+                "fivestar": "37",
+                "fourstar": "19",
+                "threestar": "22",
+                "twostar": "38",
+                "onestar": "12"
+            }
+        },
+        "review": [
+            {
+                "picture": "nicki.png",
+                "name": "Nicki Minaj",
+                "review": "Pretty good",
+                "rating": "4"
+            },
+            {
+                "picture": "tiffany.jpg",
+                "name": "Tiffany Zhu",
+                "review": "Same as the last guy",
+                "rating": "2"
+            },
+            {
+                "picture": "momo.jpg",
+                "name": "Momo",
+                "review": "Same as the last girl.",
+                "rating": "1"
+            }
+        ]
+    },
+    {
+        "id": "11",
         "info": {
             "foodName": "20 McNuggets",
             "src": "20mcnuggets.jpeg",

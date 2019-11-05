@@ -181,39 +181,60 @@ $(function () {
   // MENU - REVIEWS
 
   // MOBILE CLICK
-  if (window.matchMedia("(max-width: 1300px)")) {
-    var mobile = "#mobile-"
-    for (var i = 0; i < 2; i++) {
-      console.log(i + "hello");
-      $(mobile + i).click(function() {
-        console.log(i);
-        review(i - 1); // Not sure why i icremented 1 when inside here
-      });
-    }
+
+  fetch("../review.json")
+    .then(function (response) {
+      var dataPromise = response.json();
+      return dataPromise;
+    }).then(function (data) {
+      reviewClick(data);
+    })
+    .catch(function (error) {
+      alert("error");
+    })
+
+  function reviewClick(data) {
+    $("#mobile-0").click(function() {
+      reviewPage(data[0]);
+    })
+    $("#mobile-1").click(function() {
+      reviewPage(data[1]);
+    })
+    $("#mobile-2").click(function() {
+      reviewPage(data[2]);
+    })
+    $("#mobile-3").click(function() {
+      reviewPage(data[3]);
+    })
+    $("#mobile-4").click(function() {
+      reviewPage(data[4]);
+    })
+    $("#mobile-5").click(function() {
+      reviewPage(data[5]);
+    })
+    $("#mobile-6").click(function() {
+      reviewPage(data[6]);
+    })
+    $("#mobile-7").click(function() {
+      reviewPage(data[7]);
+    })
+    $("#mobile-8").click(function() {
+      reviewPage(data[8]);
+    })
+    $("#mobile-9").click(function() {
+      reviewPage(data[9]);
+    })
+    $("#mobile-10").click(function() {
+      reviewPage(data[10]);
+    })
+    $("#mobile-11").click(function() {
+      reviewPage(data[11]);
+    })
   }
 
-  function review(id) {
+  function reviewPage(json) {
     $("#overlay").removeClass("hidden");
-    fetch("../review.json")
-      .then(function (response) {
-        var dataPromise = response.json();
-        return dataPromise;
-      }).then(function (data) {
-        reviewPage(data, id);
-      })
-      .catch(function (error) {
-        alert("error");
-      })
-  }
-
-  $(".back").click(back);
-
-  function back() {
-    $("#overlay").addClass("hidden");
-  }
-
-  function reviewPage(info, id) {
-    var data = info[id];
+    var data = json;
 
     // Picture
     $("#review-image").attr("src", "img/" + data.info.src);
@@ -309,6 +330,13 @@ $(function () {
       })
 
     }
+  }
+
+  $(".back").click(back);
+
+  function back() {
+    $("#overlay").addClass("hidden");
+    $("#review-review").html("");
   }
 
   // MENU - ORDER

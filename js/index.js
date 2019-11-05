@@ -58,6 +58,7 @@ $(function () {
   $("#mcd").click(homeScreen);
 
   function homeScreen() {
+    $(".sb-head > h1").removeClass("hidden");
     contentTabs[0].addClass("hide");
     $(".current").removeClass("current");
     contentTabs[1].removeClass("hide");

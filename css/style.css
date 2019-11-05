@@ -52,6 +52,7 @@ content {
   position: fixed;
   overflow-x: hidden;
   box-shadow: 5px 5px 5px grey;
+  z-index: 9999;
 }
 
 .sb-head {
@@ -82,6 +83,12 @@ content {
   transition: .5s ease;
 }
 
+#sidebar.active {
+  margin-left: 0% !important;
+  transition: all 0.5s ease-in-out;
+  top: 0px;
+}
+
 /* UNIVERSAL CONTENT */
 
 .content {
@@ -108,6 +115,42 @@ content {
 
 .checked {
   color: orange;
+}
+
+#hamburger {
+  margin-top: 15px;
+  margin-right: 40px;
+  background-color: #ff6666;
+  border: 1px solid #ff5050;
+  width: 60px;
+  height: 40px;
+}
+
+#hamburger:hover {
+  background-color: #ff5050;
+  transition: .5s ease;
+}
+
+#hamburger.active {
+  background-color: #ff5050;
+}
+
+#mobile-overlay {
+  position: fixed;
+  display: none !important;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7) !important;
+  z-index: 2;
+  overflow-y: scroll;
+}
+
+#mobile-overlay.active {
+  display: block !important;
 }
 
 /* Restaurants CSS */
@@ -447,9 +490,10 @@ content {
 
 .name {
   margin-left: 2px;
+  font-size: 20px;
 }
 
-.mobile {
+.mobile-order {
   margin-bottom: 25px;
   padding: 10px 40px;
   font-size: 30px;
@@ -459,15 +503,30 @@ content {
 
 .mobile-profile {
   width: 40px;
+  float: left;
+  margin-right: 10px;
+}
+
+.mobile-name {
+  font-size: 25px;
 }
 
 .mobile-head {
   display: none;
 }
 
-@media (max-width:1000px) {
-  .mobile {
+/* REVIEW PAGE MEDIA QUERY */
+
+@media (max-width:1300px) {
+  .mobile-order {
       display: block;
+      background-color: #ff6666;
+      color: #fff;
+      border: 1px solid #ff5050;
+  }
+
+  .mobile-order:hover {
+    background-color: #ff5050;
   }
 
   .right {
@@ -484,6 +543,10 @@ content {
 
   .mobile-head {
       display: block;
+  }
+
+  .card {
+    cursor: pointer;
   }
 }
 
@@ -510,18 +573,28 @@ footer {
 
 /* MEDIA CSS */
 
-@media (max-width: 1250px) {
+/* MENU */
+
+@media (max-width: 1300px) {
   .desktop {
     display: none;
   }
 }
 
-@media (max-width: 1100px) {
+/* UNIVERSAL */
+@media (max-width: 1380px) {
+  .extra-info {
+    display: none;
+  }
+}
+
+
+@media (max-width: 1240px) {
   #sidebar {
     margin-left: -45%;
   }
 
-  #content {
+  .content {
     width: 100%;
     margin-left: 10%;
   }

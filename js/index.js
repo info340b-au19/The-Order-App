@@ -22,13 +22,33 @@ $(function () {
       })
 
       contentTabs[index].removeClass("hide");
-
+      
       if (index != 0) {
         $("h1").removeClass("hidden");
       } else {
         $("h1").addClass("hidden");
       }
+
+      $("#mobile-overlay").removeClass("active");
+      $("#sidebar").removeClass("active");
+      $("#hamburger").removeClass("active");
     }
+  }
+
+  $("#hamburger").click(openSidebar);
+
+  function openSidebar() {
+    $(this).addClass("active");
+    $("#sidebar").addClass("active");
+    $("#mobile-overlay").addClass("active");
+  }
+
+  $("#mobile-overlay").click(closeSidebar);
+
+  function closeSidebar() {
+    $(this).removeClass("active");
+    $("#sidebar").removeClass("active");
+    $("#hamburger").removeClass("active");
   }
 
   // ------------------------------------------
@@ -160,16 +180,27 @@ $(function () {
   // MENU FUNCTIONALITY
 
   // MENU - REVIEWS
-  $("#rbutton").click(review);
 
-  function review() {
+  // MOBILE CLICK
+  if (window.matchMedia("(max-width: 1300px)")) {
+    var mobile = "#mobile-"
+    for (var i = 0; i < 2; i++) {
+      console.log(i + "hello");
+      $(mobile + i).click(function() {
+        console.log(i);
+        review(i - 1); // Not sure why i icremented 1 when inside here
+      });
+    }
+  }
+
+  function review(id) {
     $("#overlay").removeClass("hidden");
     fetch("../review.json")
       .then(function (response) {
         var dataPromise = response.json();
         return dataPromise;
       }).then(function (data) {
-        reviewPage(data);
+        reviewPage(data, id);
       })
       .catch(function (error) {
         alert("error");
@@ -182,8 +213,8 @@ $(function () {
     $("#overlay").addClass("hidden");
   }
 
-  function reviewPage(info) {
-    var data = info[0];
+  function reviewPage(info, id) {
+    var data = info[id];
 
     // Picture
     $("#review-image").attr("src", "img/" + data.info.src);
@@ -213,7 +244,7 @@ $(function () {
     // Reviews
     var reviewSection = $("#review-review");
     const reviewTemplate =
-      `<div id="review-reviews" class="review-row">
+      `<div class="review-row">
           <div class="side">
             <div>
               <img src="img/placeholder.png" alt="profile picture" class="profile">
@@ -222,9 +253,9 @@ $(function () {
           </div>
           <div class="middle">
           <div class="mobile-head">
-            <p><img src="img/placeholder.png" alt="profile picture" class="mobile-profile">
-                NAME</p>
-            <div id="review-mobile-stars">
+            <img src="img/placeholder.png" alt="profile picture" class="mobile-profile">
+            <p class="mobile-name">NAME</p>
+            <div class="review-mobile-stars">
                 <span class="fa fa-star"></span>
                 <span class="fa fa-star"></span>
                 <span class="fa fa-star"></span>
@@ -232,11 +263,10 @@ $(function () {
                 <span class="fa fa-star"></span>
             </div>
           </div>
-        <p>REVIEW TEXT</p>
-
+        <p class="review-section">REVIEW TEXT</p>
       </div>
       <div class="side right">
-          <div id="review-desktop-stars">
+          <div class="review-desktop-stars">
             <span class="fa fa-star"></span>
             <span class="fa fa-star"></span>
             <span class="fa fa-star"></span>
@@ -244,12 +274,42 @@ $(function () {
             <span class="fa fa-star"></span>
           </div>
       </div>
-    </div>`;
+    </div>
+    <hr class="break">`;
 
-    $(reviewTemplate).appendTo(reviewSection);
-    $(reviewTemplate).appendTo(reviewSection);
+    for (var i = 0; i < data.review.length; i++) {
+      var reviewer = data.review[i];
+      $(reviewTemplate).appendTo(reviewSection);
 
-    //FINISH LATER
+      // Pictures
+      $(".profile").last().attr("src", "img/" + reviewer.picture);
+      $(".mobile-profile").last().attr("src", "img/" + reviewer.picture);
+
+      // Names
+      $("p.name").last().html(reviewer.name);
+      $(".mobile-name").last().html(reviewer.name);
+
+      // Reviews
+      $(".review-section").last().html(reviewer.review);
+
+      // Stars (0 - 5)
+      var star = parseInt(reviewer.rating)
+      var mobileStar = $(".review-mobile-stars").last();
+      var desktopStar = $(".review-desktop-stars").last();
+
+      $(mobileStar).find("span").each(function (index) {
+        if (index < star) {
+          $(this).addClass("checked");
+        }
+      })
+
+      $(desktopStar).find("span").each(function (index) {
+        if (index < star) {
+          $(this).addClass("checked");
+        }
+      })
+
+    }
   }
 
 });

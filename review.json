@@ -1,49 +1,249 @@
-[{
-    "id": "1",
-    "info": {
-        "foodName": "Bacon QPC",
-        "src": "bacon qpc.jpeg",
-        "alt": "burger",
-        "averageRating": "4.1",
-        "ratingCount": "254",
-        "ratings": {
-            "fivestar": "80",
-            "fourstar": "60",
-            "threestar": "20",
-            "twostar": "2",
-            "onestar": "10" 
-        }
+[
+    {
+        "id": "1",
+        "info": {
+            "foodName": "Bacon QPC",
+            "src": "bacon qpc.jpeg",
+            "alt": "burger",
+            "averageRating": "3.1",
+            "ratingCount": "254",
+            "ratings": {
+                "fivestar": "80",
+                "fourstar": "60",
+                "threestar": "20",
+                "twostar": "2",
+                "onestar": "10"
+            }
+        },
+        "review": [
+            {
+                "picture": "joshua.jpg",
+                "name": "Joshua Kim",
+                "review": "My favorite burger that is on the menu, you can get this with a side of fries and a coke for such a cheap price. This burger tops their McChicken and McNuggets any day :)!",
+                "rating": "4"
+            },
+            {
+                "picture": "victoria.jpg",
+                "name": "Victoria Quan",
+                "review": "It is okay.",
+                "rating": "3"
+            },
+            {
+                "picture": "victor.jpeg",
+                "name": "Victor Rolnaldo",
+                "review": "Do not get this burger!!! It came out raw in the middle and the server did not give me a new one when I asked for one medium rare. Maybe it was in the moment but I did not have a good time with this one.",
+                "rating": "1"
+            },
+            {
+                "picture": "jennie.jpg",
+                "name": "Jennie Kim",
+                "review": "AMAZINGGggg! 10/10 would order again. Probably the best meal I had in ages.",
+                "rating": "5"
+            },
+            {
+                "picture": "bill.jpg",
+                "name": "Bill Gates",
+                "review": "Decent burger with enough meat and vegetables as a balance. Always great with the fries and a soda on the side. Would get this again as a midnight snack.",
+                "rating": "4"
+            }
+        ]
     },
-    "review": [
-        {
-            "picture": "joshua.jpg",
-            "name": "Joshua Kim",
-            "review": "My favorite burger that is on the menu, you can get this with a side of fries and a coke for such a cheap price. This burger tops their McChicken and McNuggets any day :)!",
-            "rating": "4"
+    {
+        "id": "2",
+        "info": {
+            "foodName": "Double Bacon QPC",
+            "src": "double bacon qpc.jpeg",
+            "alt": "burger",
+            "averageRating": "4.2",
+            "ratingCount": "254",
+            "ratings": {
+                "fivestar": "43",
+                "fourstar": "77",
+                "threestar": "30",
+                "twostar": "24",
+                "onestar": "1"
+            }
         },
-        {
-            "picture": "victoria.jpg",
-            "name": "Victoria Quan",
-            "review": "It is okay.",
-            "rating": "3"
+        "review": [
+            {
+                "picture": "andrew.jpg",
+                "name": "Andrew Chu",
+                "review": "aaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaa",
+                "rating": "3"
+            },
+            {
+                "picture": "barack.jpg",
+                "name": "Barack Obama",
+                "review": "would give it a 10 if there was an option for a 10",
+                "rating": "5"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "info": {
+            "foodName": "Double Bacon QPC",
+            "src": "double bacon qpc.jpeg",
+            "alt": "burger",
+            "averageRating": "4.2",
+            "ratingCount": "351",
+            "ratings": {
+                "fivestar": "43",
+                "fourstar": "77",
+                "threestar": "30",
+                "twostar": "24",
+                "onestar": "1"
+            }
         },
-        {
-            "picture": "victor.jpeg",
-            "name": "Victor Rolnaldo",
-            "review": "Do not get this burger!!! It came out raw in the middle and the server did not give me a new one when I asked for one medium rare. Maybe it was in the moment but I did not have a good time with this one.",
-            "rating": "1"
+        "review": [
+            {
+                "picture": "andrew.jpg",
+                "name": "Andrew Chu",
+                "review": "aaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaa",
+                "rating": "3"
+            },
+            {
+                "picture": "barack.jpg",
+                "name": "Barack Obama",
+                "review": "would give it a 10 if there was an option for a 10",
+                "rating": "5"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "info": {
+            "foodName": "QPC",
+            "src": "qpc.jpeg",
+            "alt": "burger",
+            "averageRating": "5",
+            "ratingCount": "129",
+            "ratings": {
+                "fivestar": "100",
+                "fourstar": "0",
+                "threestar": "0",
+                "twostar": "0",
+                "onestar": "0"
+            }
         },
-        {
-            "picture": "jennie.jpg",
-            "name": "Jennie Kim",
-            "review": "AMAZINGGggg! 10/10 would order again. Probably the best meal I had in ages.",
-            "rating": "5"
+        "review": [
+            {
+                "picture": "beyonce.jpg",
+                "name": "Beyonce",
+                "review": "no time for a review just 5 stars",
+                "rating": "5"
+            },
+            {
+                "picture": "chris.jpg",
+                "name": "Chris Wu",
+                "review": "Been coming to this restaurant every week and I always get this burger.",
+                "rating": "5"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "info": {
+            "foodName": "4 Piece Spicy BBQ Tenders",
+            "src": "4 piece spicy.jpeg",
+            "alt": "chicken tenders",
+            "averageRating": "3.9",
+            "ratingCount": "865",
+            "ratings": {
+                "fivestar": "44",
+                "fourstar": "52",
+                "threestar": "67",
+                "twostar": "44",
+                "onestar": "10"
+            }
         },
-        {
-            "picture": "bill.jpg",
-            "name": "Bill Gates",
-            "review": "Decent burger with enough meat and vegetables as a balance. Always great with the fries and a soda on the side. Would get this again as a midnight snack.",
-            "rating": "4"
-        }
-    ]
-}]
+        "review": [
+            {
+                "picture": "jackson.png",
+                "name": "Jackson Qi",
+                "review": "Average",
+                "rating": "3"
+            },
+            {
+                "picture": "keanu.jpg",
+                "name": "Keanu Reeves",
+                "review": "good side order with other dishes on the menu. cannot change spicy level, unlucky",
+                "rating": "3"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "info": {
+            "foodName": "Big Mac",
+            "src": "big mac.jpeg",
+            "alt": "burger",
+            "averageRating": "4.3",
+            "ratingCount": "321",
+            "ratings": {
+                "fivestar": "63",
+                "fourstar": "34",
+                "threestar": "23",
+                "twostar": "40",
+                "onestar": "2"
+            }
+        },
+        "review": [
+            {
+                "picture": "jungkook.jpg",
+                "name": "Jungkook Kim",
+                "review": "I come to this restaurant just to buy this burger!!!!!!!!!!1!",
+                "rating": "5"
+            },
+            {
+                "picture": "victoria.jpg",
+                "name": "Kelly Yang",
+                "review": "",
+                "rating": "3"
+            },
+            {
+                "picture": "kenny.jpg",
+                "name": "Kenny Nguyen",
+                "review": "BIG YIKES",
+                "rating": "1"
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "info": {
+            "foodName": "20 McNuggets",
+            "src": "20mcnuggets.jpeg",
+            "alt": "burger",
+            "averageRating": "2.2",
+            "ratingCount": "59",
+            "ratings": {
+                "fivestar": "12",
+                "fourstar": "32",
+                "threestar": "34",
+                "twostar": "49",
+                "onestar": "38"
+            }
+        },
+        "review": [
+            {
+                "picture": "kevin.jpg",
+                "name": "Kevin Nguyen",
+                "review": "It looked half alive when it came out",
+                "rating": "1"
+            },
+            {
+                "picture": "tiffany.jpg",
+                "name": "Tiffany Zhu",
+                "review": "Same as the last guy",
+                "rating": "2"
+            },
+            {
+                "picture": "momo.jpg",
+                "name": "Momo",
+                "review": "Same as the last girl.",
+                "rating": "1"
+            }
+        ]
+    }
+]

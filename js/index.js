@@ -35,7 +35,6 @@ $(function () {
     }
   }
 
-<<<<<<< HEAD
   $("#hamburger").click(openSidebar);
 
   function openSidebar() {
@@ -55,9 +54,6 @@ $(function () {
   // ------------------------------------------
 
   // RESTAURANT CONTENT FUNCTIONALITY
-=======
-  // -----------RESTAURANTS FUNCTIONALITY------------------------------
->>>>>>> 7785af2f0923c9e3d952c106225563716d5edd0b
 
   $("#mcd").click(homeScreen);
 

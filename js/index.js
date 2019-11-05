@@ -314,12 +314,14 @@ $(function () {
   // MENU - ORDER
   $("#orderBt").click(order);
   function order() {
-    var newOrder = $('p');
-    var dishName = $(this).parent().parent().find('p').text();
-    console.log(dishName);
+    
+    var dishName = $(this).parent().parent().find('p#dishName').text();
+    var dishPrice = $(this).parent().parent().find('p#dishPrice').text();
+    console.log(dishPrice);
+    var newOrderDish = $('<p id="orderedDish">').text(dishName+" "+dishPrice);
 
-    newOrder.val(dishName) 
-    $("myorder").append(newOrder)
+    // newOrder.text(dishName); 
+    $("#myorder").append(newOrderDish);
   }
   //-----------SERVICE FUNCTIONALITY-------------------------
 

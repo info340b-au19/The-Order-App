@@ -256,9 +256,10 @@
                             <span class="fa fa-star"></span>
                         </div>
 
-                        <p>Bacon QFC</p>
+                        <p id="dishName">Bacon QFC</p>
+                        <p id="dishPrice">$4.5</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button id="desktop-0" class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -273,9 +274,10 @@
                             <span class="fa fa-star"></span>
                         </div>
 
-                        <p>Double Bacon QPC</p>
+                        <p id = "dishName">Double Bacon QPC</p>
+                        <p id="dishPrice">$3.5</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button id="desktop-1" class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -290,9 +292,10 @@
                             <span class="fa fa-star checked"></span>
                         </div>
 
-                        <p>QFC</p>
+                        <p id="dishName">QFC</p>
+                        <p id="dishPrice">$5</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button id="desktop-2" class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -309,9 +312,10 @@
                             <span class="fa fa-star"></span>
                         </div>
 
-                        <p>4 Piece Spicy BBQ Tenders</p>
+                        <p id="dishName">4 Piece Spicy BBQ Tenders</p>
+                        <p id="dishPrice">$5.5</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button id="desktop-3" class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -326,9 +330,10 @@
                             <span class="fa fa-star"></span>
                         </div>
 
-                        <p>Big Mac</p>
+                        <p id="dishName">Big Mac</p>
+                        <p id="dishPrice">$6</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button id="desktop-4" class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -343,9 +348,10 @@
                             <span class="fa fa-star"></span>
                         </div>
 
-                        <p>20 Piece McNuggets</p>
+                        <p id="dishName">20 Piece McNuggets</p>
+                        <p id="dishPrice">$6.5</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button id="desktop-5" class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -362,9 +368,10 @@
                             <span class="fa fa-star"></span>
                         </div>
 
-                        <p>Cheeseburger</p>
+                        <p id="dishName">Cheeseburger</p>
+                        <p id="dishPrice">$4.0</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button id="desktop-6" class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -379,9 +386,10 @@
                             <span class="fa fa-star"></span>
                         </div>
 
-                        <p>Double Cheeseburger</p>
+                        <p id="dishName">Double Cheeseburger</p>
+                        <p id="dishPrice">$5.5</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button id="desktop-7" class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -396,9 +404,10 @@
                             <span class="fa fa-star"></span>
                         </div>
 
-                        <p>Triple Cheeseburger</p>
+                        <p id="dishName">Triple Cheeseburger</p>
+                        <p id="dishPrice">$6.0</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button id="desktop-8" class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -415,9 +424,10 @@
                             <span class="fa fa-star checked"></span>
                         </div>
 
-                        <p>Chicken Tenders</p>
+                        <p id="dishName">Chicken Tenders</p>
+                        <p id="dishPrice">$5.0</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button id="desktop-9" class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -432,9 +442,10 @@
                             <span class="fa fa-star"></span>
                         </div>
 
-                        <p>Bacon McDouble</p>
+                        <p id="dishName">Bacon McDouble</p>
+                        <p id="dishPrice">$6.0</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button id="desktop-10" class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -449,9 +460,10 @@
                             <span class="fa fa-star checked"></span>
                         </div>
 
-                        <p>McChicken</p>
+                        <p id="dishName">McChicken</p>
+                        <p>$3.5</p>
                         <div>
-                            <button class="desktop">Order</button>
+                            <button id="orderBt" class="desktop">Order</button>
                             <button id="desktop-11" class="desktop">Reviews</button>
                         </div>
                     </div>
@@ -523,13 +535,28 @@
 
         <!-- SERVICE CONTENT -->
         <div id="service" class="content hide">
+                <div class="flexcontainer">
+
+                        <div class="row">
+                            <div class="card queue-card col-lg col-mg-2 col-sm-4">
+                                <button id="check-out" class="home-button dhover">CHECK OUT</button>
+                            </div>
+                            <div class="card queue-card col-lg col-mg-2 col-sm-4">
+                                <button id="water" class="home-button dhover">ADD WATER</button>
+                            </div>
+                            <div class="card queue-card col-lg col-mg-2 col-sm-4">
+                                <button id="other-service" class="home-button dhover">OTHERS</button>
+                            </div>
+                        </div>
+
+                    </div>
         </div>
 
         <!-- MY ORDER CONTENT -->
         <div id="myorder" class="content hide">
         </div>
         <div id="mobile-overlay"></div>
-        <footer>
+        <footer class="hide">
             <p class="float-right mt-3 mr-3">Copyright © 2019 Order Inc. </p>
             <p class="float-right mt-3 mr-3">Author: Eric Ng, Mingyi Yang </p>
         </footer>

@@ -20,18 +20,23 @@
 <body>
     <!-- header bar -->
     <header class="container mt-3">
-        <div class="input-group">
+        <div id="navbar" class="input-group">
             <button id="hamburger" class="btn btn-info"><i class="fas fa-align-left"></i></button>
             <!-- </button> <a id="nav-toggle" href="#">&#9776;</a> -->
             <img id="logo" src="img/logo_text-01.png" alt="logo">
 
             <input type="text" id="search-desktop" class="form-control mt-2 ml-3 mr-2" placeholder="Search restaurants... ">
-            <a><i id="mag" class="fas fa-search fa-2x mt-2 mr-4" aria-hidden="true"></i></a>
+            <button class="search-button">Search</button>
             <a><img id="prof" class="float-right mt-1 mr-4" src="img/joshua.jpg" alt="profile pic"></a>
             <a><img id="cart" class="float-right mt-1" src="img/cart.png" alt="cart"></a>
 
             <!-- <button class="float-right mt-4 btn btn-dark">Sign Up</button>
             <button class="float-right mr-3 mt-4 btn btn-outline-dark">Log In</button> -->
+        </div>
+        <div id="search-mobile" class="input-group">
+            <input type="text" id="mobile" class="form-control mt-2 ml-3 mr-2" placeholder="Search restaurants... ">
+            <button id="search-button" class="search-button">Search</button>
+            <i id="search-back"class="fas fa-arrow-up"></i>
         </div>
     </header>
 
@@ -554,6 +559,9 @@
                                 placeholder="Other services you need... "></label>
                     </div>
                     <button id="submit-service" class="desktop mt-3">Submit</button>
+                </div>
+                <div class="card serviceCard">
+                    
                 </div>
             </div>
 

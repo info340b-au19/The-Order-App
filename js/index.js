@@ -49,8 +49,28 @@ $(function () {
     $(this).removeClass("active");
     $("#sidebar").removeClass("active");
     $("#hamburger").removeClass("active");
+
+    if($("#search-mobile").hasClass("active")) {
+      $("#search-mobile").removeClass("active");
+    }
   }
 
+  $("#mag").click(mobileSearch);
+  $("#search-button").click(function() {
+    $(this).add("active");
+  })
+
+  function mobileSearch() {
+    $("#mobile-overlay").addClass("active");
+    $("#search-mobile").addClass("active");
+  }
+
+  $("#search-back").click(searchBack);
+
+  function searchBack() {
+    $("#mobile-overlay").removeClass("active");
+    $("#search-mobile").removeClass("active");
+  }
   // ------------------------------------------
 
   // RESTAURANT CONTENT FUNCTIONALITY
@@ -119,6 +139,7 @@ $(function () {
     } else {
       if (q.hasClass("queue-active")) {
         q.removeClass("queue-active");
+        q.css("background-color", "#ff6666"); // Some reason background doesnt change back to default
         qnumber.html("9");
       } else {
         q.addClass("queue-active");

@@ -2,7 +2,7 @@
 
 $(function () {
   // Adding tab functionality
-  var tabs = $(".sbbutton");
+  var tabs = $(".sb-button");
   var content = $(".content");
   // tabs restaurant - 0, home - 1, menu - 2, service - 3, my order - 4
   var contentTabs = [$("#restaurants"), $("#home"), $("#menu"), $("#service"), $("#myorder")];
@@ -22,7 +22,7 @@ $(function () {
       })
 
       contentTabs[index].removeClass("hide");
-      
+
       if (index != 0) {
         $("h1").removeClass("hidden");
       } else {
@@ -61,7 +61,7 @@ $(function () {
     contentTabs[0].addClass("hide");
     $(".current").removeClass("current");
     contentTabs[1].removeClass("hide");
-    $("#sbhome").addClass("current");
+    $("#sb-home").addClass("current");
   }
 
 
@@ -75,7 +75,6 @@ $(function () {
     var q = $(this);
     var qnumber = $("#queue-number");
     if (q.hasClass("delivery")) {
-      // RESET DINE-IN BUTTONS
 
       if (q.hasClass("queue-dactive")) {
         q.removeClass("queue-dactive");
@@ -102,7 +101,30 @@ $(function () {
     }
   }
 
-  var mintes = 15 * 60 * 1000;
+  $("#small-queue").click(smallQueue);
+  function smallQueue() {
+    var q = $(this);
+    var qnumber = $("#queue-number");
+    if (q.hasClass("delivery")) {
+      if (q.hasClass("queue-dactive")) {
+        q.removeClass("queue-dactive");
+        qnumber.html("3");
+
+
+      } else {
+        q.addClass("queue-dactive");
+        qnumber.html("4");
+      }
+    } else {
+      if (q.hasClass("queue-active")) {
+        q.removeClass("queue-active");
+        qnumber.html("9");
+      } else {
+        q.addClass("queue-active");
+        qnumber.html("10");
+      }
+    }
+  }
 
   var countdown = function () {
     $("#queue-wait").each(function () {
@@ -129,6 +151,8 @@ $(function () {
     $("#group-number").prop("disabled", false);
     $("#group-number").val("");
     $("#queue").removeClass("queue-dactive");
+    $("#small-queue").removeClass("queue-active");
+    $("#small-queue").removeClass("queue-dactive")
 
     if (deliveryButton.hasClass("delivery")) {
       deliveryButton.removeClass("delivery");
@@ -144,6 +168,8 @@ $(function () {
       $("#queue").addClass("dhover");
       $("#home-menu").removeClass("delivery");
       $("#home-menu").addClass("dhover");
+      $("#small-queue").removeClass("delivery");
+      $("#small-queue").addClass("dhover");
 
     } else {
       // DELIVERY BUTTON
@@ -160,6 +186,8 @@ $(function () {
       $("#queue").removeClass("dhover");
       $("#home-menu").addClass("delivery");
       $("#home-menu").removeClass("dhover");
+      $("#small-queue").addClass("delivery");
+      $("#small-queue").removeClass("dhover");
 
     }
   }
@@ -172,7 +200,7 @@ $(function () {
     contentTabs[1].addClass("hide");
     $(".current").removeClass("current");
     contentTabs[2].removeClass("hide");
-    $("#sbmenu").addClass("current");
+    $("#sb-menu").addClass("current");
   }
 
   // -----------MENU FUNCTIONALITY------------------------------
@@ -187,47 +215,125 @@ $(function () {
       var dataPromise = response.json();
       return dataPromise;
     }).then(function (data) {
-      reviewClick(data);
+      reviewClickMobile(data);
+      reviewClickDesktop(data);
+
     })
     .catch(function (error) {
-      alert("error");
+      displayError(error);
     })
 
-  function reviewClick(data) {
-    $("#mobile-0").click(function() {
+  function reviewClickDesktop(data) {
+    $("#desktop-0").click(function () {
+      console.log("hello");
       reviewPage(data[0]);
     })
-    $("#mobile-1").click(function() {
+    $("#desktop-1").click(function () {
       reviewPage(data[1]);
     })
-    $("#mobile-2").click(function() {
+    $("#desktop-2").click(function () {
       reviewPage(data[2]);
     })
-    $("#mobile-3").click(function() {
+    $("#desktop-3").click(function () {
       reviewPage(data[3]);
     })
-    $("#mobile-4").click(function() {
+    $("#desktop-4").click(function () {
       reviewPage(data[4]);
     })
-    $("#mobile-5").click(function() {
+    $("#desktop-5").click(function () {
       reviewPage(data[5]);
     })
-    $("#mobile-6").click(function() {
+    $("#desktop-6").click(function () {
       reviewPage(data[6]);
     })
-    $("#mobile-7").click(function() {
+    $("#desktop-7").click(function () {
       reviewPage(data[7]);
     })
-    $("#mobile-8").click(function() {
+    $("#desktop-8").click(function () {
       reviewPage(data[8]);
     })
-    $("#mobile-9").click(function() {
+    $("#desktop-9").click(function () {
       reviewPage(data[9]);
     })
-    $("#mobile-10").click(function() {
+    $("#desktop-10").click(function () {
       reviewPage(data[10]);
     })
-    $("#mobile-11").click(function() {
+    $("desktop-11").click(function () {
+      reviewPage(data[11]);
+    })
+  }
+
+  function reviewClickMobile(data) {
+    $("#mobile-0").click(function () {
+      if (window.matchMedia("min-width: 1300px)").matches) {
+        return;
+      }
+      reviewPage(data[0]);
+    })
+    $("#mobile-1").click(function () {
+      if (window.matchMedia("min-width: 1300px)").matches) {
+        return;
+      }
+      reviewPage(data[1]);
+    })
+    $("#mobile-2").click(function () {
+      if (window.matchMedia("min-width: 1300px)").matches) {
+        return;
+      }
+      reviewPage(data[2]);
+    })
+    $("#mobile-3").click(function () {
+      if (window.matchMedia("min-width: 1300px)").matches) {
+        return;
+      }
+      reviewPage(data[3]);
+    })
+    $("#mobile-4").click(function () {
+      if (window.matchMedia("min-width: 1300px)").matches) {
+        return;
+      }
+      reviewPage(data[4]);
+    })
+    $("#mobile-5").click(function () {
+      if (window.matchMedia("min-width: 1300px)").matches) {
+        return;
+      }
+      reviewPage(data[5]);
+    })
+    $("#mobile-6").click(function () {
+      if (window.matchMedia("min-width: 1300px)").matches) {
+        return;
+      }
+      reviewPage(data[6]);
+    })
+    $("#mobile-7").click(function () {
+      if (window.matchMedia("min-width: 1300px)").matches) {
+        return;
+      }
+      reviewPage(data[7]);
+    })
+    $("#mobile-8").click(function () {
+      if (window.matchMedia("min-width: 1300px)").matches) {
+        return;
+      }
+      reviewPage(data[8]);
+    })
+    $("#mobile-9").click(function () {
+      if (window.matchMedia("min-width: 1300px)").matches) {
+        return;
+      }
+      reviewPage(data[9]);
+    })
+    $("#mobile-10").click(function () {
+      if (window.matchMedia("min-width: 1300px)").matches) {
+        return;
+      }
+      reviewPage(data[10]);
+    })
+    $("#mobile-11").click(function () {
+      if (window.matchMedia("min-width: 1300px)").matches) {
+        return;
+      }
       reviewPage(data[11]);
     })
   }
@@ -235,6 +341,9 @@ $(function () {
   function reviewPage(json) {
     $("#overlay").removeClass("hidden");
     var data = json;
+
+    // CLEAR TO AVOID DUPLICATE
+    $("#review-review").html("");
 
     // Picture
     $("#review-image").attr("src", "img/" + data.info.src);
@@ -333,10 +442,29 @@ $(function () {
   }
 
   $(".back").click(back);
+  $("#overlay").click(back);
 
   function back() {
     $("#overlay").addClass("hidden");
+
+    // RESET STARS AND REVIEWS SO IT DOESNT KEEP ADDING
     $("#review-review").html("");
+    $("#review-rating .fa.fa-star.checked").each(function () {
+      $(this).removeClass("checked");
+      console.log("hello");
+    });
+  }
+
+  function displayError(error) {
+    var p = document.createElement("P");
+    p.html(error.message);
+    p.addClass("alert");
+    p.addClass("alert-danger");
+    $("#error").appendChild(p);
+    content.each(function () {
+      $(this).addClass("hide");
+    })
+    $("#error").removeClass("hide");
   }
 
   // MENU - ORDER
@@ -344,7 +472,7 @@ $(function () {
   function order(event) {
     $(".noItemAlert").addClass("hide");
     $(".total-price, table").removeClass("hide");
-    
+
     var dishName = $(event.target).parent().parent().find('.dishName').text();
     var dishPrice = $(event.target).parent().parent().find('.dishPrice').text();
     // console.log(dishPrice);
@@ -355,13 +483,13 @@ $(function () {
     // newOrder.text(dishName); 
     $("#myorder tbody").append(newOrderDish);
     // console.log($("tbody td:last-child").text().length);
-    
+
     // var totalPrice = 0;
     // for each (var item in $("tr:last-child")) {
     // totalPrice += item.text();
     // }
-    
-    
+
+
     // $(".total-price").text("Total Price: "+totalPrice);
 
   }
@@ -370,7 +498,7 @@ $(function () {
 
   // ------------ORDER FUNCTIONALITY------------------------------
 
-  
+
 
 
 });

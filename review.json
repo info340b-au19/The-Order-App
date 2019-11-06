@@ -270,7 +270,7 @@
         },
         "review": [
             {
-                "picture": "lisa.jpeg",
+                "picture": "lisa.jpg",
                 "name": "Lisa",
                 "review": "I am running out of things to say so this burger was not bad but not good",
                 "rating": "3"
@@ -350,53 +350,90 @@
                 "rating": "4"
             },
             {
-                "picture": "tiffany.jpg",
-                "name": "Tiffany Zhu",
-                "review": "Same as the last guy",
-                "rating": "2"
+                "picture": "poki.jpg",
+                "name": "Imane Anys",
+                "review": "Bought like 20 of them to feed my whole houeshold ",
+                "rating": "4"
             },
             {
-                "picture": "momo.jpg",
-                "name": "Momo",
-                "review": "Same as the last girl.",
-                "rating": "1"
+                "picture": "myth.jpg",
+                "name": "Ali Kabbani",
+                "review": "The boys and I come to Mcds to get this burger all the time at 3am in the morning",
+                "rating": "5"
             }
         ]
     },
     {
         "id": "11",
         "info": {
-            "foodName": "20 McNuggets",
-            "src": "20mcnuggets.jpeg",
+            "foodName": "Bacon McDouble",
+            "src": "bacon mcdouble.jpeg",
             "alt": "burger",
-            "averageRating": "2.2",
-            "ratingCount": "59",
+            "averageRating": "1.2",
+            "ratingCount": "21",
             "ratings": {
                 "fivestar": "12",
-                "fourstar": "32",
-                "threestar": "34",
-                "twostar": "49",
-                "onestar": "38"
+                "fourstar": "15",
+                "threestar": "44",
+                "twostar": "22",
+                "onestar": "64"
             }
         },
         "review": [
             {
-                "picture": "kevin.jpg",
-                "name": "Kevin Nguyen",
-                "review": "It looked half alive when it came out",
+                "picture": "albert.jpg",
+                "name": "Albert BoxBox",
+                "review": "dont listen to the other people, I think this is actually a decent burger than what the reviews are saying",
+                "rating": "5"
+            },
+            {
+                "picture": "albert2.jpg",
+                "name": "Albert Sleightlymusical",
+                "review": "Alberts are never wrong",
+                "rating": "5"
+            },
+            {
+                "picture": "tyler1.jpg",
+                "name": "Tyler Steinkamp",
+                "review": "",
+                "rating": "1"
+            }
+        ]
+    },
+    {
+        "id": "12",
+        "info": {
+            "foodName": "McChicken",
+            "src": "mcchicken.jpeg",
+            "alt": "burger",
+            "averageRating": "5",
+            "ratingCount": "80294",
+            "ratings": {
+                "fivestar": "74",
+                "fourstar": "64",
+                "threestar": "21",
+                "twostar": "12",
+                "onestar": "3"
+            }
+        },
+        "review": [
+            {
+                "picture": "shroud.jpg",
+                "name": "Michael Grzesiek",
+                "review": "poakfpoesmgepgomeprmgkgmepgkmepgmerg,msdpvmsdpfkmpdsfmpsdgdlsgmkdp dsofmsdkgmd,gmo kdfmkosdfm dgso",
+                "rating": "4"
+            },
+            {
+                "picture": "scarra.jpg",
+                "name": "William Li",
+                "review": "No comment",
                 "rating": "1"
             },
             {
-                "picture": "tiffany.jpg",
-                "name": "Tiffany Zhu",
-                "review": "Same as the last guy",
-                "rating": "2"
-            },
-            {
-                "picture": "momo.jpg",
-                "name": "Momo",
-                "review": "Same as the last girl.",
-                "rating": "1"
+                "picture": "mike.jpg",
+                "name": "Mike Chen",
+                "review": "The burger is one of the most succulent tender piece of meat that I had ever had ever. If you are around the neighborhood, you have to come try this burger!",
+                "rating": "5"
             }
         ]
     }

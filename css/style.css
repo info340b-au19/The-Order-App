@@ -67,7 +67,7 @@ content {
   background-color: #ff5050 !important;
 }
 
-.sbbutton {
+.sb-button {
   padding: 30px;
   font-size: 2em;
   color: white;
@@ -77,7 +77,7 @@ content {
   display: block;
 }
 
-.sbbutton:hover {
+.sb-button:hover {
   color: #ff5050;
   background: #fff !important;
   transition: .5s ease;
@@ -570,6 +570,15 @@ content {
   padding: 30px; 
 
 }
+
+/* ERROR CSS */
+.error {
+  margin: 10px 0px;
+  padding: 12px;
+  color: #d8000c;
+  background-color: #ffd2d2;
+}
+
 /* FOOTER */
 
 footer {
@@ -592,6 +601,18 @@ footer {
 }
 
 /* MEDIA CSS */
+
+/* HOME */
+
+@media (max-width: 950px) {
+  #group-number {
+    display: none;
+  }
+
+  #queue {
+    display: none;
+  }
+}
 
 /* MENU */
 
@@ -630,6 +651,23 @@ footer {
   }
 }
 
+@media (max-width: 800px) {
+  #sidebar {
+    min-width: 40%;
+  }
+}
+
+
+/* MEDIA QUERY MENU */
+
+@media (min-width: 1300px) {
+  .menu-card {
+    pointer-events: none;
+  }
+  .desktop {
+    pointer-events: auto;
+  }
+}
 
 /* css for search.html */
 .btn{

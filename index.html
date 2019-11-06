@@ -6,6 +6,7 @@
     <meta name="author" content="Eric Ng and Mingyi Yang" />
     <meta name="description" content="stage2" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="keywords" content="food, restaurant, all-in-one, service">
     <title>Menu</title>
     <link href="css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -35,557 +36,566 @@
     </header>
 
 
-    <content>
-        <!-- navi bar -->
-        <div class="wrapper">
-            <nav id="sidebar">
-                <div class="sb-head">
-                    <h1 class="hidden">McDonalds</h1>
-                </div>
+    <main>
+        <content>
+            <!-- navi bar -->
+            <div class="wrapper">
+                <nav id="sidebar">
+                    <div class="sb-head">
+                        <h1 class="hidden">McDonalds</h1>
+                    </div>
 
-                <ul class="list-unstyled components">
-                    <li>
-                        <button class="sbbutton current"><i class="fas fa-utensils"></i> Restaurants</button>
-                    </li>
-                    <li>
-                        <button id="sbhome" class="sbbutton"><i class="fas fa-home"></i> Home</button>
-                    </li>
-                    <li>
-                        <button id="sbmenu" class="sbbutton"><i class="fas fa-list-ul"></i> Menu</button>
-                    </li>
-                    <li>
-                        <button class="sbbutton"><i class="fas fa-user-tie"></i> Service</button>
-                    </li>
-                    <li>
-                        <button class="sbbutton"><i class="fas fa-money-bill-alt"></i> My Order</button>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
-        <!-- RESTAURANT CONTENT -->
-        <div id="restaurants" class="content">
-            <div class="flexcontainer">
-                <h2>Restaurants around your Location</h2>
-                <div class="row">
-                    <div id="mcd" class="card home-card col-lg col-sm-4">
-                        <img src="img/mcd-home.jpeg" alt="restaurant" class="home-img img-fluid">
-                        <div class="home-info">
-                            <h3>McDonalds</h3>
-                            <p class="extra-info">Wait-time: 5-10 mins</p>
-                            <div class="star" aria-label="4 out of 5">
-                                <span>(4)</span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="extra-info">Delivery: Available</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card home-card col-lg col-sm-4 closed-overlay">
-                        <img src="img/bokabok-home.jpg" alt="restaurant" class="home-img img-fluid">
-                        <div class="home-info">
-                            <h3>Bok a Bok Chicken</h3>
-                            <p class="extra-info">Wait-time: 17-24 mins</p>
-                            <div class="star" aria-label="5 out of 5">
-                                <span>(5)</span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="extra-info">Delivery: Unavailable</span>
-                            </div>
-                        </div>
-                        <div class="closed">
-                            <div class="closed-text">UNAVAILABLE</div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="expand">expand</a>
-                <hr class="space-break">
-
-                <h2>New Restaurants to Try</h2>
-                <div class="row">
-                    <div class="card home-card col-lg col-sm-4 closed-overlay">
-                        <img src="img/thaigerroom-home" alt="restaurant" class="home-img img-fluid">
-                        <div class="home-info">
-                            <h3>Thaiger Room</h3>
-                            <p class="extra-info">Wait-time: 8-15 mins</p>
-                            <div class="star" aria-label="2 out of 5">
-                                <span>(2)</span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="extra-info">Delivery: Unavailable</span>
-                            </div>
-                        </div>
-                        <div class="closed">
-                            <div class="closed-text">UNAVAILABLE</div>
-                        </div>
-                    </div>
-                    <div class="card home-card col-lg col-sm-4 closed-overlay">
-                        <img src="img/denny-home.jpg" alt="restaurant" class="home-img img-fluid">
-                        <div class="home-info">
-                            <h3>Dennys</h3>
-                            <p class="extra-info">Wait-time: 5-12 mins</p>
-                            <div class="star" aria-label="5 out of 5">
-                                <span>(5)</span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="extra-info">Delivery: Unavailable</span>
-                            </div>
-                        </div>
-                        <div class="closed">
-                            <div class="closed-text">UNAVAILABLE</div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="expand">expand</a>
-                <hr class="space-break">
-
-                <h2>Go Back to the Classics</h2>
-                <div class="row">
-                    <div class="card home-card col-lg col-sm-4 closed-overlay">
-                        <img src="img/meesum-home.jpg" alt="restaurant" class="home-img img-fluid">
-                        <div class="home-info">
-                            <h3>Mee Sum</h3>
-                            <p class="extra-info">Wait-time: 20-30 mins</p>
-                            <div class="star" aria-label="3 out of 5">
-                                <span>(3)</span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="extra-info">Delivery: Available</span>
-                            </div>
-                        </div>
-                        <div class="closed">
-                            <div class="closed-text">UNAVAILABLE</div>
-                        </div>
-                    </div>
-                    <div class="card home-card col-lg col-sm-4 closed-overlay">
-                        <img src="img/starbucks-home" alt="restaurant" class="home-img img-fluid">
-                        <div class="home-info">
-                            <h3>Starbucks</h3>
-                            <p class="extra-info">Wait-time: 0-5 mins</p>
-                            <div class="star" aria-label="5 out of 5">
-                                <span>(4)</span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="extra-info">Delivery: Available</span>
-                            </div>
-                        </div>
-                        <div class="closed">
-                            <div class="closed-text">UNAVAILABLE</div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="expand">expand</a>
-                <hr class="space-break">
+                    <ul class="list-unstyled components">
+                        <li>
+                            <button class="sb-button current"><i class="fas fa-utensils"></i> Restaurants</button>
+                        </li>
+                        <li>
+                            <button id="sb-home" class="sb-button"><i class="fas fa-home"></i> Home</button>
+                        </li>
+                        <li>
+                            <button id="sb-menu" class="sb-button"><i class="fas fa-list-ul"></i> Menu</button>
+                        </li>
+                        <li>
+                            <button class="sb-button"><i class="fas fa-user-tie"></i> Service</button>
+                        </li>
+                        <li>
+                            <button class="sb-button"><i class="fas fa-money-bill-alt"></i> My Order</button>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-        </div>
 
-        <!-- HOME CONTENT -->
-        <div id="home" class="content hide">
-            <div class="flexcontainer">
-                <div class="row">
-                    <div class="card queue-card col-lg col-sm-4">
-                        <div class="row">
-                            <div class="col-lg">
-                                <div id="queue-header" class="queue-inside">Groups in queue</div>
-                                <div class="whitespace queue-inside">white</div>
-                                <div id="queue-number" class="queue-inside">9</div>
-                            </div>
-                            <div class="col-lg queue-inside">
-                                <div class="center">
-                                    <input id="group-number" placeholder="# of people">
-                                </div>
-                            </div>
-                            <div class="col-lg queue-inside">
-                                <div class="center">
-                                    <button id="queue" class="home-button dhover">Queue Up</button>
+            <!-- RESTAURANT CONTENT -->
+            <div id="restaurants" class="content">
+                <div class="flexcontainer">
+                    <h2>Restaurants around your Location</h2>
+                    <div class="row">
+                        <div id="mcd" class="card home-card col-lg col-sm-4">
+                            <img src="img/mcd-home.jpeg" alt="restaurant" class="home-img img-fluid">
+                            <div class="home-info">
+                                <h3>McDonalds</h3>
+                                <p class="extra-info">Wait-time: 5-10 mins</p>
+                                <div class="star" aria-label="4 out of 5" aria-hidden="true">
+                                    <span>(4)</span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="extra-info">Delivery: Available</span>
                                 </div>
                             </div>
                         </div>
+                        <div class="card home-card col-lg col-sm-4 closed-overlay">
+                            <img src="img/bokabok-home.jpg" alt="restaurant" class="home-img img-fluid">
+                            <div class="home-info">
+                                <h3>Bok a Bok Chicken</h3>
+                                <p class="extra-info">Wait-time: 17-24 mins</p>
+                                <div class="star" aria-label="5 out of 5" aria-hidden="true">
+                                    <span>(5)</span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="extra-info">Delivery: Unavailable</span>
+                                </div>
+                            </div>
+                            <div class="closed">
+                                <div class="closed-text">UNAVAILABLE</div>
+                            </div>
+                        </div>
                     </div>
+                    <a href="#" class="expand">expand</a>
+                    <hr class="space-break">
+
+                    <h2>New Restaurants to Try</h2>
+                    <div class="row">
+                        <div class="card home-card col-lg col-sm-4 closed-overlay">
+                            <img src="img/thaigerroom-home" alt="restaurant" class="home-img img-fluid">
+                            <div class="home-info">
+                                <h3>Thaiger Room</h3>
+                                <p class="extra-info">Wait-time: 8-15 mins</p>
+                                <div class="star" aria-label="2 out of 5" aria-hidden="true">
+                                    <span>(2)</span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="extra-info">Delivery: Unavailable</span>
+                                </div>
+                            </div>
+                            <div class="closed">
+                                <div class="closed-text">UNAVAILABLE</div>
+                            </div>
+                        </div>
+                        <div class="card home-card col-lg col-sm-4 closed-overlay">
+                            <img src="img/denny-home.jpg" alt="restaurant" class="home-img img-fluid">
+                            <div class="home-info">
+                                <h3>Dennys</h3>
+                                <p class="extra-info">Wait-time: 5-12 mins</p>
+                                <div class="star" aria-label="5 out of 5" aria-hidden="true">
+                                    <span>(5)</span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="extra-info">Delivery: Unavailable</span>
+                                </div>
+                            </div>
+                            <div class="closed">
+                                <div class="closed-text">UNAVAILABLE</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="expand">expand</a>
+                    <hr class="space-break">
+
+                    <h2>Go Back to the Classics</h2>
+                    <div class="row">
+                        <div class="card home-card col-lg col-sm-4 closed-overlay">
+                            <img src="img/meesum-home.jpg" alt="restaurant" class="home-img img-fluid">
+                            <div class="home-info">
+                                <h3>Mee Sum</h3>
+                                <p class="extra-info">Wait-time: 20-30 mins</p>
+                                <div class="star" aria-label="3 out of 5" aria-hidden="true">
+                                    <span>(3)</span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="extra-info">Delivery: Available</span>
+                                </div>
+                            </div>
+                            <div class="closed">
+                                <div class="closed-text">UNAVAILABLE</div>
+                            </div>
+                        </div>
+                        <div class="card home-card col-lg col-sm-4 closed-overlay">
+                            <img src="img/starbucks-home" alt="restaurant" class="home-img img-fluid">
+                            <div class="home-info">
+                                <h3>Starbucks</h3>
+                                <p class="extra-info">Wait-time: 0-5 mins</p>
+                                <div class="star" aria-label="5 out of 5" aria-hidden="true">
+                                    <span>(4)</span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="extra-info">Delivery: Available</span>
+                                </div>
+                            </div>
+                            <div class="closed">
+                                <div class="closed-text">UNAVAILABLE</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="expand">expand</a>
+                    <hr class="space-break">
                 </div>
-                <hr class="space-break">
-
-                <div class="row">
-                    <div class="card queue-card col-lg col-mg-2 col-sm-4">
-                        <div class="queue-inside">Wait-time (mins)</div>
-                        <div class="whitespace queue-inside">white</div>
-                        <div id="queue-wait" class="queue-inside">15</div>
-                    </div>
-                    <div class="card queue-card col-lg col-mg-2 col-sm-4">
-
-                        <button id="home-delivery" class="home-button dhover">DINE IN</button>
-
-                    </div>
-                    <div class="card queue-card col-lg col-mg-2 col-sm-4">
-                        <button id="home-menu" class="home-button dhover">MENU</button>
-                    </div>
-                </div>
-
-                <hr class="space-break">
             </div>
-        </div>
 
-        <!-- MENU CONTENT -->
-        <div id="menu" class="content hide">
-            <div class="flexcontainer">
-                <div class="row">
-                    <div id="mobile-0" class="card menu-card col-lg col-mg-2 col-sm-4">
-                        <img src="img/bacon qpc.jpeg" alt="burger" class="menu-img img-fluid">
-                        <div class="star" aria-label="3 out of 5">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
+            <!-- HOME CONTENT -->
+            <div id="home" class="content hide">
+                <div class="flexcontainer">
+                    <div class="row">
+                        <div class="card queue-card col-lg col-sm-4">
+                            <div class="row">
+                                <div class="col-lg">
+                                    <div id="queue-header" class="queue-inside">Groups in queue</div>
+                                    <div class="whitespace queue-inside">white</div>
+                                    <div id="queue-number" class="queue-inside">9</div>
+                                </div>
+                                <div class="col-lg queue-inside">
+                                    <div class="center">
+                                        <input id="group-number" placeholder="# of people">
+                                    </div>
+                                </div>
+                                <div class="col-lg queue-inside">
+                                    <div class="center">
+                                        <button id="queue" class="home-button dhover">Queue Up</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    <hr class="space-break">
 
-                        <p class="dishName">Bacon QFC</p>
-                        <p class="dishPrice">$4.5</p>
-                        <div>
-                            <button class="desktop orderBt">Order</button>
-                            <button id="desktop-0" class="desktop">Reviews</button>
+                    <div class="row">
+                        <div class="card queue-card col-sm-4 d-md-none d-lg-none">
+                            <button id="small-queue" class="home-button dhover">QUEUE</button>
+                        </div>
+                        <div class="card queue-card col-lg col-mg-2 col-sm-4">
+                            <div class="queue-inside">Wait-time (mins)</div>
+                            <div class="whitespace queue-inside">white</div>
+                            <div id="queue-wait" class="queue-inside">15</div>
+                        </div>
+                        <div class="card queue-card col-lg col-mg-2 col-sm-4">
+                            <button id="home-delivery" class="home-button dhover">DINE IN</button>
+                        </div>
+                        <div class="card queue-card col-lg col-mg-2 col-sm-4">
+                            <button id="home-menu" class="home-button dhover">MENU</button>
                         </div>
                     </div>
 
-                    <div id="mobile-1" class="card menu-card col-lg col-mg-2 col-sm-4">
-                        <img src="img/double bacon qpc.jpeg" alt="burger" class="menu-img img-fluid">
-                        <div class="star" aria-label="4 out of 5">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-
-                        <p class="dishName">Double Bacon QPC</p>
-                        <p class="dishPrice">$3.5</p>
-                        <div>
-                            <button class="desktop orderBt">Order</button>
-                            <button id="desktop-1" class="desktop">Reviews</button>
-                        </div>
-                    </div>
-
-                    <div id="mobile-2" class="card menu-card col-lg col-mg-2 col-sm-4">
-                        <img src="img/qpc.jpeg" alt="burger" class="menu-img img-fluid">
-                        <div class="star" aria-label="5 out of 5">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                        </div>
-
-                        <p class="dishName">QFC</p>
-                        <p class="dishPrice">$5</p>
-                        <div>
-                            <button class="desktop orderBt">Order</button>
-                            <button id="desktop-2" class="desktop">Reviews</button>
-                        </div>
-                    </div>
+                    <hr class="space-break">
                 </div>
-
-                <div class="row">
-                    <div id="mobile-3" class="card menu-card col-lg col-mg-2 col-sm-4">
-                        <img src="img/4 piece spicy.jpeg" alt="fries" class="menu-img img-fluid">
-                        <div class="star" aria-label="3 out of 5">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-
-                        <p class="dishName">4 Piece Spicy BBQ Tenders</p>
-                        <p class="dishPrice">$5.5</p>
-                        <div>
-                            <button class="desktop orderBt">Order</button>
-                            <button id="desktop-3" class="desktop">Reviews</button>
-                        </div>
-                    </div>
-
-                    <div id="mobile-4" class="card menu-card col-lg col-mg-2 col-sm-4">
-                        <img src="img/big mac.jpeg" alt="burger" class="menu-img img-fluid">
-                        <div class="star" aria-label="4 out of 5">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-
-                        <p class="dishName">Big Mac</p>
-                        <p class="dishPrice">$6</p>
-                        <div>
-                            <button class="desktop orderBt">Order</button>
-                            <button id="desktop-4" class="desktop">Reviews</button>
-                        </div>
-                    </div>
-
-                    <div id="mobile-5" class="card menu-card col-lg col-mg-2 col-sm-4">
-                        <img src="img/20mcnuggets.jpeg" alt="fries" class="menu-img img-fluid">
-                        <div class="star" aria-label="2 out of 5">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-
-                        <p class="dishName">20 Piece McNuggets</p>
-                        <p class="dishPrice">$6.5</p>
-                        <div>
-                            <button class="desktop orderBt">Order</button>
-                            <button id="desktop-5" class="desktop">Reviews</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div id="mobile-6" class="card menu-card col-lg col-mg-2 col-sm-4">
-                        <img src="img/cheeseburger.jpeg" alt="burger" class="menu-img img-fluid">
-                        <div class="star" aria-label="3 out of 5">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-
-                        <p class="dishName">Cheeseburger</p>
-                        <p class="dishPrice">$4.0</p>
-                        <div>
-                            <button class="desktop orderBt">Order</button>
-                            <button id="desktop-6" class="desktop">Reviews</button>
-                        </div>
-                    </div>
-
-                    <div id="mobile-7" class="card menu-card col-lg col-mg-2 col-sm-4">
-                        <img src="img/double cheeseburger.jpeg" alt="burger" class="menu-img img-fluid">
-                        <div class="star" aria-label="3 out of 5">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-
-                        <p class="dishName">Double Cheeseburger</p>
-                        <p class="dishPrice">$5.5</p>
-                        <div>
-                            <button class="desktop orderBt">Order</button>
-                            <button id="desktop-7" class="desktop">Reviews</button>
-                        </div>
-                    </div>
-
-                    <div id="mobile-8" class="card menu-card col-lg col-mg-2 col-sm-4">
-                        <img src="img/triple cheeseburger.jpeg" alt="burger" class="menu-img img-fluid">
-                        <div class="star" aria-label="3 out of 5">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-
-                        <p class="dishName">Triple Cheeseburger</p>
-                        <p class="dishPrice">$6.0</p>
-                        <div>
-                            <button class="desktop orderBt">Order</button>
-                            <button id="desktop-8" class="desktop">Reviews</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div id="mobile-9" class="card menu-card col-lg col-mg-2 col-sm-4">
-                        <img src="img/chicken tenders.jpeg" alt="fries" class="menu-img img-fluid">
-                        <div class="star" aria-label="5 out of 5">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                        </div>
-
-                        <p class="dishName">Chicken Tenders</p>
-                        <p class="dishPrice">$5.0</p>
-                        <div>
-                            <button class="desktop orderBt">Order</button>
-                            <button id="desktop-9" class="desktop">Reviews</button>
-                        </div>
-                    </div>
-
-                    <div id="mobile-10" class="card menu-card col-lg col-mg-2 col-sm-4">
-                        <img src="img/bacon mcdouble.jpeg" alt="burger" class="menu-img img-fluid">
-                        <div class="star" aria-label="4 out of 5">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-
-                        <p class="dishName">Bacon McDouble</p>
-                        <p class="dishPrice">$6.0</p>
-                        <div>
-                            <button class="desktop orderBt">Order</button>
-                            <button id="desktop-10" class="desktop">Reviews</button>
-                        </div>
-                    </div>
-
-                    <div id="mobile-11" class="card menu-card col-lg col-mg-2 col-sm-4">
-                        <img src="img/mcchicken.jpeg" alt="burger" class="menu-img img-fluid">
-                        <div class="star" aria-label="5 out of 5">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                        </div>
-
-                        <p class="dishName">McChicken</p>
-                        <p class="dishPrice">$3.5</p>
-                        <div>
-                            <button class="desktop orderBt">Order</button>
-                            <button id="desktop-11" class="desktop">Reviews</button>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
 
-        <div id="overlay" class="hidden">
-            <div id="review">
-                <div>
-                    <img src="img/placeholder.png" alt="placeholder" id="review-image">
-                    <button class="back pull-right"><i class="fas fa-arrow-left"></i></button>
-                    <div id="review-rating">
-                        <span class="heading">User Rating</span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
+            <!-- MENU CONTENT -->
+            <div id="menu" class="content hide">
+                <div class="flexcontainer">
+                    <div class="row">
+                        <div id="mobile-0" class="card menu-card col-lg col-mg-2 col-sm-4">
+                            <img src="img/bacon qpc.jpeg" alt="burger" class="menu-img img-fluid">
+                            <div class="star" aria-label="3 out of 5" aria-hidden="true">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                            <p class="dishName">Bacon QFC</p>
+                            <p class="dishPrice">$4.5</p>
+                            <div>
+                                <button class="desktop orderBt">Order</button>
+                                <button id="desktop-0" class="desktop">Reviews</button>
+                            </div>
+                        </div>
+
+                        <div id="mobile-1" class="card menu-card col-lg col-mg-2 col-sm-4">
+                            <img src="img/double bacon qpc.jpeg" alt="burger" class="menu-img img-fluid">
+                            <div class="star" aria-label="4 out of 5" aria-hidden="true">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                            <p class="dishName">Double Bacon QPC</p>
+                            <p class="dishPrice">$3.5</p>
+                            <div>
+                                <button class="desktop orderBt">Order</button>
+                                <button id="desktop-1" class="desktop">Reviews</button>
+                            </div>
+                        </div>
+
+                        <div id="mobile-2" class="card menu-card col-lg col-mg-2 col-sm-4">
+                            <img src="img/qpc.jpeg" alt="burger" class="menu-img img-fluid">
+                            <div class="star" aria-label="5 out of 5" aria-hidden="true">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+
+                            <p class="dishName">QFC</p>
+                            <p class="dishPrice">$5</p>
+                            <div>
+                                <button class="desktop orderBt">Order</button>
+                                <button id="desktop-2" class="desktop">Reviews</button>
+                            </div>
+                        </div>
                     </div>
 
-                    <p id="review-name">NAME</p>
-                    <p id="review-description">REVIEW AVERAGE</p>
-                    <button class="mobile-order">Order</button>
+                    <div class="row">
+                        <div id="mobile-3" class="card menu-card col-lg col-mg-2 col-sm-4">
+                            <img src="img/4 piece spicy.jpeg" alt="fries" class="menu-img img-fluid">
+                            <div class="star" aria-label="3 out of 5" aria-hidden="true">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                            <p class="dishName">4 Piece Spicy BBQ Tenders</p>
+                            <p class="dishPrice">$5.5</p>
+                            <div>
+                                <button class="desktop orderBt">Order</button>
+                                <button id="desktop-3" class="desktop">Reviews</button>
+                            </div>
+                        </div>
+
+                        <div id="mobile-4" class="card menu-card col-lg col-mg-2 col-sm-4">
+                            <img src="img/big mac.jpeg" alt="burger" class="menu-img img-fluid">
+                            <div class="star" aria-label="4 out of 5" aria-hidden="true">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                            <p class="dishName">Big Mac</p>
+                            <p class="dishPrice">$6</p>
+                            <div>
+                                <button class="desktop orderBt">Order</button>
+                                <button id="desktop-4" class="desktop">Reviews</button>
+                            </div>
+                        </div>
+
+                        <div id="mobile-5" class="card menu-card col-lg col-mg-2 col-sm-4">
+                            <img src="img/20mcnuggets.jpeg" alt="fries" class="menu-img img-fluid">
+                            <div class="star" aria-label="2 out of 5" aria-hidden="true">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                            <p class="dishName">20 Piece McNuggets</p>
+                            <p class="dishPrice">$6.5</p>
+                            <div>
+                                <button class="desktop orderBt">Order</button>
+                                <button id="desktop-5" class="desktop">Reviews</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div id="mobile-6" class="card menu-card col-lg col-mg-2 col-sm-4">
+                            <img src="img/cheeseburger.jpeg" alt="burger" class="menu-img img-fluid">
+                            <div class="star" aria-label="3 out of 5" aria-hidden="true">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                            <p class="dishName">Cheeseburger</p>
+                            <p class="dishPrice">$4.0</p>
+                            <div>
+                                <button class="desktop orderBt">Order</button>
+                                <button id="desktop-6" class="desktop">Reviews</button>
+                            </div>
+                        </div>
+
+                        <div id="mobile-7" class="card menu-card col-lg col-mg-2 col-sm-4">
+                            <img src="img/double cheeseburger.jpeg" alt="burger" class="menu-img img-fluid">
+                            <div class="star" aria-label="3 out of 5" aria-hidden="true">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                            <p class="dishName">Double Cheeseburger</p>
+                            <p class="dishPrice">$5.5</p>
+                            <div>
+                                <button class="desktop orderBt">Order</button>
+                                <button id="desktop-7" class="desktop">Reviews</button>
+                            </div>
+                        </div>
+
+                        <div id="mobile-8" class="card menu-card col-lg col-mg-2 col-sm-4">
+                            <img src="img/triple cheeseburger.jpeg" alt="burger" class="menu-img img-fluid">
+                            <div class="star" aria-label="3 out of 5" aria-hidden="true">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                            <p class="dishName">Triple Cheeseburger</p>
+                            <p class="dishPrice">$6.0</p>
+                            <div>
+                                <button class="desktop orderBt">Order</button>
+                                <button id="desktop-8" class="desktop">Reviews</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div id="mobile-9" class="card menu-card col-lg col-mg-2 col-sm-4">
+                            <img src="img/chicken tenders.jpeg" alt="fries" class="menu-img img-fluid">
+                            <div class="star" aria-label="5 out of 5" aria-hidden="true">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+
+                            <p class="dishName">Chicken Tenders</p>
+                            <p class="dishPrice">$5.0</p>
+                            <div>
+                                <button class="desktop orderBt">Order</button>
+                                <button id="desktop-9" class="desktop">Reviews</button>
+                            </div>
+                        </div>
+
+                        <div id="mobile-10" class="card menu-card col-lg col-mg-2 col-sm-4">
+                            <img src="img/bacon mcdouble.jpeg" alt="burger" class="menu-img img-fluid">
+                            <div class="star" aria-label="4 out of 5" aria-hidden="true">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                            <p class="dishName">Bacon McDouble</p>
+                            <p class="dishPrice">$6.0</p>
+                            <div>
+                                <button class="desktop orderBt">Order</button>
+                                <button id="desktop-10" class="desktop">Reviews</button>
+                            </div>
+                        </div>
+
+                        <div id="mobile-11" class="card menu-card col-lg col-mg-2 col-sm-4">
+                            <img src="img/mcchicken.jpeg" alt="burger" class="menu-img img-fluid">
+                            <div class="star" aria-label="5 out of 5" aria-hidden="true">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+
+                            <p class="dishName">McChicken</p>
+                            <p class="dishPrice">$3.5</p>
+                            <div>
+                                <button class="desktop orderBt">Order</button>
+                                <button id="desktop-11" class="desktop">Reviews</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+            </div>
 
-                <hr class="break">
+            <div id="overlay" class="hidden">
+                <div id="review">
+                    <div>
+                        <img src="img/placeholder.png" alt="placeholder" id="review-image">
+                        <button class="back pull-right"><i class="fas fa-arrow-left"></i></button>
+                        <div id="review-rating" aria-hidden="true">
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
 
-
-                <div class="review-row">
-                    <div class="rate">
-                        <div>5 <span class="fa fa-star checked"></span></div>
-                        <div class="bar">
-                            <div class="bar-5"></div>
-                        </div>
-                    </div>
-                    <div class="rate">
-                        <div>4 <span class="fa fa-star checked"></span></div>
-                        <div class="bar">
-                            <div class="bar-4"></div>
-                        </div>
-                    </div>
-                    <div class="rate">
-                        <div>3 <span class="fa fa-star checked"></span></div>
-                        <div class="bar">
-                            <div class="bar-3"></div>
-                        </div>
-                    </div>
-                    <div class="rate">
-                        <div>2 <span class="fa fa-star checked"></span></div>
-                        <div class="bar">
-                            <div class="bar-2"></div>
-                        </div>
-                    </div>
-                    <div class="rate">
-                        <div>1 <span class="fa fa-star checked"></span></div>
-                        <div class="bar">
-                            <div class="bar-1"></div>
-                        </div>
+                        <p id="review-name">NAME</p>
+                        <p id="review-description">REVIEW AVERAGE</p>
+                        <button class="mobile-order">Order</button>
                     </div>
 
                     <hr class="break">
 
-                    <div id="review-review"></div>
+
+                    <div class="review-row">
+                        <div class="rate" aria-hidden="true">
+                            <div>5 <span class="fa fa-star checked"></span></div>
+                            <div class="bar">
+                                <div class="bar-5"></div>
+                            </div>
+                        </div>
+                        <div class="rate" aria-hidden="true">
+                            <div>4 <span class="fa fa-star checked"></span></div>
+                            <div class="bar">
+                                <div class="bar-4"></div>
+                            </div>
+                        </div>
+                        <div class="rate" aria-hidden="true">
+                            <div>3 <span class="fa fa-star checked"></span></div>
+                            <div class="bar">
+                                <div class="bar-3"></div>
+                            </div>
+                        </div>
+                        <div class="rate" aria-hidden="true">
+                            <div>2 <span class="fa fa-star checked"></span></div>
+                            <div class="bar">
+                                <div class="bar-2"></div>
+                            </div>
+                        </div>
+                        <div class="rate" aria-hidden="true">
+                            <div>1 <span class="fa fa-star checked"></span></div>
+                            <div class="bar">
+                                <div class="bar-1"></div>
+                            </div>
+                        </div>
+
+                        <hr class="break">
+
+                        <div id="review-review"></div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- SERVICE CONTENT -->
-        <div id="service" class="content hide">
-            <div class="flexcontainer">
+            <!-- SERVICE CONTENT -->
+            <div id="service" class="content hide">
+                <div class="flexcontainer">
 
-                <div class="row">
-                    <div class="card queue-card col-lg col-mg-2 col-sm-4">
-                        <button id="check-out" class="home-button dhover">CHECK OUT</button>
+                    <div class="row">
+                        <div class="card queue-card col-lg col-mg-2 col-sm-4">
+                            <button id="check-out" class="home-button dhover">CHECK OUT</button>
+                        </div>
+                        <div class="card queue-card col-lg col-mg-2 col-sm-4">
+                            <button id="water" class="home-button dhover">ADD WATER</button>
+                        </div>
+                        <div class="card queue-card col-lg col-mg-2 col-sm-4">
+                            <button id="other-service" class="home-button dhover">OTHERS</button>
+                        </div>
                     </div>
-                    <div class="card queue-card col-lg col-mg-2 col-sm-4">
-                        <button id="water" class="home-button dhover">ADD WATER</button>
-                    </div>
-                    <div class="card queue-card col-lg col-mg-2 col-sm-4">
-                        <button id="other-service" class="home-button dhover">OTHERS</button>
-                    </div>
-                </div>
 
-            </div>
-        </div>
-
-        <!-- MY ORDER CONTENT -->
-        <div id="myorder" class="content hide">
-            <div class="card orderCard">
-                <p class="noItemAlert">No item in you cart.</p>
-
-                <table class="hide">
-                    <thead>
-                        <tr>
-                            <th>Dish</th>
-                            <th>Qt.</th>
-                            <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
-                <div class="total-price hide">
-                    <hr class="space-break">
-                    <p>Total Price:</p>
-                </div>
-                <div class="orderPageBt">
-                    <button class="desktop">Check Out</button>
-                    <button id="desktop-0" class="desktop">Reviews</button>
                 </div>
             </div>
-        </div>
-        
-        <div id="mobile-overlay"></div>
-        <footer class="hide">
-            <p class="float-right mt-3 mr-3">Copyright © 2019 Order Inc. </p>
-            <p class="float-right mt-3 mr-3">Author: Eric Ng, Mingyi Yang </p>
-        </footer>
-    </content>
+
+            <!-- MY ORDER CONTENT -->
+            <div id="myorder" class="content hide">
+                <div class="card orderCard">
+                    <p class="noItemAlert">No item in you cart.</p>
+
+                    <table class="hide">
+                        <thead>
+                            <tr>
+                                <th>Dish</th>
+                                <th>Qt.</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <div class="total-price hide">
+                        <hr class="space-break">
+                        <p>Total Price:</p>
+                    </div>
+                    <div class="orderPageBt">
+                        <button class="desktop">Check Out</button>
+                        <!-- To Mingyi: choose diff id for bottom button-->
+                        <button class="desktop">Reviews</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ERROR CONTENT -->
+
+            <div id="error" class="content hide">
+            </div>
+
+            <div id="mobile-overlay"></div>
+            <footer class="hide">
+                <p class="float-right mt-3 mr-3">Copyright © 2019 Order Inc. </p>
+                <p class="float-right mt-3 mr-3">Author: Eric Ng, Mingyi Yang </p>
+            </footer>
+        </content>
+    </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/index.js"></script>

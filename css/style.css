@@ -292,7 +292,7 @@ content {
   font-size: 50px;
   width:100%;
   height: 100%;
-  background-color: #ff6666;
+  background-color: #ff6666 !important;
   color: white;
   border: 3px solid #ff5050;
   box-shadow: 1px 1px rgba(0, 0, 0, 0.5) !important;
@@ -607,6 +607,8 @@ footer {
 
 /* HOME */
 
+
+
 @media (max-width: 950px) {
   #group-number {
     display: none;
@@ -635,7 +637,7 @@ footer {
 
 @media (max-width: 1240px) {
   #sidebar {
-    margin-left: -45%;
+    margin-left: -70%;
   }
 
   .content {
@@ -656,7 +658,21 @@ footer {
 
 @media (max-width: 800px) {
   #sidebar {
-    min-width: 40%;
+    min-width: 60%;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) {
+  #sidebar {
+    width: 100% !important;
+  }
+
+  #search-desktop, #prof, #cart {
+    display: none;
+  }
+
+  #mag {
+    margin-left: 50px;
   }
 }
 

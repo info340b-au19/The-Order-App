@@ -25,8 +25,11 @@
             <!-- </button> <a id="nav-toggle" href="#">&#9776;</a> -->
             <img id="logo" src="img/logo_text-01.png" alt="logo">
 
-            <input type="text" id="search-desktop" class="form-control mt-2 ml-3 mr-2" placeholder="Search restaurants... ">
-            <button class="search-button">Search</button>
+            <input type="text" id="search-desktop" class="form-control mt-2 ml-3 mr-2"
+                placeholder="Search restaurants... ">
+            </input>
+            <a><i id="mag" class="fas fa-search fa-2x"></i></a>
+            <button id="desktop-search" class="search-button">Search</button>
             <a><img id="prof" class="float-right mt-1 mr-4" src="img/joshua.jpg" alt="profile pic"></a>
             <a><img id="cart" class="float-right mt-1" src="img/cart.png" alt="cart"></a>
 
@@ -36,7 +39,7 @@
         <div id="search-mobile" class="input-group">
             <input type="text" id="mobile" class="form-control mt-2 ml-3 mr-2" placeholder="Search restaurants... ">
             <button id="search-button" class="search-button">Search</button>
-            <i id="search-back"class="fas fa-arrow-up"></i>
+            <i id="search-back" class="fas fa-arrow-up"></i>
         </div>
     </header>
 
@@ -481,6 +484,12 @@
                 </div>
             </div>
 
+            <div id="order-overlay" class="hidden">
+                <div id="order-screen">
+                    
+                </div>
+            </div>
+
             <div id="overlay" class="hidden">
                 <div id="review">
                     <div>
@@ -546,6 +555,27 @@
             <!-- SERVICE CONTENT -->
             <div id="service" class="content hide">
                 <div class="card serviceCard">
+                    <label class="container1">One
+                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container1">Two
+                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container1">Three
+                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container1">22222222
+                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <button id="submit-service" class="desktop mt-3">Submit</button>
+
+
+
+                    <!--
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="materialUnchecked">
                         <label class="form-check-label" for="materialUnchecked">Check Out</label>
@@ -559,10 +589,10 @@
                         <label class="form-check-label" for="materialUnchecked"><input id="service-textbox" type="text"
                                 placeholder="Other services you need... "></label>
                     </div>
-                    <button id="submit-service" class="desktop mt-3">Submit</button>
+                    <button id="submit-service" class="desktop mt-3">Submit</button> -->
                 </div>
                 <div class="card serviceCard">
-                    
+
                 </div>
             </div>
 

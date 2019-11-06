@@ -570,7 +570,10 @@ content {
   padding: 30px; 
 
 }
-
+#review-textbox{
+  height: 30vh;
+  width:100%;
+}
 /* ERROR CSS */
 .error {
   margin: 10px 0px;
@@ -617,7 +620,7 @@ footer {
 /* MENU */
 
 @media (max-width: 1300px) {
-  .desktop {
+  #menu .desktop {
     display: none;
   }
 }
@@ -664,7 +667,7 @@ footer {
   .menu-card {
     pointer-events: none;
   }
-  .desktop {
+  .desktop{
     pointer-events: auto;
   }
 }
@@ -709,6 +712,7 @@ footer {
 
 ::placeholder {
   font-size: 1rem;
+  color:grey;
 }
 
 @media all and (orientation:portrait) {

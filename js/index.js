@@ -468,36 +468,72 @@ $(function () {
     $("#error").removeClass("hide");
   }
 
-  // MENU - ORDER
+  // MENU - ORDER & Display on Myorder Page
   $(".orderBt").click(order);
   function order(event) {
     $(".noItemAlert").addClass("hide");
     $(".total-price, table").removeClass("hide");
 
     var dishName = $(event.target).parent().parent().find('.dishName').text();
-    var dishPrice = $(event.target).parent().parent().find('.dishPrice').text();
-    // console.log(dishPrice);
+    var dishPrice = $(event.target).parent().parent().find('.dishPrice span').text();
+
     var newOrderDish = $("<tr></tr>");
     newOrderDish.append($('<td></td>').text(dishName));
     newOrderDish.append($('<td></td>').text(1));
-    newOrderDish.append($('<td></td>').text(dishPrice));
-    // newOrder.text(dishName); 
+    var dishPriceSpan = $("<span></span>").text(dishPrice);
+    newOrderDish.append($('<td>$</td>').append(dishPriceSpan));
+
     $("#myorder tbody").append(newOrderDish);
-    // console.log($("tbody td:last-child").text().length);
 
-    // var totalPrice = 0;
-    // for each (var item in $("tr:last-child")) {
-    // totalPrice += item.text();
-    // }
-
-
-    // $(".total-price").text("Total Price: "+totalPrice);
-
+    // calculate total price
+    var totalPrice = parseFloat(0);
+    document.querySelectorAll('tbody span').forEach(function (node) {
+      totalPrice += parseFloat(node.textContent);
+    });
+    $(".total-price p").text("Total Price: $"+totalPrice);
   }
   //-----------SERVICE FUNCTIONALITY-------------------------
 
 
   // ------------ORDER FUNCTIONALITY------------------------------
+
+  $("#check-out").click(checkOut);
+  function checkOut() {
+    console.log(1);
+    $(".noItemAlert").removeClass("hide");
+    $(".total-price, table").addClass("hide");
+  }
+
+  $("#order-review").click(orderReview);
+  function orderReview() {
+    $(".total-price, table, .noItemAlert, .orderPageBt").addClass("hide");
+    $("#review-textbox, #post, #cancel").removeClass("hide");
+
+  }
+
+  $("#cancel").click(reviewCancel);
+  function reviewCancel() {
+    $(".orderPageBt").removeClass("hide");
+    $("#review-textbox, #post, #cancel").addClass("hide");
+    if ($("#myorder tbody").children().length > 0) {
+      $(".total-price, table").removeClass("hide");
+    } else {
+      $(".noItemAlert").removeClass("hide");
+    }
+  }
+
+  $("#post").click(reviewPost);
+  function reviewPost() {
+    $(".orderPageBt").removeClass("hide");
+    $("#review-textbox, #post, #cancel").addClass("hide");
+    if ($("#myorder tbody").children().length > 0) {
+      $(".total-price, table").removeClass("hide");
+    } else {
+      $(".noItemAlert").removeClass("hide");
+    }
+  }
+
+
 
 
 

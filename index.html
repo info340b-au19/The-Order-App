@@ -261,7 +261,7 @@
                             </div>
 
                             <p class="dishName">Bacon QFC</p>
-                            <p class="dishPrice">$4.5</p>
+                            <p class="dishPrice">$<span>4.5</span></p>
                             <div>
                                 <button class="desktop orderBt">Order</button>
                                 <button id="desktop-0" class="desktop">Reviews</button>
@@ -279,7 +279,7 @@
                             </div>
 
                             <p class="dishName">Double Bacon QPC</p>
-                            <p class="dishPrice">$3.5</p>
+                            <p class="dishPrice">$<span>3.5</span></p>
                             <div>
                                 <button class="desktop orderBt">Order</button>
                                 <button id="desktop-1" class="desktop">Reviews</button>
@@ -297,7 +297,7 @@
                             </div>
 
                             <p class="dishName">QFC</p>
-                            <p class="dishPrice">$5</p>
+                            <p class="dishPrice">$<span>5.0</span></p>
                             <div>
                                 <button class="desktop orderBt">Order</button>
                                 <button id="desktop-2" class="desktop">Reviews</button>
@@ -317,7 +317,7 @@
                             </div>
 
                             <p class="dishName">4 Piece Spicy BBQ Tenders</p>
-                            <p class="dishPrice">$5.5</p>
+                            <p class="dishPrice">$<span>5.5</span></p>
                             <div>
                                 <button class="desktop orderBt">Order</button>
                                 <button id="desktop-3" class="desktop">Reviews</button>
@@ -335,7 +335,7 @@
                             </div>
 
                             <p class="dishName">Big Mac</p>
-                            <p class="dishPrice">$6</p>
+                            <p class="dishPrice">$<span>6.0</span></p>
                             <div>
                                 <button class="desktop orderBt">Order</button>
                                 <button id="desktop-4" class="desktop">Reviews</button>
@@ -353,7 +353,7 @@
                             </div>
 
                             <p class="dishName">20 Piece McNuggets</p>
-                            <p class="dishPrice">$6.5</p>
+                            <p class="dishPrice">$<span>6.5</span></p>
                             <div>
                                 <button class="desktop orderBt">Order</button>
                                 <button id="desktop-5" class="desktop">Reviews</button>
@@ -373,7 +373,7 @@
                             </div>
 
                             <p class="dishName">Cheeseburger</p>
-                            <p class="dishPrice">$4.0</p>
+                            <p class="dishPrice">$<span>4.0</span></p>
                             <div>
                                 <button class="desktop orderBt">Order</button>
                                 <button id="desktop-6" class="desktop">Reviews</button>
@@ -391,7 +391,7 @@
                             </div>
 
                             <p class="dishName">Double Cheeseburger</p>
-                            <p class="dishPrice">$5.5</p>
+                            <p class="dishPrice">$<span>5.5</span></p>
                             <div>
                                 <button class="desktop orderBt">Order</button>
                                 <button id="desktop-7" class="desktop">Reviews</button>
@@ -409,7 +409,7 @@
                             </div>
 
                             <p class="dishName">Triple Cheeseburger</p>
-                            <p class="dishPrice">$6.0</p>
+                            <p class="dishPrice">$<span>6.0</span></p>
                             <div>
                                 <button class="desktop orderBt">Order</button>
                                 <button id="desktop-8" class="desktop">Reviews</button>
@@ -429,7 +429,7 @@
                             </div>
 
                             <p class="dishName">Chicken Tenders</p>
-                            <p class="dishPrice">$5.0</p>
+                            <p class="dishPrice">$<span>5.0</span></p>
                             <div>
                                 <button class="desktop orderBt">Order</button>
                                 <button id="desktop-9" class="desktop">Reviews</button>
@@ -447,7 +447,7 @@
                             </div>
 
                             <p class="dishName">Bacon McDouble</p>
-                            <p class="dishPrice">$6.0</p>
+                            <p class="dishPrice">$<span>6.0</span></p>
                             <div>
                                 <button class="desktop orderBt">Order</button>
                                 <button id="desktop-10" class="desktop">Reviews</button>
@@ -465,7 +465,7 @@
                             </div>
 
                             <p class="dishName">McChicken</p>
-                            <p class="dishPrice">$3.5</p>
+                            <p class="dishPrice">$<span>3.5</span></p>
                             <div>
                                 <button class="desktop orderBt">Order</button>
                                 <button id="desktop-11" class="desktop">Reviews</button>
@@ -543,7 +543,7 @@
 
                     <div class="row">
                         <div class="card queue-card col-lg col-mg-2 col-sm-4">
-                            <button id="check-out" class="home-button dhover">CHECK OUT</button>
+                            <button id="check" class="home-button dhover">CHECK OUT</button>
                         </div>
                         <div class="card queue-card col-lg col-mg-2 col-sm-4">
                             <button id="water" class="home-button dhover">ADD WATER</button>
@@ -577,9 +577,22 @@
                         <p>Total Price:</p>
                     </div>
                     <div class="orderPageBt">
-                        <button class="desktop">Check Out</button>
-                        <!-- To Mingyi: choose diff id for bottom button-->
-                        <button class="desktop">Reviews</button>
+                        <button id="check-out" class="desktop">Check Out</button>
+                        <button id="order-review" class="desktop">Reviews</button>
+                    </div>
+                    <div class="review">
+                        <div>
+                        <input id="review-textbox" class="hide" type="text"
+                            placeholder="Write anything you want to say... ">
+                        </div>
+
+                        <div>
+                            <button id="post" class="desktop float-right hide mt-3">POST</button>
+                            <button id="cancel" class="desktop float-right hide mt-3">CANCEL</button>
+                            
+                        </div>
+
+
                     </div>
                 </div>
             </div>

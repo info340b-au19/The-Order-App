@@ -72,7 +72,7 @@ $(function () {
 
   $("#profile").click(showProfile);
   function showProfile() {
-    
+
   }
 
  
@@ -276,73 +276,74 @@ $(function () {
 
   function reviewClickMobile(data) {
     $("#mobile-0").click(function () {
-      if (window.matchMedia("min-width: 1300px)").matches) {
+      if ($(window).width() > 1300) {
+        console.log(1);
         return;
       }
       reviewPage(data[0]);
     })
     $("#mobile-1").click(function () {
-      if (window.matchMedia("min-width: 1300px)").matches) {
+      if ($(window).width() > 1300) {
         return;
       }
       reviewPage(data[1]);
     })
     $("#mobile-2").click(function () {
-      if (window.matchMedia("min-width: 1300px)").matches) {
+      if ($(window).width() > 1300) {
         return;
       }
       reviewPage(data[2]);
     })
     $("#mobile-3").click(function () {
-      if (window.matchMedia("min-width: 1300px)").matches) {
+      if ($(window).width() > 1300) {
         return;
       }
       reviewPage(data[3]);
     })
     $("#mobile-4").click(function () {
-      if (window.matchMedia("min-width: 1300px)").matches) {
+      if ($(window).width() > 1300) {
         return;
       }
       reviewPage(data[4]);
     })
     $("#mobile-5").click(function () {
-      if (window.matchMedia("min-width: 1300px)").matches) {
+      if ($(window).width() > 1300) {
         return;
       }
       reviewPage(data[5]);
     })
     $("#mobile-6").click(function () {
-      if (window.matchMedia("min-width: 1300px)").matches) {
+      if ($(window).width() > 1300) {
         return;
       }
       reviewPage(data[6]);
     })
     $("#mobile-7").click(function () {
-      if (window.matchMedia("min-width: 1300px)").matches) {
+      if ($(window).width() > 1300) {
         return;
       }
       reviewPage(data[7]);
     })
     $("#mobile-8").click(function () {
-      if (window.matchMedia("min-width: 1300px)").matches) {
+      if ($(window).width() > 1300) {
         return;
       }
       reviewPage(data[8]);
     })
     $("#mobile-9").click(function () {
-      if (window.matchMedia("min-width: 1300px)").matches) {
+      if ($(window).width() > 1300) {
         return;
       }
       reviewPage(data[9]);
     })
     $("#mobile-10").click(function () {
-      if (window.matchMedia("min-width: 1300px)").matches) {
+      if ($(window).width() > 1300) {
         return;
       }
       reviewPage(data[10]);
     })
     $("#mobile-11").click(function () {
-      if (window.matchMedia("min-width: 1300px)").matches) {
+      if ($(window).width() > 1300) {
         return;
       }
       reviewPage(data[11]);

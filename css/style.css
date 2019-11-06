@@ -666,7 +666,7 @@ footer {
     min-width: 40%;
   }
 
-  #logo {
+  #logo,#cart {
     display: none;
   }
 

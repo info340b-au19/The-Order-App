@@ -3,6 +3,7 @@
         "id": "1",
         "info": {
             "foodName": "Bacon QPC",
+            "price": "4.5",
             "src": "bacon qpc.jpeg",
             "alt": "burger",
             "averageRating": "3.1",
@@ -52,6 +53,7 @@
         "id": "2",
         "info": {
             "foodName": "Double Bacon QPC",
+            "price": "4.5",
             "src": "double bacon qpc.jpeg",
             "alt": "burger",
             "averageRating": "4.2",
@@ -83,6 +85,7 @@
         "id": "3",
         "info": {
             "foodName": "QPC",
+            "price": "4.5",
             "src": "qpc.jpeg",
             "alt": "burger",
             "averageRating": "5",
@@ -114,6 +117,7 @@
         "id": "4",
         "info": {
             "foodName": "4 Piece Spicy BBQ Tenders",
+            "price": "4.5",
             "src": "4 piece spicy.jpeg",
             "alt": "chicken tenders",
             "averageRating": "3.9",
@@ -145,6 +149,7 @@
         "id": "5",
         "info": {
             "foodName": "Big Mac",
+            "price": "4.5",
             "src": "big mac.jpeg",
             "alt": "burger",
             "averageRating": "4.3",
@@ -160,6 +165,7 @@
         "review": [
             {
                 "picture": "jungkook.jpg",
+                "price": "4.5",
                 "name": "Jungkook Kim",
                 "review": "I come to this restaurant just to buy this burger!!!!!!!!!!1!",
                 "rating": "5"
@@ -182,6 +188,7 @@
         "id": "6",
         "info": {
             "foodName": "20 McNuggets",
+            "price": "4.5",
             "src": "20mcnuggets.jpeg",
             "alt": "burger",
             "averageRating": "2.2",
@@ -219,6 +226,7 @@
         "id": "7",
         "info": {
             "foodName": "Cheeseburger",
+            "price": "4.5",
             "src": "cheeseburger.jpeg",
             "alt": "burger",
             "averageRating": "4.6",
@@ -256,6 +264,7 @@
         "id": "8",
         "info": {
             "foodName": "Double Cheeseburger",
+            "price": "4.5",
             "src": "double cheeseburger.jpeg",
             "alt": "burger",
             "averageRating": "1.9",
@@ -330,6 +339,7 @@
         "id": "10",
         "info": {
             "foodName": "Chicken Tenders",
+            "price": "4.5",
             "src": "chicken tenders.jpeg",
             "alt": "burger",
             "averageRating": "3.6",
@@ -367,6 +377,7 @@
         "id": "11",
         "info": {
             "foodName": "Bacon McDouble",
+            "price": "4.5",
             "src": "bacon mcdouble.jpeg",
             "alt": "burger",
             "averageRating": "1.2",
@@ -404,6 +415,7 @@
         "id": "12",
         "info": {
             "foodName": "McChicken",
+            "price": "4.5",
             "src": "mcchicken.jpeg",
             "alt": "burger",
             "averageRating": "5",

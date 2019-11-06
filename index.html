@@ -539,20 +539,21 @@
 
             <!-- SERVICE CONTENT -->
             <div id="service" class="content hide">
-                <div class="flexcontainer">
-
-                    <div class="row">
-                        <div class="card queue-card col-lg col-mg-2 col-sm-4">
-                            <button id="check" class="home-button dhover">CHECK OUT</button>
-                        </div>
-                        <div class="card queue-card col-lg col-mg-2 col-sm-4">
-                            <button id="water" class="home-button dhover">ADD WATER</button>
-                        </div>
-                        <div class="card queue-card col-lg col-mg-2 col-sm-4">
-                            <button id="other-service" class="home-button dhover">OTHERS</button>
-                        </div>
+                <div class="card serviceCard">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                        <label class="form-check-label" for="materialUnchecked">Check Out</label>
                     </div>
-
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                        <label class="form-check-label" for="materialUnchecked">Add Water</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                        <label class="form-check-label" for="materialUnchecked"><input id="service-textbox" type="text"
+                                placeholder="Other services you need... "></label>
+                    </div>
+                    <button id="submit-service" class="desktop mt-3">Submit</button>
                 </div>
             </div>
 
@@ -582,14 +583,14 @@
                     </div>
                     <div class="review">
                         <div>
-                        <input id="review-textbox" class="hide" type="text"
-                            placeholder="Write anything you want to say... ">
+                            <input id="review-textbox" class="hide" type="text"
+                                placeholder="Write anything you want to say... ">
                         </div>
 
                         <div>
                             <button id="post" class="desktop float-right hide mt-3">POST</button>
                             <button id="cancel" class="desktop float-right hide mt-3">CANCEL</button>
-                            
+
                         </div>
 
 

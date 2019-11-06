@@ -493,13 +493,20 @@ $(function () {
     $(".total-price p").text("Total Price: $"+totalPrice);
   }
   //-----------SERVICE FUNCTIONALITY-------------------------
+  $("#submit-service").click(Submit);
+  function Submit() {
+  //   $.each($("#service input:checked"), function(){
+  //     $(this).;
+  // });
+    $(":checkbox").prop('checked', false).parent().removeClass('active');
+    $("#service .card").append($("<p>Wait time: 2min</p>"));
+  }
 
 
   // ------------ORDER FUNCTIONALITY------------------------------
 
   $("#check-out").click(checkOut);
   function checkOut() {
-    console.log(1);
     $(".noItemAlert").removeClass("hide");
     $(".total-price, table").addClass("hide");
   }
@@ -532,10 +539,5 @@ $(function () {
       $(".noItemAlert").removeClass("hide");
     }
   }
-
-
-
-
-
 
 });

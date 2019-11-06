@@ -557,14 +557,17 @@ content {
     display: block;
   }
 }
-
+/* Service Page */
+#service-textbox {
+  width:200px;
+}
 /* MyOrder page */
 
 .orderedDish {
   font-size: 1rem;
 }
 
-.orderCard {
+.orderCard, .serviceCard {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin:20px;
   padding: 30px; 

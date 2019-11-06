@@ -1,11 +1,16 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   background-color: #f4f5f8 !important;
 }
 
+/* remove the blue outline of button */
+button:focus {outline:0 !important;} 
+button{
+  border:none;
+  background: transparent;
+} 
 /*
 .btn {
   text-align: center;
@@ -22,7 +27,7 @@ header {
 }
 
 #cart {
-  width: 40px;
+  width: 35px;
 }
 
 #logo {
@@ -35,7 +40,7 @@ header {
 }
 
 #prof {
-  width: 40px;
+  width: 35px;
 }
 
 content {
@@ -574,12 +579,8 @@ content {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin:20px;
   padding: 30px; 
+}
 
-}
-#review-textbox{
-  height: 30vh;
-  width:100%;
-}
 /* ERROR CSS */
 .error {
   margin: 10px 0px;

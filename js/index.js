@@ -64,8 +64,18 @@ $(function () {
     contentTabs[1].removeClass("hide");
     $("#sb-home").addClass("current");
   }
+  //-----------HEADER FUNCTIONALITY-----------------------------
+  $("#cart").click(toOrderPage);
+  function toOrderPage() {
+    $("#sb-order").click();
+  }
 
+  $("#profile").click(showProfile);
+  function showProfile() {
+    
+  }
 
+ 
   // -----------HOME FUNCTIONALITY------------------------------
 
   // QUEUE BUTTON
@@ -493,6 +503,7 @@ $(function () {
     });
     $(".total-price p").text("Total Price: $"+totalPrice);
   }
+
   // MENU - ORDER & Display on Myorder Page(for smaller screen)
   $(".mobile-order").click(orderOnReview);
   function orderOnReview(event) {
@@ -517,7 +528,9 @@ $(function () {
     });
     $(".total-price p").text("Total Price: $"+totalPrice);
   }
+
   //-----------SERVICE FUNCTIONALITY-------------------------
+
   $("#submit-service").click(Submit);
   function Submit() {
   //   $.each($("#service input:checked"), function(){
@@ -539,14 +552,14 @@ $(function () {
   $("#order-review").click(orderReview);
   function orderReview() {
     $(".total-price, table, .noItemAlert, .orderPageBt").addClass("hide");
-    $("#review-textbox, #post, #cancel").removeClass("hide");
+    $(".orderpage-review").removeClass("hide");
 
   }
 
   $("#cancel").click(reviewCancel);
   function reviewCancel() {
     $(".orderPageBt").removeClass("hide");
-    $("#review-textbox, #post, #cancel").addClass("hide");
+    $(".orderpage-review").addClass("hide");
     if ($("#myorder tbody").children().length > 0) {
       $(".total-price, table").removeClass("hide");
     } else {
@@ -557,7 +570,7 @@ $(function () {
   $("#post").click(reviewPost);
   function reviewPost() {
     $(".orderPageBt").removeClass("hide");
-    $("#review-textbox, #post, #cancel").addClass("hide");
+    $(".orderpage-review").addClass("hide");
     if ($("#myorder tbody").children().length > 0) {
       $(".total-price, table").removeClass("hide");
     } else {

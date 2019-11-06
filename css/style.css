@@ -26,9 +26,13 @@ header {
 }
 
 #logo {
-  width: 120px;
+  height: 50px;
 }
 
+#logo-notext {
+  height: 50px;
+  display: none;
+}
 
 #prof {
   width: 40px;
@@ -118,10 +122,9 @@ content {
 }
 
 #hamburger {
-  margin-right: 40px;
   background-color: #ff6666;
-  border: 1px solid #ff5050;
-  width: 60px;
+  border: 1px solid #ff6666;
+  width: 50px;
   height: 40px;
   display: none;
 }
@@ -661,6 +664,14 @@ footer {
   #sidebar {
     min-width: 40%;
   }
+
+  #logo {
+    display: none;
+  }
+
+  #logo-notext {
+    display: block;
+  }
 }
 
 
@@ -685,9 +696,6 @@ footer {
   border-radius: 10px;
 }
   
-#logo {
-  width: 120px;
-}
 
 body.search {
   background-image: url("../img/bg-landscape.png");

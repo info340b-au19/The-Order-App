@@ -360,6 +360,7 @@ $(function () {
 
     // Name
     $("#review-name").html(data.info.foodName);
+    $("#review-price").html("$<span>"+data.info.price+"</span>");
 
     // Review description
     $("#review-description").html(data.info.averageRating + " average based on " + data.info.ratingCount + " reviews.")
@@ -476,6 +477,30 @@ $(function () {
 
     var dishName = $(event.target).parent().parent().find('.dishName').text();
     var dishPrice = $(event.target).parent().parent().find('.dishPrice span').text();
+
+    var newOrderDish = $("<tr></tr>");
+    newOrderDish.append($('<td></td>').text(dishName));
+    newOrderDish.append($('<td></td>').text(1));
+    var dishPriceSpan = $("<span></span>").text(dishPrice);
+    newOrderDish.append($('<td>$</td>').append(dishPriceSpan));
+
+    $("#myorder tbody").append(newOrderDish);
+
+    // calculate total price
+    var totalPrice = parseFloat(0);
+    document.querySelectorAll('tbody span').forEach(function (node) {
+      totalPrice += parseFloat(node.textContent);
+    });
+    $(".total-price p").text("Total Price: $"+totalPrice);
+  }
+  // MENU - ORDER & Display on Myorder Page(for smaller screen)
+  $(".mobile-order").click(orderOnReview);
+  function orderOnReview(event) {
+    $(".noItemAlert").addClass("hide");
+    $(".total-price, table").removeClass("hide");
+
+    var dishName = $(event.target).parent().find('#review-name').text();
+    var dishPrice = $(event.target).parent().find('#review-price span').text();
 
     var newOrderDish = $("<tr></tr>");
     newOrderDish.append($('<td></td>').text(dishName));

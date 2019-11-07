@@ -23,7 +23,7 @@
         <div class="input-group">
             <button id="hamburger" class="btn btn-info mt-2 mr-3"><i class="fas fa-align-left"></i></button>
             <span class="glyphicon glyphicon-menu-hamburger d-block"></span>
-            
+
             <img id="logo" src="img/logo_text-01.png" alt="logo">
             <img id="logo-notext" src="img/logo_transparent-01.png" alt="logo">
 
@@ -36,16 +36,18 @@
             <!-- <button class="float-right mt-4 btn btn-dark">Sign Up</button>
             <button class="float-right mr-3 mt-4 btn btn-outline-dark">Log In</button> -->
             <ul class="nav">
-            <li class="nav-item dropdown">
-                <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img id="prof" class="float-right" src="img/joshua.jpg" alt="profile pic"></a>
-                <div class="dropdown-menu mt-5">
-                  <a class="dropdown-item" href="#">Order History</a>
-                  <a class="dropdown-item" href="#">Account Settings</a>
-                  <a class="dropdown-item" href="#">Your Favorites</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Sign Out</a>
-                </div>
-              </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                        aria-expanded="false"><img id="prof" class="float-right" src="img/joshua.jpg"
+                            alt="profile pic"></a>
+                    <div class="dropdown-menu mt-5">
+                        <a class="dropdown-item" href="#">Order History</a>
+                        <a class="dropdown-item" href="#">Account Settings</a>
+                        <a class="dropdown-item" href="#">Your Favorites</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Sign Out</a>
+                    </div>
+                </li>
             </ul>
 
             <button><img id="cart" class="float-right mt-1" src="img/cart.png" alt="cart"></button>
@@ -82,7 +84,8 @@
                             <button class="sb-button"><i class="fas fa-user-tie"></i> Service</button>
                         </li>
                         <li>
-                            <button id="sb-order" class="sb-button"><i class="fas fa-money-bill-alt"></i> My Order</button>
+                            <button id="sb-order" class="sb-button"><i class="fas fa-money-bill-alt"></i> My
+                                Order</button>
                         </li>
                     </ul>
                 </nav>
@@ -499,11 +502,20 @@
                 </div>
             </div>
 
-            <div id="order-overlay" class="hidden">
+            <div id="order-container" class="hidden">
                 <div id="order-screen">
-                    
+                    <div id="quantity-screen">
+                        <button id="quantity-sub" class="quantity-setter sub">-</button>
+                        <input id="quantity" type="text" value="1" />
+                        <button id="quantity-add" class="quantity-setter">+</button>
+                    </div>
+                    <div class="order-center">
+                        <button id="quantity-addBtn">ADD</button>
+                    </div>
+                    <div id="message" class="order-center alert alert-success hidden"><b>SUCCESS!</b></div>
                 </div>
             </div>
+            <div id="order-overlay" class="hidden"></div>
 
             <div id="overlay" class="hidden">
                 <div id="review">
@@ -522,7 +534,13 @@
                         <p id="review-name">NAME</p>
                         <p id="review-price">PRICE</p>
                         <p id="review-description">REVIEW AVERAGE</p>
-                        <button class="mobile-order">Order</button>
+                        <div id="review-mobile-quantity">
+                                <button id="mobile-quantity-sub" class="quantity-setter sub">-</button>
+                                <input id="mobile-quantity" type="text" value="1" />
+                                <button id="mobile-quantity-add" class="quantity-setter">+</button>
+                        </div>
+                        <button id="mobile-quantity-addBtn" class="mobile-order">Order</button>
+                        <div id="mobile-message" class="order-center alert alert-success hidden"><b>SUCCESS!</b></div>
                     </div>
 
                     <hr class="break">
@@ -570,44 +588,36 @@
             <!-- SERVICE CONTENT -->
             <div id="service" class="content hide">
                 <div class="card serviceCard">
-                    <label class="container1">One
-                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                    <label class="service-container">Notify someone for assistance
+                        <input type="checkbox" class="form-check-input" id="service-opt1">
                         <span class="checkmark"></span>
                     </label>
-                    <label class="container1">Two
-                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                    <label class="service-container">Add more to your current order
+                        <input type="checkbox" class="form-check-input" id="service-opt2">
                         <span class="checkmark"></span>
                     </label>
-                    <label class="container1">Three
-                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                    <label class="service-container">Want to change the current order / problem with an order
+                        <input type="checkbox" class="form-check-input" id="service-opt3">
                         <span class="checkmark"></span>
                     </label>
-                    <label class="container1">22222222
-                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                    <label class="service-container">Other
+                        <input type="checkbox" class="form-check-input" id="service-opt4">
                         <span class="checkmark"></span>
                     </label>
                     <button id="submit-service" class="desktop mt-3">Submit</button>
-
-
-
-                    <!--
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input">
-                        <label class="form-check-label">Check Out</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input">
-                        <label class="form-check-label">Add Water</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input">
-                        <label class="form-check-label"><input id="service-textbox" type="text"
-                                placeholder="Other services you need... "></label>
-                    </div>
-                    <button id="submit-service" class="desktop mt-3">Submit</button> -->
+                    <div id="service-message" class="alert alert-danger hidden"><b>STOP!</b> Wait a little to add more requests</div>
                 </div>
-                <div class="card serviceCard">
-
+                <div id="service-output" class="card serviceCard">
+                    <div class="row">
+                        <div id="service-description" class="col-lg">
+                        </div>
+                        <div id="service-time" class="col-lg">
+                        </div>
+                        <div class="col-lg">
+                            <div class="service-style">Wait-time (mins:secs)</div>
+                            <div id="service-timeleft" class="service-style" value="0">0</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -637,17 +647,15 @@
                     </div>
                     <div class="orderpage-review hide">
                         <div class="form-group">
-                            <label>Write anything you want to say... </label>
+                            <label for="exampleFormControlTextarea1">Write anything you want to say... </label>
                             <textarea id="review-textbox" class="form-control" rows="5"></textarea>
-                          </div>
+                        </div>
 
                         <div>
                             <button id="post" class="desktop float-right mt-3">POST</button>
                             <button id="cancel" class="desktop float-right mt-3">CANCEL</button>
 
                         </div>
-
-
                     </div>
                 </div>
             </div>
@@ -665,9 +673,15 @@
         </content>
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
     <script src="js/index.js"></script>

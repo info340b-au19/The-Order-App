@@ -20,21 +20,36 @@
 <body>
     <!-- header bar -->
     <header class="container mt-3">
-        <div id="navbar" class="input-group">
-            <button id="hamburger" class="btn btn-info"><i class="fas fa-align-left"></i></button>
-            <!-- </button> <a id="nav-toggle" href="#">&#9776;</a> -->
+        <div class="input-group">
+            <button id="hamburger" class="btn btn-info mt-2 mr-3"><i class="fas fa-align-left"></i></button>
+            <span class="glyphicon glyphicon-menu-hamburger d-block"></span>
+            
             <img id="logo" src="img/logo_text-01.png" alt="logo">
+            <img id="logo-notext" src="img/logo_transparent-01.png" alt="logo">
 
             <input type="text" id="search-desktop" class="form-control mt-2 ml-3 mr-2"
                 placeholder="Search restaurants... ">
             </input>
             <a><i id="mag" class="fas fa-search fa-2x"></i></a>
             <button id="desktop-search" class="search-button">Search</button>
-            <a><img id="prof" class="float-right mt-1 mr-4" src="img/joshua.jpg" alt="profile pic"></a>
-            <a><img id="cart" class="float-right mt-1" src="img/cart.png" alt="cart"></a>
 
             <!-- <button class="float-right mt-4 btn btn-dark">Sign Up</button>
             <button class="float-right mr-3 mt-4 btn btn-outline-dark">Log In</button> -->
+            <ul class="nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img id="prof" class="float-right" src="img/joshua.jpg" alt="profile pic"></a>
+                <div class="dropdown-menu mt-5">
+                  <a class="dropdown-item" href="#">Order History</a>
+                  <a class="dropdown-item" href="#">Account Settings</a>
+                  <a class="dropdown-item" href="#">Your Favorites</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Sign Out</a>
+                </div>
+              </li>
+            </ul>
+
+            <button><img id="cart" class="float-right mt-1" src="img/cart.png" alt="cart"></button>
+
         </div>
         <div id="search-mobile" class="input-group">
             <input type="text" id="mobile" class="form-control mt-2 ml-3 mr-2" placeholder="Search restaurants... ">
@@ -67,7 +82,7 @@
                             <button class="sb-button"><i class="fas fa-user-tie"></i> Service</button>
                         </li>
                         <li>
-                            <button class="sb-button"><i class="fas fa-money-bill-alt"></i> My Order</button>
+                            <button id="sb-order" class="sb-button"><i class="fas fa-money-bill-alt"></i> My Order</button>
                         </li>
                     </ul>
                 </nav>
@@ -620,15 +635,15 @@
                         <button id="check-out" class="desktop">Check Out</button>
                         <button id="order-review" class="desktop">Reviews</button>
                     </div>
-                    <div class="review">
-                        <div>
-                            <input id="review-textbox" class="hide" type="text"
-                                placeholder="Write anything you want to say... ">
-                        </div>
+                    <div class="orderpage-review hide">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Write anything you want to say... </label>
+                            <textarea id="review-textbox" class="form-control" rows="5"></textarea>
+                          </div>
 
                         <div>
-                            <button id="post" class="desktop float-right hide mt-3">POST</button>
-                            <button id="cancel" class="desktop float-right hide mt-3">CANCEL</button>
+                            <button id="post" class="desktop float-right mt-3">POST</button>
+                            <button id="cancel" class="desktop float-right mt-3">CANCEL</button>
 
                         </div>
 
@@ -650,11 +665,12 @@
         </content>
     </main>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 

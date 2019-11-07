@@ -353,7 +353,7 @@ content {
 
 /* MENU CONTENT */
 
-​ .wrapper {
+​.wrapper {
     display: flex;
     align-items: stretch;
     height: 100%;
@@ -649,6 +649,7 @@ content {
 
 #review-mobile-quantity {
   text-align: center;
+  display: none;
 }
 
 /* REVIEW PAGE MEDIA QUERY */
@@ -741,10 +742,6 @@ content {
   display: none;
 }
 
-.service-container input:checked ~ .checkmark:after {
-  display: block;
-}
-
 .service-container .checkmark:after {
   width: 5px;
   height: 10px;
@@ -754,6 +751,10 @@ content {
   transform: rotate(45deg);
   border: solid white;
   border-width: 0 3px 3px 0;
+}
+
+.service-container input:checked ~ .checkmark:after {
+  display: block;
 }
 
 #service-message {
@@ -869,52 +870,70 @@ footer {
     }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    #sidebar {
-        width: 100% !important;
-        margin-left: -45%;
-    }
-    #search-desktop, #prof, #cart, #desktop-search {
-        display: none;
-    }
-    #mag {
-        display: block;
-    }
-    .closed-text {
-        font-size: 30px;
-    }
-    h1 {
-        font-size: 20px !important;
-    }
-    .content {
-        width: 100%;
-        margin-left: 10%;
-    }
-    #topnav {
-        visibility: visible;
-    }
-    #sidebutton:hover {
-        background-color: #ff6666;
-        color: white;
-        transition: 0.5s ease;
-    }
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) {
+  #search-desktop, #prof, #cart, #desktop-search {
+    display: none;
+  }
 
-    .service-container {
-      font-size: 17px;
-    }
+  #mag {
+    display: block;
+    margin-left: 150px;
+    margin-top: 10px;
+  }
 
-    #service-description, #service-time {
-      display: none;
-    }
+  #sidebar {
+    width: 100% !important;
+    margin-left: -45%;
+  }
 
-    .service-style {
+  .closed-text {
       font-size: 30px;
-      margin-bottom: 60px;
-    }
+  }
 
-    #service-timeleft {
-      font-size: 60px !important;
-    }
+  h1 {
+    font-size: 20px !important;
+  }
+
+  .content {
+    width: 100%;
+    margin-left: 10%;
+  }
+
+  #topnav {
+    visibility: visible;
+  }
+
+  #sidebutton:hover {
+    background-color: #ff6666;
+    color: white;
+    transition: 0.5s ease;
+  }
+
+  .service-container {
+    font-size: 17px;
+    margin: 0;
+  }
+
+  #service-description, #service-time {
+    display: none;
+  }
+
+  .service-style {
+    font-size: 30px;
+    margin-bottom: 60px;
+  }
+
+  #service-timeleft {
+    font-size: 60px !important;
+  }
+
+  #review-mobile-quantity {
+    display: block;
+  }
+
+  #service-message {
+    margin-top: 0px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -964,16 +983,16 @@ body.search {
     margin-right: 10%;
     margin-top: 20vh;
 }
-
+/* CAUSING ERROR WITH INDEX.HTML
 footer {
     background-color: #ffeb3886;
     height: 7vh;
     bottom: 0px;
     position: fixed;
     width: 100%;
-    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23); */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
 }
-
+*/
 ::placeholder {
     font-size: 1rem;
     color: grey;

@@ -612,7 +612,7 @@ $(function () {
 		var newOrderDish = $("<tr></tr>");
 		newOrderDish.append($('<td></td>').text(dishName));
 		newOrderDish.append($('<td></td>').text(quantity));
-		var dishPriceSpan = $("<span></span>").text(dishPrice*quantity);
+		var dishPriceSpan = $("<span></span>").text(dishPrice * quantity);
 		newOrderDish.append($('<td>$</td>').append(dishPriceSpan));
 
 		$("#myorder tbody").append(newOrderDish);

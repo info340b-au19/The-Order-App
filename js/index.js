@@ -296,7 +296,6 @@ $(function () {
 				return;
 			}
 			reviewPage(data[0]);
-			current = event;
 		})
 		$("#mobile-1").click(function () {
 			if ($(window).width() > 1300) {
@@ -471,7 +470,7 @@ $(function () {
 	}
 
 	$(".back").click(back);
-	//$("#overlay").click(back);
+	// $("#overlay").click(back); CAUSES PROBLEMS
 
 	function back() {
 		$("#overlay").addClass("hidden");
@@ -503,17 +502,19 @@ $(function () {
 	});
 
 	$("#mobile-quantity-addBtn").click(function () {
-		if ($("#mobile-quantity").val() != 0) {
-			orderOnReview(current, $("#mobile-quantity").val());
-			$("#mobile-message").removeClass("hidden");
-			setTimeout(
-				function () {
-					$("#overlay").addClass("hidden");
-					$("#mobile-message").addClass("hidden");
-				}, 2000
-			);
-		} else {
-			$("#overlay").addClass("hidden");
+		if ($.isNumeric($("#mobile-quantity").val())) {
+			if ($("#mobile-quantity").val() != 0) {
+				orderOnReview($(this), $("#mobile-quantity").val());
+				$("#mobile-message").removeClass("hidden");
+				setTimeout(
+					function () {
+						$("#overlay").addClass("hidden");
+						$("#mobile-message").addClass("hidden");
+					}, 2000
+				);
+			} else {
+				$("#overlay").addClass("hidden");
+			}
 		}
 	});
 
@@ -550,19 +551,21 @@ $(function () {
 	});
 
 	$("#quantity-addBtn").click(function () {
-		if ($("#quantity").val() != 0) {
-			order(current, $("#quantity").val());
-			$("#message").removeClass("hidden");
-			setTimeout(
-				function () {
-					$("#order-container").addClass("hidden");
-					$("#order-overlay").addClass("hidden");
-					$("#message").addClass("hidden");
-				}, 2000
-			);
-		} else {
-			$("#order-container").addClass("hidden");
-			$("#order-overlay").addClass("hidden");
+		if ($.isNumeric($("#quantity").val())) {
+			if ($("#quantity").val() != 0) {
+				order(current, $("#quantity").val());
+				$("#message").removeClass("hidden");
+				setTimeout(
+					function () {
+						$("#order-container").addClass("hidden");
+						$("#order-overlay").addClass("hidden");
+						$("#message").addClass("hidden");
+					}, 2000
+				);
+			} else {
+				$("#order-container").addClass("hidden");
+				$("#order-overlay").addClass("hidden");
+			}
 		}
 	});
 
@@ -601,18 +604,18 @@ $(function () {
 	}
 
 	// MENU - ORDER & Display on Myorder Page(for smaller screen)
-	$(".mobile-order").click(orderOnReview);
+	$("#mobile-quantity-button").click(orderOnReview);
 	function orderOnReview(event, quantity) {
 		$(".noItemAlert").addClass("hide");
 		$(".total-price, table").removeClass("hide");
 
-		var dishName = $(event.target).parent().find('#review-name').text();
-		var dishPrice = $(event.target).parent().find('#review-price span').text();
+		var dishName = $(event).parent().find('#review-name').text();
+		var dishPrice = $(event).parent().find('#review-price span').text();
 
 		var newOrderDish = $("<tr></tr>");
 		newOrderDish.append($('<td></td>').text(dishName));
-		newOrderDish.append($('<td></td>').text(1));
-		var dishPriceSpan = $("<span></span>").text(dishPrice);
+		newOrderDish.append($('<td></td>').text(quantity));
+		var dishPriceSpan = $("<span></span>").text(dishPrice * quantity);
 		newOrderDish.append($('<td>$</td>').append(dishPriceSpan));
 
 		$("#myorder tbody").append(newOrderDish);
@@ -655,15 +658,15 @@ $(function () {
 		}
 	}
 
-/* will implement in future, i tired
-	var serviceCountdown = function () {
-		var time = $("#service-timeleft").attr("value") * 1000 * 60;
-	}
-
-
-	setInterval(, 60 * 1000);
-
-*/
+	/* will implement in future, i tired
+		var serviceCountdown = function () {
+			var time = $("#service-timeleft").attr("value") * 1000 * 60;
+		}
+	
+	
+		setInterval(, 60 * 1000);
+	
+	*/
 	// ------------ORDER FUNCTIONALITY------------------------------
 
 	$("#check-out").click(checkOut);

@@ -291,7 +291,7 @@ $(function () {
 	}
 
 	function reviewClickMobile(data) {
-		$("#mobile-0").click(function (event) {
+		$("#mobile-0").click(function () {
 			if ($(window).width() > 1300) {
 				return;
 			}
@@ -644,7 +644,7 @@ $(function () {
 				}, 3000
 			);
 		} else {
-			var time = $(":checkbox:checked").length * 3;
+			//var time = $(":checkbox:checked").length * 3;
 
 			$(":checkbox").each(function (index) {
 				if (this.checked) {

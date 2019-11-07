@@ -8,13 +8,13 @@ body {
 
 /* remove the blue outline of button */
 
-button:focus {
-    outline: 0 !important;
-}
-
 button {
     border: none;
     background: transparent;
+}
+
+button:focus {
+    outline: 0 !important;
 }
 
 /*
@@ -51,8 +51,9 @@ header {
 }
 
 #mag {
-  display: none;
-  width: 50px;
+    display: none;
+    width: 50px;
+    margin-top: 6px;
 }
 
 content {
@@ -174,33 +175,33 @@ content {
 }
 
 #search-mobile {
-  z-index: 9999;
-  background-color: white;
-  padding: 20px;
-  margin-top: -200px;
+    z-index: 9999;
+    background-color: white;
+    padding: 20px;
+    margin-top: -200px;
 }
 
 #search-mobile.active {
-  margin-top: -50px;
-  transition: .5s ease;
+    margin-top: -50px;
+    transition: .5s ease;
 }
 
 .search-button {
-  margin-right: 20px;
-  height: 40px;
-  margin-top: 7px;
-  background-color: #ff6666;
-  border: 1px solid #ff5050;
-  color: white;
+    margin-right: 20px;
+    height: 40px;
+    margin-top: 7px;
+    background-color: #ff6666;
+    border: 1px solid #ff5050;
+    color: white;
 }
 
 #search-back {
-  font-size: 25px;
-  margin-top: 14px;
+    font-size: 25px;
+    margin-top: 14px;
 }
 
 .search-button:hover {
-  background-color: #ff5050;
+    background-color: #ff5050;
 }
 
 /* Restaurants CSS */
@@ -246,6 +247,20 @@ content {
     color: darkgray;
 }
 
+.closed {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
 .closed-overlay:hover .closed {
     opacity: 1;
     transition: 0.5s ease;
@@ -260,20 +275,6 @@ content {
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
-}
-
-.closed {
-    background-color: rgba(0, 0, 0, 0.8);
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: 0.5s ease;
 }
 
 #mcd {
@@ -371,7 +372,7 @@ content {
 
 /* MENU CONTENT */
 
-​ .wrapper {
+​.wrapper {
     display: flex;
     align-items: stretch;
     height: 100%;
@@ -738,12 +739,12 @@ content {
 }
 
 .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
 }
 
 .service-container:hover input ~ .checkmark {
@@ -760,10 +761,6 @@ content {
   display: none;
 }
 
-.service-container input:checked ~ .checkmark:after {
-  display: block;
-}
-
 .service-container .checkmark:after {
   width: 5px;
   height: 10px;
@@ -773,6 +770,10 @@ content {
   transform: rotate(45deg);
   border: solid white;
   border-width: 0 3px 3px 0;
+}
+
+.service-container input:checked ~ .checkmark:after {
+  display: block;
 }
 
 #service-message {
@@ -797,9 +798,9 @@ content {
 }
 
 .orderCard {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin:20px;
-  padding: 30px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 30px;
 }
 
 /* ERROR CSS */
@@ -836,8 +837,6 @@ footer {
 
 /* HOME */
 
-
-
 @media (max-width: 950px) {
     #group-number {
         display: none;
@@ -864,8 +863,54 @@ footer {
 }
 
 @media (max-width: 1240px) {
+    #sidebar {
+        margin-left: -70%;
+    }
+    .content {
+        width: 100%;
+        margin-left: 10%;
+    }
+    #topnav {
+        visibility: visible;
+    }
+    #sidebutton:hover {
+        background-color: #ff6666;
+        color: white;
+        transition: .5s ease;
+    }
+}
+
+@media (max-width: 800px) {
+    #sidebar {
+        min-width: 40%;
+    }
+    .sb-button {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) {
+  #search-desktop, #prof, #cart, #desktop-search {
+    display: none;
+  }
+
+  #mag {
+    display: block;
+    margin-left: 150px;
+    margin-top: 10px;
+  }
+
   #sidebar {
-    margin-left: -70%;
+    width: 100% !important;
+    margin-left: -45%;
+  }
+
+  .closed-text {
+      font-size: 30px;
+  }
+
+  h1 {
+    font-size: 20px !important;
   }
 
   .content {
@@ -880,83 +925,34 @@ footer {
   #sidebutton:hover {
     background-color: #ff6666;
     color: white;
-    transition: .5s ease;
-  }
-}
-
-@media (max-width: 800px) {
-  #sidebar {
-    min-width: 40%;
+    transition: 0.5s ease;
   }
 
-  .sb-button {
-    font-size: 20px;
-  }
-}
-
-@media only screen and (min-device-width: 375px) and (max-device-height: 812px) {
-  #sidebar {
-    width: 100% !important;
+  .service-container {
+    font-size: 17px;
+    margin: 0;
   }
 
-  #search-desktop, #prof, #cart, #desktop-search {
+  #service-description, #service-time {
     display: none;
   }
 
-  #mag {
-    display: block;
-    margin-left: 150px;
-    margin-top: 10px;
-  }
-
-  .closed-text {
+  .service-style {
     font-size: 30px;
+    margin-bottom: 60px;
   }
 
-  h1 {
-    font-size: 20px !important;
+  #service-timeleft {
+    font-size: 60px !important;
   }
-    #sidebar {
-        margin-left: -45%;
-    }
-    .content {
-        width: 100%;
-        margin-left: 10%;
-    }
-    #topnav {
-        visibility: visible;
-    }
-    #sidebutton:hover {
-        background-color: #ff6666;
-        color: white;
-        transition: 0.5s ease;
-    }
 
-    .service-container {
-      font-size: 17px;
-      margin: 0;
-    }
+  #review-mobile-quantity {
+    display: block;
+  }
 
-    #service-description, #service-time {
-      display: none;
-    }
-
-    .service-style {
-      font-size: 30px;
-      margin-bottom: 60px;
-    }
-
-    #service-timeleft {
-      font-size: 60px !important;
-    }
-
-    #review-mobile-quantity {
-      display: block;
-    }
-
-    #service-message {
-      margin-top: 0px;
-    }
+  #service-message {
+    margin-top: 0px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -988,7 +984,6 @@ footer {
     text-align: center;
     padding: 1px;
     width: 90px;
-    font: helvetica;
     line-height: 2;
     border-radius: 10px;
 }
@@ -1007,16 +1002,16 @@ body.search {
     margin-right: 10%;
     margin-top: 20vh;
 }
-
+/* CAUSING ERROR WITH INDEX.HTML
 footer {
     background-color: #ffeb3886;
     height: 7vh;
     bottom: 0px;
     position: fixed;
     width: 100%;
-    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23); */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
 }
-
+*/
 ::placeholder {
     font-size: 1rem;
     color: grey;

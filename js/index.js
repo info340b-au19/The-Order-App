@@ -84,12 +84,12 @@ $(function () {
 		contentTabs[1].removeClass("hide");
 		$("#sb-home").addClass("current");
 	}
-		//-----------HEADER FUNCTIONALITY-----------------------------
-		$("#cart").click(toOrderPage);
-		function toOrderPage() {
-			$("#sb-order").click();
-		}
-	
+	//-----------HEADER FUNCTIONALITY-----------------------------
+	$("#cart").click(toOrderPage);
+	function toOrderPage() {
+		$("#sb-order").click();
+	}
+
 
 
 	// -----------HOME FUNCTIONALITY------------------------------
@@ -291,12 +291,12 @@ $(function () {
 	}
 
 	function reviewClickMobile(data) {
-		$("#mobile-0").click(function () {
+		$("#mobile-0").click(function (event) {
 			if ($(window).width() > 1300) {
-				console.log(1);
 				return;
 			}
 			reviewPage(data[0]);
+			current = event;
 		})
 		$("#mobile-1").click(function () {
 			if ($(window).width() > 1300) {
@@ -471,7 +471,7 @@ $(function () {
 	}
 
 	$(".back").click(back);
-	$("#overlay").click(back);
+	//$("#overlay").click(back);
 
 	function back() {
 		$("#overlay").addClass("hidden");
@@ -480,7 +480,6 @@ $(function () {
 		$("#review-review").html("");
 		$("#review-rating .fa.fa-star.checked").each(function () {
 			$(this).removeClass("checked");
-			console.log("hello");
 		});
 	}
 
@@ -496,17 +495,89 @@ $(function () {
 		$("#error").removeClass("hide");
 	}
 
+	$("#mobile-quantity-sub").click(function () {
+		changeQuantityMobile($(this));
+	});
+	$("#mobile-quantity-add").click(function () {
+		changeQuantityMobile($(this));
+	});
+
+	$("#mobile-quantity-addBtn").click(function () {
+		if ($("#mobile-quantity").val() != 0) {
+			orderOnReview(current, $("#mobile-quantity").val());
+			$("#mobile-message").removeClass("hidden");
+			setTimeout(
+				function () {
+					$("#overlay").addClass("hidden");
+					$("#mobile-message").addClass("hidden");
+				}, 2000
+			);
+		} else {
+			$("#overlay").addClass("hidden");
+		}
+	});
+
+	function changeQuantityMobile(button) {
+		var quantity = $("#mobile-quantity").val()
+		if (button.hasClass("sub")) {
+			if (quantity != 0) {
+				$("#mobile-quantity").val(parseInt(quantity) - 1);
+			}
+		} else {
+			$("#mobile-quantity").val(parseInt(quantity) + 1);
+		}
+	}
+
 	// MENU - ORDER & Display on Myorder Page
 	$(".orderBt").click(orderScreen);
 
+	// QUANTITY ORDER
+
+	var current;
+
 	function orderScreen(event) {
-		alert("hello");
-		$("order-overlay").removeClass("hidden");
+		$("#order-container").removeClass("hidden");
+		$("#order-overlay").removeClass("hidden");
+		$("#quantity").val("1");
+		current = event;
 	}
 
+	$("#quantity-sub").click(function () {
+		changeQuantity($(this));
+	});
+	$("#quantity-add").click(function () {
+		changeQuantity($(this));
+	});
 
+	$("#quantity-addBtn").click(function () {
+		if ($("#quantity").val() != 0) {
+			order(current, $("#quantity").val());
+			$("#message").removeClass("hidden");
+			setTimeout(
+				function () {
+					$("#order-container").addClass("hidden");
+					$("#order-overlay").addClass("hidden");
+					$("#message").addClass("hidden");
+				}, 2000
+			);
+		} else {
+			$("#order-container").addClass("hidden");
+			$("#order-overlay").addClass("hidden");
+		}
+	});
 
-	function order(event) {
+	function changeQuantity(button) {
+		var quantity = $("#quantity").val()
+		if (button.hasClass("sub")) {
+			if (quantity != 0) {
+				$("#quantity").val(parseInt(quantity) - 1);
+			}
+		} else {
+			$("#quantity").val(parseInt(quantity) + 1);
+		}
+	}
+
+	function order(event, quantity) {
 		$(".noItemAlert").addClass("hide");
 		$(".total-price, table").removeClass("hide");
 
@@ -515,8 +586,8 @@ $(function () {
 
 		var newOrderDish = $("<tr></tr>");
 		newOrderDish.append($('<td></td>').text(dishName));
-		newOrderDish.append($('<td></td>').text(1));
-		var dishPriceSpan = $("<span></span>").text(dishPrice);
+		newOrderDish.append($('<td></td>').text(quantity));
+		var dishPriceSpan = $("<span></span>").text(dishPrice * quantity);
 		newOrderDish.append($('<td>$</td>').append(dishPriceSpan));
 
 		$("#myorder tbody").append(newOrderDish);
@@ -528,10 +599,10 @@ $(function () {
 		});
 		$(".total-price p").text("Total Price: $" + totalPrice);
 	}
-	
+
 	// MENU - ORDER & Display on Myorder Page(for smaller screen)
 	$(".mobile-order").click(orderOnReview);
-	function orderOnReview(event) {
+	function orderOnReview(event, quantity) {
 		$(".noItemAlert").addClass("hide");
 		$(".total-price, table").removeClass("hide");
 
@@ -557,15 +628,42 @@ $(function () {
 	//-----------SERVICE FUNCTIONALITY-------------------------
 
 	$("#submit-service").click(Submit);
+
+	const options = ["Notify someone for assistance", "Add more to your current order", "Change order / problem with an order", "Other"];
+
 	function Submit() {
-		//   $.each($("#service input:checked"), function(){
-		//     $(this).;
-		// });
-		$(":checkbox").prop('checked', false).parent().removeClass('active');
-		$("#service .card").append($("<p>Wait time: 2min</p>"));
+
+		if ($("#service-description p").length > 8) {
+			$("#service-message").removeClass("hidden");
+			setTimeout(
+				function () {
+					$("#service-message").addClass("hidden");
+				}, 3000
+			);
+		} else {
+			var time = $(":checkbox:checked").length * 3;
+
+			$(":checkbox").each(function (index) {
+				if (this.checked) {
+					$("#service-description").append($("<p>" + options[index] + "<p>"));
+					$("#service-time").append($("<p>3 minutes<p>"));
+					$("#service-timeleft").html(parseInt($("#service-timeleft").html()) + 3 + ":00");
+				}
+			})
+
+			$(":checkbox").prop('checked', false).parent().removeClass('active');
+		}
+	}
+
+/* will implement in future, i tired
+	var serviceCountdown = function () {
+		var time = $("#service-timeleft").attr("value") * 1000 * 60;
 	}
 
 
+	setInterval(, 60 * 1000);
+
+*/
 	// ------------ORDER FUNCTIONALITY------------------------------
 
 	$("#check-out").click(checkOut);
@@ -589,7 +687,7 @@ $(function () {
 			$(".total-price, table").removeClass("hide");
 		} else {
 			$(".noItemAlert").removeClass("hide");
-		} 	
+		}
 	}
 
 	$("#post").click(reviewPost);

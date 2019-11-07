@@ -422,31 +422,90 @@ content {
 }
 
 /* ORDER */
+#order-container {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999 !important;
+}
 
 #order-overlay {
-    position: fixed;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5) !important;
-    z-index: 2;
-    overflow-y: scroll;
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5) !important;
+  z-index: 30;
+  overflow-y: scroll;
 }
 
 #order-screen {
-    background-color: white;
-    width: 90%;
-    padding: 20px;
-    margin: 0 auto;
-    margin-top: 20px;
-    border: 2px solid grey !important;
-    overflow: visible !important;
-    position: static !important;
+  margin: 0 auto;
+  background-color: white;
+  width: 25%;
+  height: 35%;
+  padding: 20px;
+  margin-top: 15%;
+  border: 2px solid grey !important;
+  overflow: visible !important;
+  position: static !important;
 }
+
+#quantity-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#quantity {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 50px;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+#quantity-addBtn {
+  width: 100px;
+  height: 50px;
+  background-color: #ff6666;
+  border: 1px solid #ff5050;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.quantity-setter {
+  width: 50px;
+  height: 50px;
+  background-color: #ff6666;
+  border: 1px solid #ff5050;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.quantity-setter:hover {
+  background-color: #ff5050;
+}
+
+.order-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* REVIEW */
 
@@ -498,6 +557,7 @@ content {
     border: 2px solid grey !important;
     overflow: visible !important;
     position: static !important;
+    z-index: 9999 !important;
 }
 
 .back {
@@ -597,6 +657,19 @@ content {
     display: none;
 }
 
+#mobile-quantity {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 50px;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+#review-mobile-quantity {
+  text-align: center;
+}
+
 /* REVIEW PAGE MEDIA QUERY */
 
 @media (max-width: 1300px) {
@@ -639,36 +712,30 @@ content {
 }
 
 .serviceCard {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 20px;
-    padding: 30px;
-    height: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin:20px;
+  padding: 30px; 
+  height: 400px;
 }
 
-/* Customize the label (the container) */
-
-.container1 {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    user-select: none;
+.service-container {
+  display: block;
+  position: relative;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  font-size: 22px;
+  padding-left: 35px;
+  margin-bottom: 12px;
 }
 
-/* Hide the browser's default checkbox */
-
-.container1 input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+.service-container input {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  cursor: pointer;
 }
-
-/* Create a custom checkbox */
 
 .checkmark {
     position: absolute;
@@ -679,44 +746,48 @@ content {
     background-color: #eee;
 }
 
-/* On mouse-over, add a grey background color */
-
-.container1:hover input~.checkmark {
-    background-color: #ccc;
+.service-container:hover input ~ .checkmark {
+  background-color: #ff6666;
 }
 
-/* When the checkbox is checked, add a blue background */
-
-.container1 input:checked~.checkmark {
-    background-color: #2196F3;
+.service-container input:checked ~ .checkmark {
+  background-color: #ff6666;
 }
-
-/* Create the checkmark/indicator (hidden when not checked) */
 
 .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
+  content: "";
+  position: absolute;
+  display: none;
 }
 
-/* Style the checkmark/indicator */
-
-.container1 .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+.service-container input:checked ~ .checkmark:after {
+  display: block;
 }
 
-/* Show the checkmark when checked */
+.service-container .checkmark:after {
+  width: 5px;
+  height: 10px;
+  left: 9px;
+  top: 5px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border: solid white;
+  border-width: 0 3px 3px 0;
+}
 
-.container1 input:checked~.checkmark:after {
-    display: block;
+#service-message {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.service-style {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#service-timeleft {
+  font-size: 100px
 }
 
 /* MyOrder page */
@@ -845,6 +916,23 @@ footer {
         background-color: #ff6666;
         color: white;
         transition: 0.5s ease;
+    }
+
+    .service-container {
+      font-size: 17px;
+    }
+
+    #service-description, #service-time {
+      display: none;
+    }
+
+    .service-style {
+      font-size: 30px;
+      margin-bottom: 60px;
+    }
+
+    #service-timeleft {
+      font-size: 60px !important;
     }
 }
 

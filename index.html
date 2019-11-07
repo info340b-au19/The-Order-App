@@ -30,7 +30,7 @@
             <input type="text" id="search-desktop" class="form-control mt-2 ml-3 mr-2"
                 placeholder="Search restaurants... ">
             </input>
-            
+
             <a class="mt-2"><i id="mag" class="fas fa-search fa-2x float-right"></i></a>
             <button id="desktop-search" class="search-button">Search</button>
 
@@ -228,48 +228,21 @@
 
             <!-- HOME CONTENT -->
             <div id="home" class="content hide">
-                <div class="flexcontainer">
-                    <div class="row">
-                        <div class="card queue-card col-lg col-sm-4">
-                            <div class="row">
-                                <div class="col-lg">
-                                    <div id="queue-header" class="queue-inside">Groups in queue</div>
-                                    <div class="whitespace queue-inside">white</div>
-                                    <div id="queue-number" class="queue-inside">9</div>
-                                </div>
-                                <div class="col-lg queue-inside">
-                                    <div class="center">
-                                        <input id="group-number" placeholder="# of people">
-                                    </div>
-                                </div>
-                                <div class="col-lg queue-inside">
-                                    <div class="center">
-                                        <button id="queue" class="home-button dhover">Queue Up</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="card queue-card">
+                    <button id="home-delivery" class="desktop delivery dhover">DINE IN</button>
+                    <div>
+                        <span id="queue-header" class="queue-inside">Groups in queue: </span>
+                        <span id="queue-number" class="queue-inside">9</span>
                     </div>
-                    <hr class="space-break">
-
-                    <div class="row">
-                        <div class="card queue-card col-sm-4 d-md-none d-lg-none">
-                            <button id="small-queue" class="home-button dhover">Queue Up</button>
-                        </div>
-                        <div class="card queue-card col-lg col-mg-2 col-sm-4">
-                            <div class="queue-inside">Wait-time (mins)</div>
-                            <div class="whitespace queue-inside">white</div>
-                            <div id="queue-wait" class="queue-inside">15</div>
-                        </div>
-                        <div class="card queue-card col-lg col-mg-2 col-sm-4">
-                            <button id="home-delivery" class="home-button dhover">DINE IN</button>
-                        </div>
-                        <div class="card queue-card col-lg col-mg-2 col-sm-4">
-                            <button id="home-menu" class="home-button dhover">MENU</button>
-                        </div>
+                    <div>
+                        <span class="queue-inside">Wait-time (mins): </span>
+                        <span id="queue-wait" class="queue-inside">15</span>
                     </div>
-
-                    <hr class="space-break">
+                    <div class="input-group mt-3">
+                        <input id="group-number" placeholder="# of people">
+                        <button id="queue" class="desktop dhover ml-2">Queue Up</button>
+                    </div>
+                    <button id="home-menu" class="desktop dhover mt-3">MENU</button>
                 </div>
             </div>
 
@@ -536,9 +509,9 @@
                         <p id="review-price">PRICE</p>
                         <p id="review-description">REVIEW AVERAGE</p>
                         <div id="review-mobile-quantity">
-                                <button id="mobile-quantity-sub" class="quantity-setter sub">-</button>
-                                <input id="mobile-quantity" type="text" value="1" />
-                                <button id="mobile-quantity-add" class="quantity-setter">+</button>
+                            <button id="mobile-quantity-sub" class="quantity-setter sub">-</button>
+                            <input id="mobile-quantity" type="text" value="1" />
+                            <button id="mobile-quantity-add" class="quantity-setter">+</button>
                         </div>
                         <button id="mobile-quantity-addBtn" class="mobile-order">Order</button>
                         <div id="mobile-message" class="order-center alert alert-success hidden"><b>SUCCESS!</b></div>
@@ -606,7 +579,8 @@
                         <span class="checkmark"></span>
                     </label>
                     <button id="submit-service" class="desktop mt-3">Submit</button>
-                    <div id="service-message" class="alert alert-danger hidden"><b>STOP!</b> Wait a little to add more requests</div>
+                    <div id="service-message" class="alert alert-danger hidden"><b>STOP!</b> Wait a little to add more
+                        requests</div>
                 </div>
                 <div id="service-output" class="card serviceCard">
                     <div class="row">

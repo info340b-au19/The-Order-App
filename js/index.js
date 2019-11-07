@@ -485,7 +485,7 @@ $(function () {
 
 	function displayError(error) {
 		var p = document.createElement("P");
-		p.html(error.message);
+		p.html("ERROR");
 		p.addClass("alert");
 		p.addClass("alert-danger");
 		$("#error").appendChild(p);

@@ -84,6 +84,12 @@ $(function () {
 		contentTabs[1].removeClass("hide");
 		$("#sb-home").addClass("current");
 	}
+		//-----------HEADER FUNCTIONALITY-----------------------------
+		$("#cart").click(toOrderPage);
+		function toOrderPage() {
+			$("#sb-order").click();
+		}
+	
 
 
 	// -----------HOME FUNCTIONALITY------------------------------

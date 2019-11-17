@@ -5,6 +5,7 @@ import RestaurantContent from "./components/RestaurantContent.js";
 
 
 
+
 class App extends Component {
 	render() {
 		return (

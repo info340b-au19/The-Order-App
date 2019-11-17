@@ -70,3 +70,21 @@
     justify-content: center;
     flex-flow: column wrap;
 }
+.home-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 0px !important;
+    margin: 16px;
+    height: 350px;
+    padding-bottom: 10px !important;
+}
+
+.checked {
+    color: orange;
+    height: 15px;
+}
+
+.unchecked {
+    color: black;
+    height: 15px;
+}

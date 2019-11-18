@@ -11,6 +11,7 @@ class App extends Component {
 		return (
 			<div className="app">
 				<Sidebar />
+				{/* UNCOMMENT TO SHOW TODO: IMPLEMENT SIDEBAR/NAVBAR FOR CONTENT */}
 				<RestaurantContent />
 			</div>
 		)

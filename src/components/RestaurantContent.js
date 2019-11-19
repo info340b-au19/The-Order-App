@@ -1,12 +1,11 @@
 'use strict'
+
 import React, { Component } from 'react';
-import Button from 'react-bootstrap/Button';
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ReviewStar  from "./ReviewStar";
 import "../App.css";
-import "./components.css";
 
 class RestaurantContent extends Component {
     render() {
@@ -116,7 +115,6 @@ class RestaurantContent extends Component {
                     <a href="#" className="expand">expand</a>
                     <hr className="spaceBreak" />
                 </div>
-
             </div>
         );
     }

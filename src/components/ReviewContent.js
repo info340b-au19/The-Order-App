@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import Card from "react-bootstrap/Card";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import ReviewStar from "./ReviewStar";
 import "../App.css";
 import reviews from "../review.json";

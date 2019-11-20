@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import "../App.css";
 import ReviewStar from "./ReviewStar.js";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import {Row, Col} from "reactstrap";
 
 class ReviewRow extends Component {
     render() {

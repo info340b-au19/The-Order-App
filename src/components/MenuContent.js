@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import Card from "react-bootstrap/Card";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import {Row, Col, Card} from "reactstrap";
 import ReviewStar from "./ReviewStar";
 import "../App.css";
 import ReviewContent from "./ReviewContent";
 
-class RestaurantContent extends Component {
+class MenuPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -223,4 +221,4 @@ class RestaurantContent extends Component {
     }
 }
 
-export default RestaurantContent;
+export default MenuPage;

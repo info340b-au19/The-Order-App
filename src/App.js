@@ -4,8 +4,8 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar.js";
 //import RestaurantContent from "./components/RestaurantContent.js";
 import MenuPage from "./components/MenuContent.js";
-import HomePage from "./components/RestaurantsContent";
-import RestaurantPage from "./components/Restaurant.js";
+import HomePage from "./components/RestaurantsContent.js";
+import RestaurantPage from "./components/RestaurantHomeContent.js";
 import ServicePage from "./components/Service.js";
 import OrderPage from "./components/Order.js";
 import { Route, Switch, Redirect} from 'react-router-dom';
@@ -17,7 +17,6 @@ class App extends Component {
 				<Header />
 				<content>
 				<Sidebar />
-				{/* UNCOMMENT TO SHOW TODO: IMPLEMENT SIDEBAR/NAVBAR FOR CONTENT */}
 				<Switch>
 					<Route exact path='/' component={HomePage} />
 					<Route exact path='/home' component={RestaurantPage} />

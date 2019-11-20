@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import {Card, Row, Col} from "reactstrap";
-import ReviewStar  from "./ReviewStar";
+import { Card, Row, Col } from "reactstrap";
+import ReviewStar from "./ReviewStar";
 import "../App.css";
+import { NavLink } from 'react-router-dom';
 
 class HomePage extends Component {
     render() {
@@ -11,15 +12,17 @@ class HomePage extends Component {
                     <h2>Restaurants around your Location</h2>
                     <Row>
                         <Col sm="12" lg="6">
-                            <Card id="mcd" className="homeCard">
-                                <img src="img/mcdHome.jpeg" alt="restaurant" className="homeImg imgFluid" />
-                                <div className="homeInfo">
-                                    <h3>McDonalds</h3>
-                                    <p className="extraInfo">Delivery: Available</p>
-                                    <p className="extraInfo">Wait-time: 5-10 mins</p>
-                                    <ReviewStar number={4} />
-                                </div>
-                            </Card>
+                            <NavLink exact to="/home" style={{ textDecoration: 'none' }} >
+                                <Card id="mcd" className="homeCard">
+                                    <img src="img/mcdHome.jpeg" alt="restaurant" className="homeImg imgFluid" />
+                                    <div className="homeInfo">
+                                        <h3>McDonalds</h3>
+                                        <p className="extraInfo">Delivery: Available</p>
+                                        <p className="extraInfo">Wait-time: 5-10 mins</p>
+                                        <ReviewStar number={4} />
+                                    </div>
+                                </Card>
+                            </NavLink>
                         </Col>
                         <Col sm="12" lg="6">
                             <Card className="homeCard closedOverlay">
@@ -50,7 +53,7 @@ class HomePage extends Component {
                                     <h3>Thaiger Room</h3>
                                     <p className="extraInfo">Delivery: Unavailable</p>
                                     <p className="extraInfo">Wait-time: 5-10 mins</p>
-                                    <ReviewStar number={2}  />
+                                    <ReviewStar number={2} />
                                 </div>
                                 <div className="closed">
                                     <div className="closedText">UNAVAILABLE</div>
@@ -100,7 +103,7 @@ class HomePage extends Component {
                                     <h3>Starbucks</h3>
                                     <p className="extraInfo">Delivery: Unavailable</p>
                                     <p className="extraInfo">Wait-time: 15 mins</p>
-                                    <ReviewStar number={5}  />
+                                    <ReviewStar number={5} />
                                 </div>
                                 <div className="closed">
                                     <div className="closedText">UNAVAILABLE</div>

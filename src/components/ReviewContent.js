@@ -18,7 +18,7 @@ class ReviewContent extends Component {
             return (
                 <>
                     <ReviewRow info={element} />
-                    <hr class="break" />
+                    <hr className="break" />
                 </>);
         })
 
@@ -81,12 +81,12 @@ class ReviewContent extends Component {
                         <div>
                             <img src={"img/" + info.info.src} alt={info.info.alt} id="reviewImage" />
                             <button className="back" onClick={this.props.back.bind(this)}>BACK</button>
+                            <p id="reviewName">{info.info.foodName}</p>
+                            <p id="review-price">{"($" + info.info.price + ")"}</p>
                             <div id="review-rating" aria-hidden="true">
                                 <span className="heading">User Rating</span>
                                 <ReviewStar number={4} />
                             </div>
-                            <p id="reviewName">{info.info.foodName}</p>
-                            <p id="review-price">{"$" + info.info.price}</p>
                             <p id="review-description">{info.info.averageRating + " average based on " + info.info.ratingCount + " reviews."}</p>
                             <div id="review-mobile-quantity">
                                 <button id="mobile-quantity-sub" className="quantity-setter sub">-</button>

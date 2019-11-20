@@ -219,6 +219,75 @@ content {
   cursor: pointer;
 }
 
+/* HOME CONTENT */
+
+.queueCard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin:20px;
+  padding: 30px; 
+  height: 400px;
+}
+
+.queueInside {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#queueNumber {
+  font-size: 2rem;
+}
+
+.center {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.queue-active {
+  background-color: #ff5050 !important;
+}
+
+.queue-dactive {
+  background-color: #1ec71e !important;
+}
+
+::-webkit-input-placeholder {
+  font-size: 30px;
+  color: black;
+}
+
+#queueWait {
+  font-size: 2rem;
+}
+
+.home-button {
+  font-size: 50px;
+  width: 100%;
+  height: 100%;
+  background-color: #ff6666;
+  color: white;
+  border: 3px solid #ff5050;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.5) !important;
+}
+
+.delivery {
+  background-color: #64e764;
+}
+
+.delivery:hover {
+  background-color: #1ec71e;
+  transition: 0.5s ease;
+}
+
+.dhover:hover {
+  background-color: #ff5050;
+  transition: 0.5s ease;
+}
+
 /* Menu Content CSS */
 
 #menu {
@@ -259,7 +328,7 @@ content {
   cursor: pointer;
 }
 
-.dishName {
+.dishName, .dishPrice {
   font-weight: bold;
 }
 
@@ -291,6 +360,7 @@ content {
 #reviewImage {
   width: 100px;
   height: 100px;
+  float: left;
 }
 
 .rate {
@@ -305,6 +375,11 @@ content {
   margin-bottom: -5px !important;
   margin-left: -5px !important;
   padding: 0px;
+}
+
+#review-price {
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .reviewRow:after {

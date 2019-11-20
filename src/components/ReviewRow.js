@@ -13,13 +13,13 @@ class ReviewRow extends Component {
                         <div className="reviewRow">
                             <div className="side">
                                 <div>
-                                    <img src={"img/" + data.picture} alt="profile picture" className="profile" />
+                                    <img src={"img/" + data.picture} alt="person" className="profile" />
                                     <p className="name"></p>
                                 </div>
                             </div>
                             <div className="middle">
                                 <div className="mobile-head">
-                                    <img src={"img/" + data.picture} alt="profile picture" className="mobile-profile" />
+                                    <img src={"img/" + data.picture} alt="person" className="mobile-profile" />
                                     <p className="mobile-name">{data.name}</p>
                                     <ReviewStar number={data.rating} />
                                 </div>

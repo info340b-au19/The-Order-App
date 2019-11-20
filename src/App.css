@@ -216,6 +216,7 @@ a {
   box-shadow: 1px 1px 1px black;
   max-width: 15em !important;
   margin: 5px !important;
+  cursor: pointer;
 }
 
 .dishName {
@@ -247,7 +248,7 @@ a {
   overflow-y: scroll;
 }
 
-#review-image {
+#reviewImage {
   width: 100px;
   height: 100px;
 }
@@ -257,7 +258,7 @@ a {
   margin-top: 5px;
 }
 
-#review-name {
+#reviewName {
   font-weight: bold;
   font-size: 50px;
   margin-top: -10px !important;
@@ -266,7 +267,7 @@ a {
   padding: 0px;
 }
 
-.review-row:after {
+.reviewRow:after {
   content: "";
   display: table;
   clear: both;
@@ -290,6 +291,7 @@ a {
   width: 80px;
   height: 40px;
   border: 1px solid #ff5050;
+  float: right;
 }
 
 .back:hover {
@@ -304,31 +306,31 @@ a {
   color: white;
 }
 
-.bar-5 {
+.bar5 {
   width: 0%;
   height: 18px;
   background-color: #ff6961;
 }
 
-.bar-4 {
+.bar4 {
   width: 0%;
   height: 18px;
   background-color: #778ecb;
 }
 
-.bar-3 {
+.bar3 {
   width: 0%;
   height: 18px;
   background-color: #ffb347;
 }
 
-.bar-2 {
+.bar2 {
   width: 0%;
   height: 18px;
   background-color: #add8e6;
 }
 
-.bar-1 {
+.bar1 {
   width: 0%;
   height: 18px;
   background-color: #77dd77;
@@ -359,7 +361,7 @@ a {
   font-size: 20px;
 }
 
-.mobile-order {
+.mobileOrder {
   margin-bottom: 25px;
   padding: 10px 40px;
   font-size: 30px;
@@ -395,16 +397,20 @@ text-align: center;
 display: none;
 }
 
+.scrollLock {
+  position: fixed;
+}
+
 /* REVIEW PAGE MEDIA QUERY */
 
 @media (max-width: 1300px) {
-  .mobile-order {
+  .mobileOrder {
       display: block;
       background-color: #ff6666;
       color: #fff;
       border: 1px solid #ff5050;
   }
-  .mobile-order:hover {
+  .mobileOrder:hover {
       background-color: #ff5050;
   }
   .right {
@@ -428,4 +434,14 @@ display: none;
   #hamburger {
       display: block;
   }
+}
+
+/* HIDE */
+
+.hidden {
+  visibility: hidden;
+}
+
+.hide {
+  display: none;
 }

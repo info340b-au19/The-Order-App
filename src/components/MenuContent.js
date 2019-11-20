@@ -13,7 +13,6 @@ class RestaurantContent extends Component {
             reviewState: false,
             reviewIndex: 0
         };
-
     }
 
     toggleReview = (index) => {
@@ -22,17 +21,24 @@ class RestaurantContent extends Component {
             reviewIndex: index
         });
     }
+
+    back = () => {
+        this.setState({
+            reviewState: false,
+            reviewIndex: 0
+        });
+    }
     
     review = () => {
         if (this.state.reviewState) {
-            return <ReviewContent index = {this.state.reviewIndex} />
+            return <ReviewContent index = {this.state.reviewIndex} back = {this.back} />
         }
     }
 
     render() {
         return (
             <>
-            <div id="menu" className="content">
+            <div id="menu" className={ this.state.reviewState ? "content scrollLock" : "content" }>
                 <div className="flexcontainer">
                     <Row>
                         <Col sm="12" lg="4">
@@ -43,7 +49,7 @@ class RestaurantContent extends Component {
                                 <p className="dishPrice">$<span>4.5</span></p>
                                 <div>
                                     <button className="desktop orderBt">Order</button>
-                                    <button id="desktop-0" className="desktop" onClick={() => this.toggleReview(0)}>Reviews</button>
+                                    <button className="desktop" onClick={() => this.toggleReview(0)} >Reviews</button>
                                 </div>
                             </ Card>
                         </ Col>
@@ -56,7 +62,7 @@ class RestaurantContent extends Component {
                                 <p className="dishPrice">$<span>3.5</span></p>
                                 <div>
                                     <button className="desktop orderBt">Order</button>
-                                    <button id="desktop-1" className="desktop" onClick={() => this.toggleReview(1)}>Reviews</button>
+                                    <button className="desktop" onClick={() => this.toggleReview(1)} >Reviews</button>
                                 </div>
                             </ Card>
                         </Col>
@@ -70,7 +76,7 @@ class RestaurantContent extends Component {
                                 <p className="dishPrice">$<span>5.0</span></p>
                                 <div>
                                     <button className="desktop orderBt">Order</button>
-                                    <button id="desktop-2" className="desktop">Reviews</button>
+                                    <button className="desktop" onClick={() => this.toggleReview(2)} >Reviews</button>
                                 </div>
                             </ Card>
                         </ Col>
@@ -86,7 +92,7 @@ class RestaurantContent extends Component {
                                 <p className="dishPrice">$<span>5.5</span></p>
                                 <div>
                                     <button className="desktop orderBt">Order</button>
-                                    <button id="desktop-3" className="desktop">Reviews</button>
+                                    <button className="desktop" onClick={() => this.toggleReview(3)} >Reviews</button>
                                 </div>
                             </ Card>
                         </ Col>
@@ -99,7 +105,7 @@ class RestaurantContent extends Component {
                                 <p className="dishPrice">$<span>6.0</span></p>
                                 <div>
                                     <button className="desktop orderBt">Order</button>
-                                    <button id="desktop-4" className="desktop">Reviews</button>
+                                    <button className="desktop" onClick={() => this.toggleReview(4)} >Reviews</button>
                                 </div>
                             </ Card>
                         </ Col>
@@ -113,7 +119,7 @@ class RestaurantContent extends Component {
                                 <p className="dishPrice">$<span>6.5</span></p>
                                 <div>
                                     <button className="desktop orderBt">Order</button>
-                                    <button id="desktop-5" className="desktop">Reviews</button>
+                                    <button className="desktop" onClick={() => this.toggleReview(5)} >Reviews</button>
                                 </div>
                             </ Card>
                         </ Col>
@@ -129,7 +135,7 @@ class RestaurantContent extends Component {
                                 <p className="dishPrice">$<span>4.0</span></p>
                                 <div>
                                     <button className="desktop orderBt">Order</button>
-                                    <button id="desktop-6" className="desktop">Reviews</button>
+                                    <button className="desktop" onClick={() => this.toggleReview(6)} >Reviews</button>
                                 </div>
                             </ Card>
                         </ Col>
@@ -143,7 +149,7 @@ class RestaurantContent extends Component {
                                 <p className="dishPrice">$<span>5.5</span></p>
                                 <div>
                                     <button className="desktop orderBt">Order</button>
-                                    <button id="desktop-7" className="desktop">Reviews</button>
+                                    <button className="desktop" onClick={() => this.toggleReview(7) }>Reviews</button>
                                 </div>
                             </ Card>
                         </ Col>
@@ -157,7 +163,7 @@ class RestaurantContent extends Component {
                                 <p className="dishPrice">$<span>6.0</span></p>
                                 <div>
                                     <button className="desktop orderBt">Order</button>
-                                    <button id="desktop-8" className="desktop">Reviews</button>
+                                    <button className="desktop" onClick={() => this.toggleReview(8)} >Reviews</button>
                                 </div>
                             </ Card>
                         </ Col>
@@ -173,7 +179,7 @@ class RestaurantContent extends Component {
                                 <p className="dishPrice">$<span>5.0</span></p>
                                 <div>
                                     <button className="desktop orderBt">Order</button>
-                                    <button id="desktop-9" className="desktop">Reviews</button>
+                                    <button className="desktop" onClick={() => this.toggleReview(9)} >Reviews</button>
                                 </div>
                             </ Card>
                         </ Col>
@@ -187,7 +193,7 @@ class RestaurantContent extends Component {
                                 <p className="dishPrice">$<span>6.0</span></p>
                                 <div>
                                     <button className="desktop orderBt">Order</button>
-                                    <button id="desktop-10" className="desktop">Reviews</button>
+                                    <button className="desktop" onClick={() => this.toggleReview(10)} >Reviews</button>
                                 </div>
                             </ Card>
                         </ Col>
@@ -201,7 +207,7 @@ class RestaurantContent extends Component {
                                 <p className="dishPrice">$<span>3.5</span></p>
                                 <div>
                                     <button className="desktop orderBt">Order</button>
-                                    <button id="desktop-11" className="desktop">Reviews</button>
+                                    <button className="desktop" onClick={() => this.toggleReview(11)} >Reviews</button>
                                 </div>
                             </ Card>
                         </ Col>

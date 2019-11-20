@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "../App.css";
-
+import { NavLink } from 'react-router-dom';
 class Sidebar extends Component {
     render() {
         return (
@@ -12,19 +12,19 @@ class Sidebar extends Component {
 
                     <ul>
                         <li>
-                            <button className="sbButton current">Restaurants</button>
+                            <NavLink exact to="/" style={{ textDecoration: 'none' }}><button className="sbButton current">Home</button></NavLink>
                         </li>
                         <li>
-                            <button className="sbButton">Home</button>
+                            <NavLink exact to="/home" style={{ textDecoration: 'none' }}><button className="sbButton">Restaurant Home</button></NavLink>
                         </li>
                         <li>
-                            <button className="sbButton">Menu</button>
+                            <NavLink exact to="/menu" style={{ textDecoration: 'none' }}><button className="sbButton">Menu</button></NavLink>
                         </li>
                         <li>
-                            <button className="sbButton">Service</button>
+                            <NavLink exact to="/service" style={{ textDecoration: 'none' }}><button className="sbButton">Service</button></NavLink>
                         </li>
                         <li>
-                            <button className="sbButton">My Order</button>
+                            <NavLink exact to="/order" style={{ textDecoration: 'none' }}><button className="sbButton">My Order</button></NavLink>
                         </li>
                     </ul>
                 </nav>

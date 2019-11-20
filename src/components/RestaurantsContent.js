@@ -1,13 +1,9 @@
-'use strict'
-
 import React, { Component } from 'react';
-import Card from "react-bootstrap/Card";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import {Card, Row, Col} from "reactstrap";
 import ReviewStar  from "./ReviewStar";
 import "../App.css";
 
-class RestaurantContent extends Component {
+class HomePage extends Component {
     render() {
         return (
             <div id="restaurants" className="content">
@@ -120,4 +116,4 @@ class RestaurantContent extends Component {
     }
 }
 
-export default RestaurantContent;
+export default HomePage;

@@ -11,7 +11,7 @@ class ReviewRow extends Component {
             <>
                 <Row>
                     <Col lg="12">
-                        <div className="review-row">
+                        <div className="reviewRow">
                             <div className="side">
                                 <div>
                                     <img src={"img/" + data.picture} alt="profile picture" className="profile" />

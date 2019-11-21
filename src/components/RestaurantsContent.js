@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {Card, Row, Col} from "reactstrap";
-import ReviewStar  from "./ReviewStar";
+import { Card, Row, Col } from "reactstrap";
+import ReviewStar from "./ReviewStar";
 import "../App.css";
 import { Redirect} from 'react-router-dom';
 
@@ -63,7 +63,7 @@ class HomePage extends Component {
                                     <h3>Thaiger Room</h3>
                                     <p className="extraInfo">Delivery: Unavailable</p>
                                     <p className="extraInfo">Wait-time: 5-10 mins</p>
-                                    <ReviewStar number={2}  />
+                                    <ReviewStar number={2} />
                                 </div>
                                 <div className="closed">
                                     <div className="closedText">UNAVAILABLE</div>
@@ -113,7 +113,7 @@ class HomePage extends Component {
                                     <h3>Starbucks</h3>
                                     <p className="extraInfo">Delivery: Unavailable</p>
                                     <p className="extraInfo">Wait-time: 15 mins</p>
-                                    <ReviewStar number={5}  />
+                                    <ReviewStar number={5} />
                                 </div>
                                 <div className="closed">
                                     <div className="closedText">UNAVAILABLE</div>

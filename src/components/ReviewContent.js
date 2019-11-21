@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReviewStar from "./ReviewStar";
 import "../App.css";
-import reviews from "../review.json";
+import reviews from "../menu.json";
 import ReviewRow from "./ReviewRow";
 
 class ReviewContent extends Component {

@@ -3,6 +3,7 @@ import { Card, Row, Col } from "reactstrap";
 import ReviewStar from "./ReviewStar";
 import "../App.css";
 import { Redirect} from 'react-router-dom';
+import dishes from "../menu.json";
 
 class HomePage extends Component {
     constructor(props){

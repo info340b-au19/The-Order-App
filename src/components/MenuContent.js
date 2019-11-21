@@ -1,10 +1,31 @@
 import React, { Component } from 'react';
-import {Col, Card, CardDeck} from "reactstrap";
+import { Col, Card, CardDeck } from "reactstrap";
 import ReviewStar from "./ReviewStar";
 import "../App.css";
 import ReviewContent from "./ReviewContent";
+import MENU from "../menu.json";
+
 
 class MenuPage extends Component {
+    render() {
+        let menu = MENU; //handle if not provided a prop
+        let dishCards = menu.map((dish) => {
+            return <DishCard key={dish.info.name} dish={dish} />;
+        })
+
+        return (
+
+            <div id="menu" className="container">
+                <div className="flexcontainer">
+                    <CardDeck>
+                        {dishCards}
+                    </CardDeck>
+                </div>
+            </div>
+        );
+    }
+}
+class DishCard extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -26,200 +47,36 @@ class MenuPage extends Component {
             reviewIndex: 0
         });
     }
-    
+
     review = () => {
         if (this.state.reviewState) {
-            return <ReviewContent index = {this.state.reviewIndex} back = {this.back} />
+            return <ReviewContent index={this.state.reviewIndex} back={this.back} />
         }
     }
-
     render() {
+        let dish = this.props.dish;
         return (
             <>
-            <div id="menu" className={ this.state.reviewState ? "container scrollLock" : "container" }>
-                <div className="flexcontainer">
-                    <CardDeck>
-                        <Col sm="12" md="6" lg="4">
-                            <Card id="mobile-0" className="menuCard">
-                                <img src="img/bacon qpc.jpeg" alt="burger" className="menuImg imgFluid" />
-                                <ReviewStar number={3} />
-                                <p className="dishName">Bacon QFC</p>
-                                <p className="dishPrice">$<span>4.5</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(0)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-                        <Col sm="12" md="6" lg="4">
-                            <Card id="mobile-1" className="menuCard">
-                                <img src="img/double bacon qpc.jpeg" alt="burger" className="menuImg imgFluid" />
-                                <ReviewStar number={4} />
-
-                                <p className="dishName">Double Bacon QPC</p>
-                                <p className="dishPrice">$<span>3.5</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(1)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </Col>
-
-                        <Col sm="12" md="6" lg="4">
-                            <Card id="mobile-2" className="menuCard">
-                                <img src="img/qpc.jpeg" alt="burger" className="menuImg imgFluid" />
-                                <ReviewStar number={5} />
-
-                                <p className="dishName">QFC</p>
-                                <p className="dishPrice">$<span>5.0</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(2)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-                   
-
-               
-                        <Col sm="12" md="6" lg="4">
-                            <Card id="mobile-3" className="menuCard">
-                                <img src="img/4 piece spicy.jpeg" alt="fries" className="menuImg imgFluid" />
-                                <ReviewStar number={3} />
-
-                                <p className="dishName">4 Piece Spicy BBQ Tenders</p>
-                                <p className="dishPrice">$<span>5.5</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(3)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-                        <Col sm="12" md="6" lg="4">
-                            <Card id="mobile-4" className="menuCard">
-                                <img src="img/big mac.jpeg" alt="burger" className="menuImg imgFluid" />
-                                <ReviewStar number={3} />
-
-                                <p className="dishName">Big Mac</p>
-                                <p className="dishPrice">$<span>6.0</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(4)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-
-                        <Col sm="12" md="6" lg="4">
-                            <Card id="mobile-5" className="menuCard">
-                                <img src="img/20mcnuggets.jpeg" alt="fries" className="menuImg imgFluid" />
-                                <ReviewStar number={2} />
-
-                                <p className="dishName">20 Piece McNuggets</p>
-                                <p className="dishPrice">$<span>6.5</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(5)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-         
-
-             
-                        <Col sm="12" md="6" lg="4">
-                            <Card id="mobile-6" className="menuCard">
-                                <img src="img/cheeseburger.jpeg" alt="burger" className="menuImg imgFluid" />
-                                <ReviewStar number={3} />
-
-                                <p className="dishName">Cheeseburger</p>
-                                <p className="dishPrice">$<span>4.0</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(6)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-
-                        <Col sm="12" md="6" lg="4">
-                            <Card id="mobile-7" className="menuCard">
-                                <img src="img/double cheeseburger.jpeg" alt="burger" className="menuImg imgFluid" />
-                                <ReviewStar number={3} />
-
-                                <p className="dishName">Double Cheeseburger</p>
-                                <p className="dishPrice">$<span>5.5</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(7) }>Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-
-                        <Col sm="12" md="6" lg="4">
-                            <Card id="mobile-8" className="menuCard">
-                                <img src="img/triple cheeseburger.jpeg" alt="burger" className="menuImg imgFluid" />
-                                <ReviewStar number={3} />
-
-                                <p className="dishName">Triple Cheeseburger</p>
-                                <p className="dishPrice">$<span>6.0</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(8)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-        
-
-       
-                        <Col sm="12" md="6" lg="4">
-                            <Card id="mobile-9" className="menuCard">
-                                <img src="img/chicken tenders.jpeg" alt="fries" className="menuImg imgFluid" />
-                                <ReviewStar number={5} />
-
-                                <p className="dishName">Chicken Tenders</p>
-                                <p className="dishPrice">$<span>5.0</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(9)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-
-                        <Col sm="12" md="6" lg="4">
-                            <Card id="mobile-10" className="menuCard">
-                                <img src="img/bacon mcdouble.jpeg" alt="burger" className="menuImg imgFluid" />
-                                <ReviewStar number={4} />
-
-                                <p className="dishName">Bacon McDouble</p>
-                                <p className="dishPrice">$<span>6.0</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(10)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-
-                        <Col sm="12" md="6" lg="4">
-                            <Card id="mobile-11" className="menuCard">
-                                <img src="img/mcchicken.jpeg" alt="burger" className="menuImg imgFluid" />
-                                <ReviewStar number={5} />
-
-                                <p className="dishName">McChicken</p>
-                                <p className="dishPrice">$<span>3.5</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(11)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-                        </CardDeck>
-       
+                <Col sm="12" md="6" lg="4">
+                    <Card id="mobile-0" className="menuCard">
+                        <img src={"img/" + dish.info.src} alt={dish.info.alt} className="menuImg imgFluid" />
+                        <ReviewStar number={Math.floor(dish.info.averageRating)} />
+                        <p className="dishName">{dish.info.foodName}</p>
+                        <p className="dishPrice">$<span>{dish.info.price}</span></p>
+                        <div>
+                            <button className="desktop orderBt">Order</button>
+                            <button className="desktop" onClick={() => this.toggleReview(dish.id - 1)} >Reviews</button>
+                        </div>
+                    </ Card>
+                </ Col>
+                <div>
+                    {this.review()}
                 </div>
-            </div>
-            
-            <div>
-                {this.review()}
-            </div>            
             </>
         );
     }
+
 }
+
 
 export default MenuPage;

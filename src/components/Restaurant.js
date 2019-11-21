@@ -40,7 +40,7 @@ class RestaurantPage extends Component {
         return (
             <div className="container">
                 <h1>McDonalds</h1>
-                <p>4.5 points based on 1000 Reviews</p>
+                <p>4.5 points based on 1000 reviews</p>
                 <p>$$</p>
                 <p>Write a Review</p>
                 <RestaurantNav {...this.state} navClickHandler={this.navClickHandler.bind(this)} />

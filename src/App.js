@@ -62,6 +62,7 @@ class App extends Component {
 					</Switch>
 					</content>
 				</div>
+			
 			)
 
 		// } else {

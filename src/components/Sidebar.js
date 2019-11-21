@@ -14,15 +14,15 @@ class Sidebar extends Component {
                         <li>
                             <NavLink exact to="/" style={{ textDecoration: 'none' }}><button className="sbButton current">Home</button></NavLink>
                         </li>
-                        <li>
-                            <NavLink exact to="/home" style={{ textDecoration: 'none' }}><button className="sbButton">Restaurant Home</button></NavLink>
+                        {/* <li>
+                            <NavLink exact to="/restaurant" style={{ textDecoration: 'none' }}><button className="sbButton">Restaurant Home</button></NavLink>
                         </li>
                         <li>
                             <NavLink exact to="/menu" style={{ textDecoration: 'none' }}><button className="sbButton">Menu</button></NavLink>
                         </li>
                         <li>
                             <NavLink exact to="/service" style={{ textDecoration: 'none' }}><button className="sbButton">Service</button></NavLink>
-                        </li>
+                        </li> */}
                         <li>
                             <NavLink exact to="/order" style={{ textDecoration: 'none' }}><button className="sbButton">My Order</button></NavLink>
                         </li>

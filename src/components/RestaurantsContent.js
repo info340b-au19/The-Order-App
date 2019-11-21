@@ -2,16 +2,29 @@ import React, { Component } from 'react';
 import {Card, Row, Col} from "reactstrap";
 import ReviewStar  from "./ReviewStar";
 import "../App.css";
+import { Redirect} from 'react-router-dom';
 
 class HomePage extends Component {
+    constructor(props){
+        super(props);
+        this.state = {redirect:false};
+      }
+    
+      handleClick = () => {
+        this.setState({redirect: true}); 
+      }
+
     render() {
+        if(this.state.redirect) { //if we should redirect
+            return <Redirect push to='/restaurant'/>;
+          }
         return (
-            <div id="restaurants" className="content">
+            <div id="restaurants" className="container">
                 <div className="flexcontainer">
                     <h2>Restaurants around your Location</h2>
                     <Row>
                         <Col sm="12" lg="6">
-                            <Card id="mcd" className="homeCard">
+                            <Card id="mcd" className="homeCard" onClick={this.handleClick}>
                                 <img src="img/mcdHome.jpeg" alt="restaurant" className="homeImg imgFluid" />
                                 <div className="homeInfo">
                                     <h3>McDonalds</h3>

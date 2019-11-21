@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Row, Col, Card} from "reactstrap";
+import {Col, Card, CardDeck} from "reactstrap";
 import ReviewStar from "./ReviewStar";
 import "../App.css";
 import ReviewContent from "./ReviewContent";
@@ -36,11 +36,11 @@ class MenuPage extends Component {
     render() {
         return (
             <>
-            <div id="menu" className={ this.state.reviewState ? "content scrollLock" : "content" }>
+            <div id="menu" className={ this.state.reviewState ? "container scrollLock" : "container" }>
                 <div className="flexcontainer">
-                    <Row>
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-0" className="card menuCard col-lg col-mg-2 col-sm-4">
+                    <CardDeck>
+                        <Col sm="12" md="6" lg="4">
+                            <Card id="mobile-0" className="menuCard">
                                 <img src="img/bacon qpc.jpeg" alt="burger" className="menuImg imgFluid" />
                                 <ReviewStar number={3} />
                                 <p className="dishName">Bacon QFC</p>
@@ -51,8 +51,8 @@ class MenuPage extends Component {
                                 </div>
                             </ Card>
                         </ Col>
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-1" className="card menuCard col-lg col-mg-2 col-sm-4">
+                        <Col sm="12" md="6" lg="4">
+                            <Card id="mobile-1" className="menuCard">
                                 <img src="img/double bacon qpc.jpeg" alt="burger" className="menuImg imgFluid" />
                                 <ReviewStar number={4} />
 
@@ -65,8 +65,8 @@ class MenuPage extends Component {
                             </ Card>
                         </Col>
 
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-2" className="card menuCard col-lg col-mg-2 col-sm-4">
+                        <Col sm="12" md="6" lg="4">
+                            <Card id="mobile-2" className="menuCard">
                                 <img src="img/qpc.jpeg" alt="burger" className="menuImg imgFluid" />
                                 <ReviewStar number={5} />
 
@@ -78,11 +78,11 @@ class MenuPage extends Component {
                                 </div>
                             </ Card>
                         </ Col>
-                    </ Row>
+                   
 
-                    <Row>
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-3" className="card menuCard col-lg col-mg-2 col-sm-4">
+               
+                        <Col sm="12" md="6" lg="4">
+                            <Card id="mobile-3" className="menuCard">
                                 <img src="img/4 piece spicy.jpeg" alt="fries" className="menuImg imgFluid" />
                                 <ReviewStar number={3} />
 
@@ -94,8 +94,8 @@ class MenuPage extends Component {
                                 </div>
                             </ Card>
                         </ Col>
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-4" className="card menuCard col-lg col-mg-2 col-sm-4">
+                        <Col sm="12" md="6" lg="4">
+                            <Card id="mobile-4" className="menuCard">
                                 <img src="img/big mac.jpeg" alt="burger" className="menuImg imgFluid" />
                                 <ReviewStar number={3} />
 
@@ -108,8 +108,8 @@ class MenuPage extends Component {
                             </ Card>
                         </ Col>
 
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-5" className="card menuCard col-lg col-mg-2 col-sm-4">
+                        <Col sm="12" md="6" lg="4">
+                            <Card id="mobile-5" className="menuCard">
                                 <img src="img/20mcnuggets.jpeg" alt="fries" className="menuImg imgFluid" />
                                 <ReviewStar number={2} />
 
@@ -121,11 +121,11 @@ class MenuPage extends Component {
                                 </div>
                             </ Card>
                         </ Col>
-                    </ Row>
+         
 
-                    <Row>
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-6" className="card menuCard col-lg col-mg-2 col-sm-4">
+             
+                        <Col sm="12" md="6" lg="4">
+                            <Card id="mobile-6" className="menuCard">
                                 <img src="img/cheeseburger.jpeg" alt="burger" className="menuImg imgFluid" />
                                 <ReviewStar number={3} />
 
@@ -138,8 +138,8 @@ class MenuPage extends Component {
                             </ Card>
                         </ Col>
 
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-7" className="card menuCard col-lg col-mg-2 col-sm-4">
+                        <Col sm="12" md="6" lg="4">
+                            <Card id="mobile-7" className="menuCard">
                                 <img src="img/double cheeseburger.jpeg" alt="burger" className="menuImg imgFluid" />
                                 <ReviewStar number={3} />
 
@@ -152,8 +152,8 @@ class MenuPage extends Component {
                             </ Card>
                         </ Col>
 
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-8" className="card menuCard col-lg col-mg-2 col-sm-4">
+                        <Col sm="12" md="6" lg="4">
+                            <Card id="mobile-8" className="menuCard">
                                 <img src="img/triple cheeseburger.jpeg" alt="burger" className="menuImg imgFluid" />
                                 <ReviewStar number={3} />
 
@@ -165,11 +165,11 @@ class MenuPage extends Component {
                                 </div>
                             </ Card>
                         </ Col>
-                    </ Row>
+        
 
-                    <Row>
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-9" className="card menuCard col-lg col-mg-2 col-sm-4">
+       
+                        <Col sm="12" md="6" lg="4">
+                            <Card id="mobile-9" className="menuCard">
                                 <img src="img/chicken tenders.jpeg" alt="fries" className="menuImg imgFluid" />
                                 <ReviewStar number={5} />
 
@@ -182,8 +182,8 @@ class MenuPage extends Component {
                             </ Card>
                         </ Col>
 
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-10" className="card menuCard col-lg col-mg-2 col-sm-4">
+                        <Col sm="12" md="6" lg="4">
+                            <Card id="mobile-10" className="menuCard">
                                 <img src="img/bacon mcdouble.jpeg" alt="burger" className="menuImg imgFluid" />
                                 <ReviewStar number={4} />
 
@@ -196,8 +196,8 @@ class MenuPage extends Component {
                             </ Card>
                         </ Col>
 
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-11" className="card menuCard col-lg col-mg-2 col-sm-4">
+                        <Col sm="12" md="6" lg="4">
+                            <Card id="mobile-11" className="menuCard">
                                 <img src="img/mcchicken.jpeg" alt="burger" className="menuImg imgFluid" />
                                 <ReviewStar number={5} />
 
@@ -209,7 +209,8 @@ class MenuPage extends Component {
                                 </div>
                             </ Card>
                         </ Col>
-                    </ Row>
+                        </CardDeck>
+       
                 </div>
             </div>
             

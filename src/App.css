@@ -22,11 +22,13 @@ a {
 button {
   border: none;
   background: transparent;
+  justify-content: center;
 }
 
 button:focus {
   outline: 0 !important;
 }
+
 /* HEADER CSS */
 header {
   height: 75px;
@@ -106,15 +108,40 @@ content {
 }
 */
 
+/* RESTAIRANT PAGE NAVI CSS */
+.topnav {
+  background-color:white;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
+}
+
+.topnav a:hover {
+  border-bottom: 3px solid red;
+}
+
+.topnav a.active {
+  border-bottom: 3px solid red;
+}
+
 /* UNIVERSAL CONTENT CSS */
 
-.content {
+/* .content {
   min-width: 75%;
   max-width: 80%;
   margin-left: 20%;
   padding: 1%;
   overflow-x: hidden;
-}
+} */
 
 .row {
   display: flex;
@@ -221,9 +248,9 @@ content {
 
 /* Menu Content CSS */
 
-#menu {
+/* #menu {
   margin-left: 19%;
-}
+} */
 
 .menuCard {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

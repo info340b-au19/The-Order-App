@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 class Header extends Component {
     render() {
         return (
-            <header className="container mt-3">
+            <header className="mt-3 container">
                 <div className="input-group">
                     <GiHamburgerMenu className="mt-2 mr-3" style={{color: 'red'}} size={24} />
 

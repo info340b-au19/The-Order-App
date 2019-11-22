@@ -136,13 +136,13 @@ content {
 
 /* UNIVERSAL CONTENT CSS */
 
- .content {
+ /* .content {
   min-width: 75%;
   max-width: 80%;
   margin-left: 20%;
   padding: 1%;
   overflow-x: hidden;
-} 
+}  */
 
 .row {
   display: flex;

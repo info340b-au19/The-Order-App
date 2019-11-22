@@ -8,9 +8,9 @@ class Dish extends Component {
         let data = this.props.info.info;
         return (
             <>
-                <Col sm="12" lg="4">
-                    <Card id="mobile-0" className="card menuCard col-lg col-mg-2 col-sm-4">
-                        <img src="img/bacon qpc.jpeg" alt="burger" className="menuImg imgFluid" />
+                <Col sm="12" md="6" lg="4">
+                    <Card id="mobile-0" className="menuCard">
+                        <img src={"img/" + data.src} alt={data.alt} className="menuImg imgFluid" />
                         <ReviewStar number={3} />
                         <p className="dishName">{data.foodName}</p>
                         <p className="dishPrice">$<span>{data.price}</span></p>

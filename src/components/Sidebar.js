@@ -5,7 +5,7 @@ class Sidebar extends Component {
     render() {
         return (
             <div>
-                <nav id="sidebar">
+                <nav id="sidebar" className="active">
                     <div>
                         <p className="sbHead">McDonalds</p>
                     </div>

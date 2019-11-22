@@ -4,7 +4,7 @@ import "../App.css";
 import ReviewContent from "./ReviewContent";
 import Dish from "./Dish";
 import OrderContent from "./OrderContent.js";
-import reviews from "../review.json";
+import reviews from "../menu.json";
 
 
 class MenuPage extends Component {
@@ -49,11 +49,11 @@ class MenuPage extends Component {
             return <OrderContent />
         }
     }
-
     render() {
+        let dish = this.props.dish;
         return (
             <>
-                <div id="menu" className={this.state.reviewState ? "content scrollLock" : "content"}>
+                <div id="menu" className="content">
                     <div className="flexcontainer">
                         <Row>
                             <Dish info={this.state.info[0]} toggleReview={this.toggleReview} back={this.back} index={0} />
@@ -91,6 +91,8 @@ class MenuPage extends Component {
             </>
         );
     }
+
 }
+
 
 export default MenuPage;

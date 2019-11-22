@@ -23,11 +23,13 @@ button {
   border: none;
   background: transparent;
   cursor: pointer;
+  justify-content: center;
 }
 
 button:focus {
   outline: 0 !important;
 }
+
 /* HEADER CSS */
 header {
   height: 75px;
@@ -107,15 +109,40 @@ content {
 }
 */
 
+/* RESTAIRANT PAGE NAVI CSS */
+.topnav {
+  background-color:white;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
+}
+
+.topnav a:hover {
+  border-bottom: 3px solid red;
+}
+
+.topnav a.active {
+  border-bottom: 3px solid red;
+}
+
 /* UNIVERSAL CONTENT CSS */
 
-.content {
+ .content {
   min-width: 75%;
   max-width: 80%;
   margin-left: 20%;
   padding: 1%;
   overflow-x: hidden;
-}
+} 
 
 .row {
   display: flex;
@@ -309,9 +336,9 @@ content {
 
 /* Menu Content CSS */
 
-#menu {
+/* #menu {
   margin-left: 19%;
-}
+} */
 
 .menuCard {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -666,4 +693,89 @@ display: none;
 
 .hide {
   display: none;
+}
+
+/* Service Page */
+
+#service-textbox {
+  width: 200px;
+}
+
+.serviceCard {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+margin:20px;
+padding: 30px; 
+height: 400px;
+}
+
+.service-container {
+display: block;
+position: relative;
+-webkit-user-select: none;
+user-select: none;
+cursor: pointer;
+font-size: 22px;
+padding-left: 35px;
+margin-bottom: 12px;
+}
+
+.service-container input {
+position: absolute;
+height: 0;
+width: 0;
+opacity: 0;
+cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.service-container:hover input ~ .checkmark {
+background-color: #ff6666;
+}
+
+.service-container input:checked ~ .checkmark {
+background-color: #ff6666;
+}
+
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+.service-container .checkmark:after {
+width: 5px;
+height: 10px;
+left: 9px;
+top: 5px;
+-webkit-transform: rotate(45deg);
+transform: rotate(45deg);
+border: solid white;
+border-width: 0 3px 3px 0;
+}
+
+.service-container input:checked ~ .checkmark:after {
+display: block;
+}
+
+#service-message {
+margin-top: 25px;
+text-align: center;
+}
+
+.service-style {
+font-size: 40px;
+font-weight: bold;
+text-align: center;
+}
+
+#service-timeleft {
+font-size: 100px
 }

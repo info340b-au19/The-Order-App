@@ -16,7 +16,7 @@ class HomePage extends Component {
 
     render() {
         return (
-            <div id="restaurants" className="content">
+            <div id="restaurants" className="container content">
                 <div className="flexcontainer">
                     <h2>Restaurants around your Location</h2>
                     <Row>

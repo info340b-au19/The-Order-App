@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+
 import "../App.css";
 import { NavLink } from 'react-router-dom';
 
-class RestaurantHomeContent extends Component {
+class Queue extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -121,4 +122,4 @@ class RestaurantHomeContent extends Component {
     }
 }
 
-export default RestaurantHomeContent;
+export default Queue;

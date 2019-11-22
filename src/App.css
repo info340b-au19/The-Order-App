@@ -779,3 +779,16 @@ text-align: center;
 #service-timeleft {
 font-size: 100px
 }
+
+/* Order Page */
+.orderedDish {
+  font-size: 1rem;
+}
+
+.orderCard {
+  display: block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  padding: 30px;
+  height:100%;
+}

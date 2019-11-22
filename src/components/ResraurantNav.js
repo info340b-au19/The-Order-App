@@ -12,7 +12,7 @@ class RestaurantNav extends Component {
                 <nav id="restaurant" className="topnav">
                     {
                         this.props.menus.map(menu =>
-                            <a
+                            <a key={menu.menu}
                                 className={menu.isActive ? 'active' : ''}
                                 id={menu.id}
                                 onClick={this.props.navClickHandler}

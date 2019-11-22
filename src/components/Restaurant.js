@@ -5,6 +5,7 @@ import RestaurantNav from "./ResraurantNav";
 import ServicePage from "./Service.js";
 import MenuPage from "./MenuContent";
 import QueuePage from "./Queue"
+import ReviewStar from "./ReviewStar"
 
 class RestaurantPage extends Component {
     constructor(props) {
@@ -27,11 +28,10 @@ class RestaurantPage extends Component {
     }
 
     render() {
-
         let restaurantContent = ''
         this.state.menus.forEach((element) => {
             if (element.isActive) {
-                if (element.id == 0) { restaurantContent = <MenuPage />; }
+                if (element.id == 0) { restaurantContent = <MenuPage orderHandler={this.props.orderHandler}/>; }
                 else if (element.id == 1) { restaurantContent = <ServicePage />; }
                 else { restaurantContent = <QueuePage />; }
             }
@@ -40,8 +40,8 @@ class RestaurantPage extends Component {
         return (
             <div className="container">
                 <h1>McDonalds</h1>
-                <p>4.5 points based on 1000 eviews</p>
-                <p>$$</p>
+                <ReviewStar number={4} /><span>4.5 points based on 1000 reviews  </span>
+                <span>$$</span>
                 <p>Write a Review</p>
                 <RestaurantNav {...this.state} navClickHandler={this.navClickHandler.bind(this)} />
 

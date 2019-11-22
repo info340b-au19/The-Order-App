@@ -11,7 +11,8 @@ class App extends Component {
 constructor(props) {
         super(props);
         this.state = {
-            current: 0
+			current: 0,
+			orderedDishes:[]
         };
     }
 
@@ -19,7 +20,25 @@ constructor(props) {
         this.setState({
             current: index
         })
-    }
+	}
+	
+	orderHandler = newOrderDish => {
+		let newOrderedDishes = this.state.orderedDishes;
+		newOrderedDishes.push(newOrderDish);
+        this.setState(
+            {
+				orderedDishes:newOrderedDishes                    
+            }
+        );
+	}
+	
+	checkoutHandler = () => {
+		this.setState(
+            {
+				orderedDishes:[]                
+            }
+        );
+	}
 
 	render() {
 		return (
@@ -29,8 +48,8 @@ constructor(props) {
 				{/* <Sidebar current = {this.state.current} changeCurrent = {this.changeCurrent} /> */}
 				<Switch>
 					<Route exact path='/' render={(props) => <HomePage changeCurrent = {this.changeCurrent} />} />
-					<Route exact path='/home' render={(props) => <RestaurantPage changeCurrent = {this.changeCurrent} />} />
-					<Route exact path='/order' render={(props) => <OrderPage />} />
+					<Route exact path='/home' render={(props) => <RestaurantPage changeCurrent = {this.changeCurrent} orderHandler={this.orderHandler.bind(this)} />} />
+					<Route exact path='/order' render={(props) => <OrderPage orderedDishes = {this.state.orderedDishes} checkoutHandler={this.checkoutHandler.bind(this)}/>} />
 					<Redirect to='/' />
 				</Switch>
 				</content>

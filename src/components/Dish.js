@@ -15,7 +15,7 @@ class Dish extends Component {
                         <p className="dishName">{data.foodName}</p>
                         <p className="dishPrice">$<span>{data.price}</span></p>
                         <div>
-                            <button className="desktop orderBt">Order</button>
+                            <button className="desktop orderBt" onClick={() => this.props.toggleOrder()} >Order</button>
                             <button className="desktop" onClick={() => this.props.toggleReview(this.props.index)} >Reviews</button>
                         </div>
                     </ Card>

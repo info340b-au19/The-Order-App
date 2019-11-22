@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Row, Col, Card } from "reactstrap";
+import { Row } from "reactstrap";
 import "../App.css";
-import ReviewContent from "./ReviewContent";
-import Dish from "./Dish";
+import ReviewContent from "./ReviewContent.js";
+import Dish from "./Dish.js";
 import OrderContent from "./OrderContent.js";
 import reviews from "../menu.json";
 
@@ -50,7 +50,6 @@ class MenuPage extends Component {
         }
     }
     render() {
-        let dish = this.props.dish;
         return (
             <>
                 <div id="menu" className="content">

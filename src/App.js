@@ -7,7 +7,7 @@ import RestaurantPage from "./components/Queue.js";
 import OrderPage from "./components/Order.js";
 import { Route, Switch, Redirect} from 'react-router-dom';
 import MenuPage from "./components/MenuContent.js";
-//import ServicePage from "./Service.js";
+import ServicePage from "./components/Service.js";
 
 class App extends Component {
 constructor(props) {
@@ -33,7 +33,7 @@ constructor(props) {
 					<Route exact path='/' render={(props) => <HomePage changeCurrent = {this.changeCurrent} />} />
 					<Route exact path='/home' render={(props) => <RestaurantPage changeCurrent = {this.changeCurrent} />} />
 					<Route exact path='/menu' render={(props) => <MenuPage />} />
-					{/* <Route exact path='/service' render={(props) => <ServicePage />} /> */}
+					<Route exact path='/service' render={(props) => <ServicePage />} />
 					<Route exact path='/order' render={(props) => <OrderPage />} />
 					<Redirect to='/' />
 				</Switch>

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Card, Row, Col } from "reactstrap";
-import ReviewStar from "./ReviewStar";
+import ReviewStar from "./ReviewStar.js";
 import "../App.css";
 import { NavLink } from 'react-router-dom';
 import restaurants from "../restaurants.json";
-import ClosedRestaurant from "./ClosedRestaurant";
+import ClosedRestaurant from "./ClosedRestaurant.js";
 
 class HomePage extends Component {
     constructor(props) {
@@ -36,7 +36,7 @@ class HomePage extends Component {
                         </Col>
                         <ClosedRestaurant info={this.state.restaurant[0]} />
                     </Row>
-                    <a href="#" className="expand">expand</a>
+                    <button className="expand">expand</button>
                     <hr className="spaceBreak" />
                 </div>
 
@@ -46,7 +46,7 @@ class HomePage extends Component {
                         <ClosedRestaurant info={this.state.restaurant[1]} />
                         <ClosedRestaurant info={this.state.restaurant[2]} />
                     </Row>
-                    <a href="#" className="expand">expand</a>
+                    <button className="expand">expand</button>
                     <hr className="spaceBreak" />
                 </div>
 
@@ -56,7 +56,7 @@ class HomePage extends Component {
                         <ClosedRestaurant info={this.state.restaurant[3]} />
                         <ClosedRestaurant info={this.state.restaurant[4]} />
                     </Row>
-                    <a href="#" className="expand">expand</a>
+                    <button className="expand">expand</button>
                     <hr className="spaceBreak" />
                 </div>
             </div>

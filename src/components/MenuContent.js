@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
 import {CardDeck } from "reactstrap";
-=======
-import { Row } from "reactstrap";
->>>>>>> 9667db9012ceb62ca5a1c607c585c20f195b5397
 import "../App.css";
 import ReviewContent from "./ReviewContent.js";
 import Dish from "./Dish.js";

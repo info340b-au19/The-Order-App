@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
-import {Row, Col, Card} from "reactstrap";
-import ReviewStar from "./ReviewStar";
+import { Row, Col, Card } from "reactstrap";
 import "../App.css";
 import ReviewContent from "./ReviewContent";
+import Dish from "./Dish";
+import OrderContent from "./OrderContent.js";
+import reviews from "../review.json";
+
 
 class MenuPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            info: reviews,
             reviewState: false,
-            reviewIndex: 0
+            reviewIndex: 0,
+            orderState: false
         };
     }
 
@@ -20,202 +25,69 @@ class MenuPage extends Component {
         });
     }
 
+    toggleOrder = () => {
+        this.setState({
+            orderState: true
+        })
+    }
+
     back = () => {
         this.setState({
             reviewState: false,
             reviewIndex: 0
         });
     }
-    
+
     review = () => {
         if (this.state.reviewState) {
-            return <ReviewContent index = {this.state.reviewIndex} back = {this.back} />
+            return <ReviewContent info={this.state.info} index={this.state.reviewIndex} back={this.back} />
+        }
+    }
+
+    order = () => {
+        if (this.state.orderState) {
+            return <OrderContent />
         }
     }
 
     render() {
         return (
             <>
-            <div id="menu" className={ this.state.reviewState ? "content scrollLock" : "content" }>
-                <div className="flexcontainer">
-                    <Row>
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-0" className="card menuCard col-lg col-mg-2 col-sm-4">
-                                <img src="img/bacon qpc.jpeg" alt="burger" className="menuImg imgFluid" />
-                                <ReviewStar number={3} />
-                                <p className="dishName">Bacon QFC</p>
-                                <p className="dishPrice">$<span>4.5</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(0)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-1" className="card menuCard col-lg col-mg-2 col-sm-4">
-                                <img src="img/double bacon qpc.jpeg" alt="burger" className="menuImg imgFluid" />
-                                <ReviewStar number={4} />
+                <div id="menu" className={this.state.reviewState ? "content scrollLock" : "content"}>
+                    <div className="flexcontainer">
+                        <Row>
+                            <Dish info={this.state.info[0]} toggleReview={this.toggleReview} back={this.back} index={0} />
+                            <Dish info={this.state.info[1]} toggleReview={this.toggleReview} back={this.back} index={1} />
+                            <Dish info={this.state.info[2]} toggleReview={this.toggleReview} back={this.back} index={2} />
+                        </ Row>
 
-                                <p className="dishName">Double Bacon QPC</p>
-                                <p className="dishPrice">$<span>3.5</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(1)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </Col>
+                        <Row>
+                            <Dish info={this.state.info[3]} toggleReview={this.toggleReview} back={this.back} index={3} />
+                            <Dish info={this.state.info[4]} toggleReview={this.toggleReview} back={this.back} index={4} />
+                            <Dish info={this.state.info[5]} toggleReview={this.toggleReview} back={this.back} index={5} />
+                        </ Row>
 
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-2" className="card menuCard col-lg col-mg-2 col-sm-4">
-                                <img src="img/qpc.jpeg" alt="burger" className="menuImg imgFluid" />
-                                <ReviewStar number={5} />
+                        <Row>
+                            <Dish info={this.state.info[6]} toggleReview={this.toggleReview} back={this.back} index={6} />
+                            <Dish info={this.state.info[7]} toggleReview={this.toggleReview} back={this.back} index={7} />
+                            <Dish info={this.state.info[8]} toggleReview={this.toggleReview} back={this.back} index={8} />
+                        </ Row>
 
-                                <p className="dishName">QFC</p>
-                                <p className="dishPrice">$<span>5.0</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(2)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-                    </ Row>
-
-                    <Row>
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-3" className="card menuCard col-lg col-mg-2 col-sm-4">
-                                <img src="img/4 piece spicy.jpeg" alt="fries" className="menuImg imgFluid" />
-                                <ReviewStar number={3} />
-
-                                <p className="dishName">4 Piece Spicy BBQ Tenders</p>
-                                <p className="dishPrice">$<span>5.5</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(3)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-4" className="card menuCard col-lg col-mg-2 col-sm-4">
-                                <img src="img/big mac.jpeg" alt="burger" className="menuImg imgFluid" />
-                                <ReviewStar number={3} />
-
-                                <p className="dishName">Big Mac</p>
-                                <p className="dishPrice">$<span>6.0</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(4)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-5" className="card menuCard col-lg col-mg-2 col-sm-4">
-                                <img src="img/20mcnuggets.jpeg" alt="fries" className="menuImg imgFluid" />
-                                <ReviewStar number={2} />
-
-                                <p className="dishName">20 Piece McNuggets</p>
-                                <p className="dishPrice">$<span>6.5</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(5)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-                    </ Row>
-
-                    <Row>
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-6" className="card menuCard col-lg col-mg-2 col-sm-4">
-                                <img src="img/cheeseburger.jpeg" alt="burger" className="menuImg imgFluid" />
-                                <ReviewStar number={3} />
-
-                                <p className="dishName">Cheeseburger</p>
-                                <p className="dishPrice">$<span>4.0</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(6)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-7" className="card menuCard col-lg col-mg-2 col-sm-4">
-                                <img src="img/double cheeseburger.jpeg" alt="burger" className="menuImg imgFluid" />
-                                <ReviewStar number={3} />
-
-                                <p className="dishName">Double Cheeseburger</p>
-                                <p className="dishPrice">$<span>5.5</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(7) }>Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-8" className="card menuCard col-lg col-mg-2 col-sm-4">
-                                <img src="img/triple cheeseburger.jpeg" alt="burger" className="menuImg imgFluid" />
-                                <ReviewStar number={3} />
-
-                                <p className="dishName">Triple Cheeseburger</p>
-                                <p className="dishPrice">$<span>6.0</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(8)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-                    </ Row>
-
-                    <Row>
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-9" className="card menuCard col-lg col-mg-2 col-sm-4">
-                                <img src="img/chicken tenders.jpeg" alt="fries" className="menuImg imgFluid" />
-                                <ReviewStar number={5} />
-
-                                <p className="dishName">Chicken Tenders</p>
-                                <p className="dishPrice">$<span>5.0</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(9)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-10" className="card menuCard col-lg col-mg-2 col-sm-4">
-                                <img src="img/bacon mcdouble.jpeg" alt="burger" className="menuImg imgFluid" />
-                                <ReviewStar number={4} />
-
-                                <p className="dishName">Bacon McDouble</p>
-                                <p className="dishPrice">$<span>6.0</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(10)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-
-                        <Col sm="12" lg="4">
-                            <Card id="mobile-11" className="card menuCard col-lg col-mg-2 col-sm-4">
-                                <img src="img/mcchicken.jpeg" alt="burger" className="menuImg imgFluid" />
-                                <ReviewStar number={5} />
-
-                                <p className="dishName">McChicken</p>
-                                <p className="dishPrice">$<span>3.5</span></p>
-                                <div>
-                                    <button className="desktop orderBt">Order</button>
-                                    <button className="desktop" onClick={() => this.toggleReview(11)} >Reviews</button>
-                                </div>
-                            </ Card>
-                        </ Col>
-                    </ Row>
+                        <Row>
+                            <Dish info={this.state.info[9]} toggleReview={this.toggleReview} back={this.back} index={9} />
+                            <Dish info={this.state.info[10]} toggleReview={this.toggleReview} back={this.back} index={10} />
+                            <Dish info={this.state.info[11]} toggleReview={this.toggleReview} back={this.back} index={11} />
+                        </ Row>
+                    </div>
                 </div>
-            </div>
-            
-            <div>
-                {this.review()}
-            </div>            
+
+                <div>
+                    {this.review()}
+                </div>
+
+                <div>
+                    {this.order()}
+                </div>
             </>
         );
     }

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import ReviewStar from "./ReviewStar";
 import "../App.css";
-import reviews from "../review.json";
 import ReviewRow from "./ReviewRow";
 
 class ReviewContent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            review: reviews
+            review: this.props.info
         };
     }
 

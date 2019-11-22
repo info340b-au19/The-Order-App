@@ -2,19 +2,6 @@ import React, { Component } from 'react';
 import "../App.css";
 import { NavLink } from 'react-router-dom';
 class Sidebar extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            current: 0
-        };
-    }
-
-    changeCurrent = (index) => {
-        this.setState({
-            current: index
-        })
-    }
-
     render() {
         return (
             <div>
@@ -25,19 +12,19 @@ class Sidebar extends Component {
 
                     <ul>
                         <li>
-                            <NavLink exact to="/" style={{ textDecoration: 'none'}}><button className={this.state.current === 0 ? "sbButton current" : "sbButton"} onClick={() => this.changeCurrent(0)}>Home</button></NavLink>
+                            <NavLink exact to="/" style={{ textDecoration: 'none'}}><button className={this.props.current === 0 ? "sbButton current" : "sbButton"} onClick={() => this.props.changeCurrent(0)}>Home</button></NavLink>
                         </li>
                         <li>
-                            <NavLink exact to="/home" style={{ textDecoration: 'none' }}><button className={this.state.current === 1 ? "sbButton current" : "sbButton"} onClick={() => this.changeCurrent(1)}>Restaurant Home</button></NavLink>
+                            <NavLink exact to="/home" style={{ textDecoration: 'none' }}><button className={this.props.current === 1 ? "sbButton current" : "sbButton"} onClick={() => this.props.changeCurrent(1)}>Restaurant Home</button></NavLink>
                         </li>
                         <li>
-                            <NavLink exact to="/menu" style={{ textDecoration: 'none'}}><button className={this.state.current === 2 ? "sbButton current" : "sbButton"} onClick={() => this.changeCurrent(2)}>Menu</button></NavLink>
+                            <NavLink exact to="/menu" style={{ textDecoration: 'none'}}><button className={this.props.current === 2 ? "sbButton current" : "sbButton"} onClick={() => this.props.changeCurrent(2)}>Menu</button></NavLink>
                         </li>
                         <li>
-                            <NavLink exact to="/service" style={{ textDecoration: 'none' }}><button className={this.state.current === 3 ? "sbButton current" : "sbButton"} onClick={() => this.changeCurrent(3)}>Service</button></NavLink>
+                            <NavLink exact to="/service" style={{ textDecoration: 'none' }}><button className={this.props.current === 3 ? "sbButton current" : "sbButton"} onClick={() => this.props.changeCurrent(3)}>Service</button></NavLink>
                         </li>
                         <li>
-                            <NavLink exact to="/order" style={{ textDecoration: 'none' }}><button className={this.state.current === 4 ? "sbButton current" : "sbButton"} onClick={() => this.changeCurrent(4)}>My Order</button></NavLink>
+                            <NavLink exact to="/order" style={{ textDecoration: 'none' }}><button className={this.props.current === 4 ? "sbButton current" : "sbButton"} onClick={() => this.props.changeCurrent(4)}>My Order</button></NavLink>
                         </li>
                     </ul>
                 </nav>

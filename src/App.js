@@ -11,18 +11,31 @@ import OrderPage from "./components/Order.js";
 import { Route, Switch, Redirect} from 'react-router-dom';
 
 class App extends Component {
+constructor(props) {
+        super(props);
+        this.state = {
+            current: 0
+        };
+    }
+
+    changeCurrent = (index) => {
+        this.setState({
+            current: index
+        })
+    }
+
 	render() {
 		return (
 			<div className="app">
 				<Header />
 				<content>
-				<Sidebar />
+				<Sidebar current = {this.state.current} changeCurrent = {this.changeCurrent} />
 				<Switch>
-					<Route exact path='/' component={HomePage} />
-					<Route exact path='/home' component={RestaurantPage} />
-					<Route exact path='/menu' component={MenuPage} />
-					<Route exact path='/service' component={ServicePage} />
-					<Route exact path='/order' component={OrderPage} />
+					<Route exact path='/' render={(props) => <HomePage changeCurrent = {this.changeCurrent} />} />
+					<Route exact path='/home' render={(props) => <RestaurantPage changeCurrent = {this.changeCurrent} />} />
+					<Route exact path='/menu' render={(props) => <MenuPage />} />
+					<Route exact path='/service' render={(props) => <ServicePage />} />
+					<Route exact path='/order' render={(props) => <OrderPage />} />
 					<Redirect to='/' />
 				</Switch>
 				</content>

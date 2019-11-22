@@ -1,0 +1,42 @@
+[
+    {
+        "id": "1",
+        "src": "bokabokHome.jpg",
+        "name": "Bok a Bok Chicken",
+        "star": "3",
+        "delivery": "Unavailable",
+        "waittime": "17-24 minutes"
+    },
+    {
+        "id": "2",
+        "src": "thaigerroomHome.jpg",
+        "name": "Thaiger Room",
+        "star": "2",
+        "delivery": "Available",
+        "waittime": "5-10 minutes"
+    },
+    {
+        "id": "3",
+        "src": "dennyHome.jpg",
+        "name": "Dennys",
+        "star": "3",
+        "delivery": "Unavailable",
+        "waittime": "35-52 minutes"
+    },
+    {
+        "id": "4",
+        "src": "meesumHome.jpg",
+        "name": "Mee Sum",
+        "star": "1",
+        "delivery": "Unavailable",
+        "waittime": "8-12 minutes"
+    },
+    {
+        "id": "5",
+        "src": "starbucksHome.jpg",
+        "name": "Starbucks",
+        "star": "5",
+        "delivery": "Available",
+        "waittime": "15 minutes",
+    }
+]

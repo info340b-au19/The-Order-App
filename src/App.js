@@ -6,6 +6,11 @@ import HomePage from "./components/RestaurantsContent";
 import RestaurantPage from "./components/Restaurant";
 import OrderPage from "./components/Order.js";
 import { Route, Switch, Redirect} from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import MenuPage from "./components/MenuContent.js";
+import ServicePage from "./components/Service.js";
+>>>>>>> 9667db9012ceb62ca5a1c607c585c20f195b5397
 
 class App extends Component {
 constructor(props) {
@@ -30,6 +35,11 @@ constructor(props) {
 				<Switch>
 					<Route exact path='/' render={(props) => <HomePage changeCurrent = {this.changeCurrent} />} />
 					<Route exact path='/home' render={(props) => <RestaurantPage changeCurrent = {this.changeCurrent} />} />
+<<<<<<< HEAD
+=======
+					<Route exact path='/menu' render={(props) => <MenuPage />} />
+					<Route exact path='/service' render={(props) => <ServicePage />} />
+>>>>>>> 9667db9012ceb62ca5a1c607c585c20f195b5397
 					<Route exact path='/order' render={(props) => <OrderPage />} />
 					<Redirect to='/' />
 				</Switch>

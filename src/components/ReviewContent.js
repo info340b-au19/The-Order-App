@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ReviewStar from "./ReviewStar";
+import ReviewStar from "./ReviewStar.js";
 import "../App.css";
-import ReviewRow from "./ReviewRow";
+import ReviewRow from "./ReviewRow.js";
 
 class ReviewContent extends Component {
     constructor(props) {

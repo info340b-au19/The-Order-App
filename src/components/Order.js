@@ -21,7 +21,7 @@ class OrderPage extends Component {
 
             let orderedDishesLines = orderedDishes.map((dish) => {
                 return (
-                    <tr>
+                    <tr key={dish.info.foodName}>
                         <td>{dish.info.foodName}</td>
                         <td>1</td>
                         <td>{dish.info.price}</td>
@@ -31,6 +31,7 @@ class OrderPage extends Component {
             // eslint-disable-next-line
             orderedDishes.map((dish) => {
                 totalPrice += parseFloat(dish.info.price);
+                return 0;
             })
 
             return (

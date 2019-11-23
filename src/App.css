@@ -51,6 +51,10 @@ header {
   width: 35px;
 }
 
+input::placeholder {
+  font-size:1rem;
+}
+
 content {
   position: absolute;
   top: 75px;
@@ -59,6 +63,7 @@ content {
   bottom: 0px;
   overflow-y: scroll;
 }
+
 
 /* SIDE BAR CSS */
 

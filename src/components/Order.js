@@ -21,7 +21,7 @@ class OrderPage extends Component {
 
             let orderedDishesLines = orderedDishes.map((dish) => {
                 return (
-                    <tr>
+                    <tr key={dish.info.foodName}>
                         <td>{dish.info.foodName}</td>
                         <td>1</td>
                         <td>{dish.info.price}</td>
@@ -30,6 +30,7 @@ class OrderPage extends Component {
             let totalPrice = 0;
             orderedDishes.map((dish) => {
                 totalPrice += parseFloat(dish.info.price);
+                return 0;
             })
 
             return (

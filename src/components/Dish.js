@@ -3,26 +3,35 @@ import "../App.css";
 import ReviewStar from "./ReviewStar.js";
 import { Card, Col } from "reactstrap";
 
-class Dish extends Component {
+
+class DishCard extends Component {
+
+    success = () => {
+        if (this.props.success && this.props.successIndex === this.props.dish.id - 1) {
+            return (
+                <div id="message" className="order-center alert alert-success"><strong>SUCCESS!</strong></div>
+            );
+        }
+    }
+
     render() {
-        let data = this.props.info.info;
+        let dish = this.props.dish;
         return (
-            <>
                 <Col sm="12" md="6" lg="4">
                     <Card id="mobile-0" className="menuCard">
-                        <img src={"img/" + data.src} alt={data.alt} className="menuImg imgFluid" />
-                        <ReviewStar number={3} />
-                        <p className="dishName">{data.foodName}</p>
-                        <p className="dishPrice">$<span>{data.price}</span></p>
+                        <img src={"img/" + dish.info.src} alt={dish.info.alt} className="menuImg imgFluid" />
+                        <ReviewStar number={Math.floor(dish.info.averageRating)} />
+                        <p className="dishName">{dish.info.foodName}</p>
+                        <p className="dishPrice">$<span>{dish.info.price}</span></p>
+                        {this.success()}
                         <div>
-                            <button className="desktop orderBt" onClick={() => this.props.toggleOrder()} >Order</button>
-                            <button className="desktop" onClick={() => this.props.toggleReview(this.props.index)} >Reviews</button>
+                            <button className="desktop orderBt" onClick={() => this.props.orderHandler(dish, dish.id - 1)}>Order</button>
+                            <button className="desktop" onClick={() => this.props.toggleReview(dish.id - 1)} >Reviews</button>
                         </div>
                     </ Card>
                 </ Col>
-            </>
         );
     }
 }
 
-export default Dish;
+export default DishCard;

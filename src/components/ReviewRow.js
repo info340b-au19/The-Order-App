@@ -5,7 +5,7 @@ import {Row, Col} from "reactstrap";
 
 class ReviewRow extends Component {
     render() {
-        let data = this.props.info;
+        let review = this.props.review;
         return (
             <>
                 <Row>
@@ -13,21 +13,21 @@ class ReviewRow extends Component {
                         <div className="reviewRow">
                             <div className="side">
                                 <div>
-                                    <img src={"img/" + data.picture} alt="person" className="profile" />
+                                    <img src={"img/" + review.picture} alt="person" className="profile" />
                                     <p className="name"></p>
                                 </div>
                             </div>
                             <div className="middle">
                                 <div className="mobile-head">
-                                    <img src={"img/" + data.picture} alt="person" className="mobile-profile" />
-                                    <p className="mobile-name">{data.name}</p>
-                                    <ReviewStar number={data.rating} />
+                                    <img src={"img/" + review.picture} alt="person" className="mobile-profile" />
+                                    <p className="mobile-name">{review.name}</p>
+                                    <ReviewStar number={review.rating} />
                                 </div>
-                                <p className="review-section">{data.review}</p>
+                                <p className="review-section">{review.review}</p>
                             </div>
                             <div className="side right">
                                 <div className="review-desktop-stars">
-                                    <ReviewStar number={data.rating} />
+                                    <ReviewStar number={review.rating} />
                                 </div>
                             </div>
                         </div>

@@ -7,16 +7,16 @@ class ReviewContent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            review: this.props.info
+            dishes: this.props.dishes
         };
     }
 
     reviewRows = () => {
-        var rows = this.state.review[this.props.index].review;
-        var reviewRows = rows.map((element) => {
+        let reviews = this.state.dishes[this.props.index].review;
+        let reviewRows = reviews.map((element) => {
             return (
                 <>
-                    <ReviewRow info={element} />
+                    <ReviewRow review={element} />
                     <hr className="break" />
                 </>);
         })
@@ -25,35 +25,35 @@ class ReviewContent extends Component {
     }
 
     render() {
-        var info = this.state.review[this.props.index];
+        let dish = this.state.dishes[this.props.index];
 
         // CSS FOR REVIEW BARS
         let bar5 = {
-            width: info.info.ratings.fivestar + "%",
+            width: dish.info.ratings.fivestar + "%",
             height: "18px",
             backgroundColor: "#ff6961"
         }
 
         let bar4 = {
-            width: info.info.ratings.fourstar + "%",
+            width: dish.info.ratings.fourstar + "%",
             height: "18px",
             backgroundColor: "#778ecb"
         }
 
         let bar3 = {
-            width: info.info.ratings.threestar + "%",
+            width: dish.info.ratings.threestar + "%",
             height: "18px",
             backgroundColor: "#ffb347"
         }
 
         let bar2 = {
-            width: info.info.ratings.twostar + "%",
+            width: dish.info.ratings.twostar + "%",
             height: "18px",
             backgroundColor: "#add8e6"
         }
 
         let bar1 = {
-            width: info.info.ratings.onestar + "%",
+            width: dish.info.ratings.onestar + "%",
             height: "18px",
             backgroundColor: "#77dd77"
         }
@@ -78,15 +78,15 @@ class ReviewContent extends Component {
                 <div id="overlay">
                     <div id="review">
                         <div>
-                            <img src={"img/" + info.info.src} alt={info.info.alt} id="reviewImage" />
+                            <img src={"img/" + dish.info.src} alt={dish.info.alt} id="reviewImage" />
                             <button className="back" onClick={this.props.back.bind(this)}>BACK</button>
-                            <p id="reviewName">{info.info.foodName}</p>
-                            <p id="review-price">{"($" + info.info.price + ")"}</p>
+                            <p id="reviewName">{dish.info.foodName}</p>
+                            <p id="review-price">{"($" + dish.info.price + ")"}</p>
                             <div id="review-rating" aria-hidden="true">
                                 <span className="heading">User Rating</span>
                                 <ReviewStar number={4} />
                             </div>
-                            <p id="review-description">{info.info.averageRating + " average based on " + info.info.ratingCount + " reviews."}</p>
+                            <p id="review-description">{dish.info.averageRating + " average based on " + dish.info.ratingCount + " reviews."}</p>
                             <div id="review-mobile-quantity">
                                 <button id="mobile-quantity-sub" className="quantity-setter sub">-</button>
                                 <input id="mobile-quantity" type="text" value="1" />

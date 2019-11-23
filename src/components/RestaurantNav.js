@@ -13,7 +13,7 @@ class RestaurantNav extends Component {
                     {
                         this.props.menus.map(menu =>
                             // eslint-disable-next-line
-                            <a
+                            <a key={menu.menu}
                                 className={menu.isActive ? 'active' : ''}
                                 id={menu.id}
                                 onClick={this.props.navClickHandler}

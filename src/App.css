@@ -60,6 +60,17 @@ content {
   overflow-y: scroll;
 }
 
+.search-button {
+  margin-right: 20px;
+  height: 35px;
+  margin-top: 7px;
+  background-color: #ff6666;
+  border: 1px solid #ff5050;
+  color: white;
+  width: 80px;
+  font-weight: bold;
+}
+
 /* SIDE BAR CSS */
 
 #sidebar {
@@ -799,3 +810,17 @@ text-align: center;
 #service-timeleft {
 font-size: 100px
 }
+
+/* Order Page */
+.orderedDish {
+  font-size: 1rem;
+}
+
+.orderCard {
+  display: block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  padding: 30px;
+  height:100%;
+}
+

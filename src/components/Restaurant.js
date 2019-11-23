@@ -34,7 +34,6 @@ class RestaurantPage extends Component {
     }
 
     render() {
-
         let restaurantContent = ''
         this.state.menus.forEach((element) => {
             if (element.isActive) {
@@ -42,7 +41,7 @@ class RestaurantPage extends Component {
                 if (element.id == 0) { restaurantContent = <QueuePage />; }
                 // eslint-disable-next-line
                 else if (element.id == 1) { restaurantContent = <ServicePage />; }
-                else { restaurantContent = <MenuPage />; }
+                else { restaurantContent = <MenuPage orderHandler={this.props.orderHandler} success={this.props.success} successIndex={this.props.successIndex} />; }
             }
         });
 

@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import {CardDeck } from "reactstrap";
+import { CardDeck } from "reactstrap";
 import "../App.css";
 import ReviewContent from "./ReviewContent.js";
-import Dish from "./Dish.js";
+import DishCard from "./Dish.js";
 import OrderContent from "./OrderContent.js";
-import reviews from "../menu.json";
+import DISHES from "../menu.json";
 
 
 class MenuPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            info: reviews,
+            dishes: DISHES,
             reviewState: false,
             reviewIndex: 0,
             orderState: false
@@ -41,7 +41,7 @@ class MenuPage extends Component {
 
     review = () => {
         if (this.state.reviewState) {
-            return <ReviewContent info={this.state.info} index={this.state.reviewIndex} back={this.back} />
+            return <ReviewContent dishes={this.state.dishes} index={this.state.reviewIndex} back={this.back} />
         }
     }
 
@@ -50,24 +50,19 @@ class MenuPage extends Component {
             return <OrderContent toggleOrder={this.toggleOrder} />
         }
     }
+
+    
     render() {
+        let dishCards = this.state.dishes.map((dish) => {
+            return <DishCard key={dish.info.foodName+"card"} dish={dish} toggleReview={this.toggleReview} back={this.back} orderHandler={this.props.orderHandler} success={this.props.success} successIndex={this.props.successIndex} />;
+        })
+        
         return (
             <>
                 <div id="menu" className="content">
                     <div className="flexcontainer">
-                    <CardDeck>
-                            <Dish info={this.state.info[0]} toggleReview={this.toggleReview} toggleOrder={this.toggleOrder} back={this.back} index={0} />
-                            <Dish info={this.state.info[1]} toggleReview={this.toggleReview} toggleOrder={this.toggleOrder} back={this.back} index={1} />
-                            <Dish info={this.state.info[2]} toggleReview={this.toggleReview} toggleOrder={this.toggleOrder} back={this.back} index={2} />
-                            <Dish info={this.state.info[3]} toggleReview={this.toggleReview} toggleOrder={this.toggleOrder} back={this.back} index={3} />
-                            <Dish info={this.state.info[4]} toggleReview={this.toggleReview} toggleOrder={this.toggleOrder} back={this.back} index={4} />
-                            <Dish info={this.state.info[5]} toggleReview={this.toggleReview} toggleOrder={this.toggleOrder} back={this.back} index={5} />
-                            <Dish info={this.state.info[6]} toggleReview={this.toggleReview} toggleOrder={this.toggleOrder} back={this.back} index={6} />
-                            <Dish info={this.state.info[7]} toggleReview={this.toggleReview} toggleOrder={this.toggleOrder} back={this.back} index={7} />
-                            <Dish info={this.state.info[8]} toggleReview={this.toggleReview} toggleOrder={this.toggleOrder} back={this.back} index={8} />
-                            <Dish info={this.state.info[9]} toggleReview={this.toggleReview} toggleOrder={this.toggleOrder} back={this.back} index={9} />
-                            <Dish info={this.state.info[10]} toggleReview={this.toggleReview} toggleOrder={this.toggleOrder} back={this.back} index={10} />
-                            <Dish info={this.state.info[11]} toggleReview={this.toggleReview} toggleOrder={this.toggleOrder} back={this.back} index={11} />
+                        <CardDeck>
+                            {dishCards}
                         </CardDeck>
                     </div>
                 </div>

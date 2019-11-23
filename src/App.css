@@ -828,3 +828,108 @@ font-size: 100px
   height:100%;
 }
 
+/* MEDIA QUERIES */
+
+@media (max-width: 1380px) {
+  .extra-info {
+      display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  #sidebar {
+      min-width: 40%;
+  }
+  .sbButton {
+      font-size: 20px;
+  }
+}
+
+@media (max-width: 1380px) {
+  .extraInfo {
+      display: none;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) {
+  #search-desktop #desktop-search {
+    display: none;
+  }
+
+  #mag {
+    display: block;
+    margin-left: 150px;
+    margin-top: 10px;
+  }
+
+  .closed-text {
+      font-size: 30px;
+  }
+
+  .sbHead {
+    font-size: 20px !important;
+  }
+
+  #topnav {
+    visibility: visible;
+  }
+
+  #sidebutton:hover {
+    background-color: #ff6666;
+    color: white;
+    transition: 0.5s ease;
+  }
+
+  .service-container {
+    font-size: 17px;
+    margin: 0;
+  }
+
+  #service-description, #service-time {
+    display: none;
+  }
+
+  .service-style {
+    font-size: 30px;
+    margin-bottom: 60px;
+  }
+
+  #service-timeleft {
+    font-size: 60px !important;
+  }
+
+  #review-mobile-quantity {
+    display: block;
+  }
+
+  #service-message {
+    margin-top: 0px;
+  }
+
+  .middle {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    height: 200px;
+  }
+
+  #reviewName {
+    font-size: 25px;
+  }
+
+  #review-price {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  #sidebar {
+      min-width: 40%;
+  }
+  #logo, #cart {
+      display: none;
+  }
+  #logo-notext {
+      display: block;
+  }
+}

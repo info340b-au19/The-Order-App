@@ -15,7 +15,7 @@ class ReviewStar extends Component {
     render() {
         let number = this.props.number;
         return (
-            <div className="star" aria-label={number + " out of 5"} aria-hidden="true">
+            <div className="star" aria-label={number + " out of 5"} aria-hidden="false">
             {/* <span className="starNumber">{"(" + number + ")"}</span> */}
             {this.createStars(0, number)}
             {this.createStars(1, number)}

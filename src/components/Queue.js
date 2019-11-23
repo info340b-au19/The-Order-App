@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import "../App.css";
-import { NavLink } from 'react-router-dom';
 
 class Queue extends Component {
     constructor(props) {
@@ -81,7 +80,6 @@ class Queue extends Component {
                                 <input id="groupNumber" placeholder="# of people" value={this.state.input} onChange={this.changeInput} disabled={this.state.isDisabled} />
                                 <button id="queue" className="desktop dhover ml-2" onClick={() => this.changeQueueNumber()} >Queue Up</button>
                             </div>
-                            <NavLink exact to="/menu" style={{ textDecoration: 'none' }} ><button id="homeMenu" className="desktop dhover mt-3" onClick={() => this.props.changeCurrent(2)} >MENU</button></NavLink>
                         </div>
                     </div>
                 </>
@@ -104,7 +102,6 @@ class Queue extends Component {
                                 <input id="groupNumber" placeholder="# of people" value={this.state.input} onChange={this.changeInput} disabled={this.state.isDisabled} />
                                 <button id="queue" className="delivery ml-2" onClick={() => this.changeQueueNumber()} >Queue Up</button>
                             </div>
-                            <NavLink exact to="/menu" style={{ textDecoration: 'none' }} ><button id="homeMenu" className="delivery mt-3" onClick={() => this.props.changeCurrent(2)} >MENU</button></NavLink>
                         </div>
                     </div>
                 </>

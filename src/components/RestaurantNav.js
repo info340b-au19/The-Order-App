@@ -17,6 +17,7 @@ class RestaurantNav extends Component {
                                 className={menu.isActive ? 'active' : ''}
                                 id={menu.id}
                                 onClick={this.props.navClickHandler}
+                                style={{cursor: "pointer"}}
                             >
                                 {menu.menu}
                             </a>

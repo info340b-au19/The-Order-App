@@ -4,7 +4,8 @@ import "../App.css";
 
 class ServicePage extends Component {
     render() {
-        return (           
+        return (
+            /* Check boxes with the help from W3 Schools */
             <div id="service" className="content">
                 <Card className="serviceCard">
                     <label className="service-container">Notify someone for assistance

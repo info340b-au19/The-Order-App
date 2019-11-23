@@ -4,19 +4,15 @@ import "../App.css";
 import { Table } from 'reactstrap';
 
 class OrderPage extends Component {
-    constructor(props) {
-        super(props);
-    }
-
 
     render() {
         let orderedDishes = this.props.orderedDishes;
 
-        if (orderedDishes.length == 0) {
+        if (orderedDishes.length === 0) {
             return (
-                <div id="myorder" class="content container">
-                    <div class="card orderCard">
-                        <p class="noItemAlert">No item in you cart.</p>
+                <div id="myorder" className="content container">
+                    <div className="card orderCard">
+                        <p className="noItemAlert">No item in you cart.</p>
                     </div>
                 </div>
             );
@@ -37,8 +33,8 @@ class OrderPage extends Component {
             })
 
             return (
-                <div id="myorder" class="content container">
-                    <div class="card orderCard">
+                <div id="myorder" className="content container">
+                    <div className="card orderCard">
 
                         <Table borderless>
                             <thead>
@@ -53,13 +49,13 @@ class OrderPage extends Component {
                             </tbody>
                         </Table>
 
-                        <div class="total-price">
-                            <hr class="space-break" />
+                        <div className="total-price">
+                            <hr className="space-break" />
                             <p>Total Price: {totalPrice}</p>
                         </div>
 
-                        <div class="orderPageBt">
-                            <button id="check-out" class="desktop" onClick={() => this.props.checkoutHandler()}>Check Out</button>
+                        <div className="orderPageBt">
+                            <button id="check-out" className="desktop" onClick={() => this.props.checkoutHandler()}>Check Out</button>
                         </div>
                     </div>
                 </div>

@@ -3,23 +3,45 @@ import React, { Component } from 'react';
 import "../App.css";
 
 class OrderContent extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: 1
+        }
+    }
+
+    add = () => {
+        this.setState({
+            value: this.state.value + 1
+        })
+    }
+
+    subtract = () => {
+        if (this.state.value - 1 !== -1) {
+            this.setState({
+                value: this.state.value - 1
+            })
+        }
+    }
+
+
     render() {
         return (
             <>
-                <div id="order-container" className="hidden">
+                <div id="order-container">
                     <div id="order-screen">
                         <div id="quantity-screen">
-                            <button id="quantity-sub" className="quantity-setter sub">-</button>
-                            <input id="quantity" type="text" value="1" />
-                            <button id="quantity-add" className="quantity-setter">+</button>
+                            <button id="quantity-sub" className="quantity-setter sub" onClick={() => this.subtract()} >-</button>
+                            <input id="quantity" type="text" value={this.state.value} />
+                            <button id="quantity-add" className="quantity-setter" onClick={() => this.add()}>+</button>
                         </div>
                         <div className="order-center">
-                            <button id="quantity-addBtn">ADD</button>
+                            <button id="quantity-addBtn" onClick={() => this.props.toggleOrder()}>ADD</button>
                         </div>
                         <div id="message" className="order-center alert alert-success hidden"><strong>SUCCESS!</strong></div>
                     </div>
                 </div>
-                <div id="order-overlay" className="hidden"></div>
+                <div id="order-overlay" onClick={() => this.props.toggleOrder()} ></div>
             </>
         );
     }

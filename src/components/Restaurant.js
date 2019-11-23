@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import "../App.css";
-import RestaurantNav from "./ResraurantNav";
+import RestaurantNav from "./RestaurantNav";
 import ServicePage from "./Service.js";
 import MenuPage from "./MenuContent";
 import QueuePage from "./Queue"
@@ -11,7 +11,11 @@ class RestaurantPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            menus: [{ id: 0, menu: "Menu", isActive: true }, { id: 1, menu: "Service", isActive: false }, { id: 2, menu: "Queue Up", isActive: false }]
+            menus: [
+                { id: 0, menu: "Queue Up", isActive: true }, 
+                { id: 1, menu: "Service", isActive: false }, 
+                { id: 2, menu: "Menu", isActive: false }
+            ]
         }
     }
 
@@ -20,6 +24,7 @@ class RestaurantPage extends Component {
             {
                 menus:
                     this.state.menus.map((m) => {
+                        // eslint-disable-next-line
                         m.isActive = (e.target.id == m.id);
                         return m;
                     })
@@ -31,9 +36,11 @@ class RestaurantPage extends Component {
         let restaurantContent = ''
         this.state.menus.forEach((element) => {
             if (element.isActive) {
-                if (element.id == 0) { restaurantContent = <MenuPage orderHandler={this.props.orderHandler}/>; }
+                // eslint-disable-next-line
+                if (element.id == 0) { restaurantContent = <QueuePage />; }
+                // eslint-disable-next-line
                 else if (element.id == 1) { restaurantContent = <ServicePage />; }
-                else { restaurantContent = <QueuePage />; }
+                else { restaurantContent = <MenuPage orderHandler={this.props.orderHandler}/>; }
             }
         });
 
@@ -47,8 +54,6 @@ class RestaurantPage extends Component {
 
                 {/* <MenuPage /> */}
                 {restaurantContent}
-
-
 
             </div>
 

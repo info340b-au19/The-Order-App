@@ -26,8 +26,9 @@ class MenuPage extends Component {
     }
 
     toggleOrder = () => {
+        console.log("hello");
         this.setState({
-            orderState: true
+            orderState: !this.state.orderState
         })
     }
 
@@ -46,7 +47,7 @@ class MenuPage extends Component {
 
     order = () => {
         if (this.state.orderState) {
-            return <OrderContent />
+            return <OrderContent toggleOrder={this.toggleOrder} />
         }
     }
 

@@ -8,7 +8,7 @@ class Sidebar extends Component {
             <div>
                 <nav id="sidebar" className={active}>
                     <div>
-                        <p className="sbHead">McDonalds</p>
+                        <p className="sbHead"></p>
                     </div>
                     <ul>
                         <li>
@@ -18,7 +18,7 @@ class Sidebar extends Component {
                             <NavLink exact to="/home" style={{ textDecoration: 'none' }}><button className={this.props.current === 1 ? "sbButton current" : "sbButton"} onClick={() => this.props.changeCurrent(1)}>Restaurant Home</button></NavLink>
                         </li>
                         <li>
-                            <NavLink exact to="/order" style={{ textDecoration: 'none' }}><button className={this.props.current === 2 ? "sbButton current" : "sbButton"} onClick={() => this.props.changeCurrent(4)}>My Order</button></NavLink>
+                            <NavLink exact to="/order" style={{ textDecoration: 'none' }}><button className={this.props.current === 2 ? "sbButton current" : "sbButton"} onClick={() => this.props.changeCurrent(2)}>My Order</button></NavLink>
                         </li>
                     </ul>
                 </nav>

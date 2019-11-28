@@ -25,7 +25,7 @@ class DishCard extends Component {
                         <p className="dishPrice">$<span>{dish.info.price}</span></p>
                         {this.success()}
                         <div>
-                            <button className="desktop orderBt" onClick={() => this.props.orderHandler(dish, dish.id - 1)}>Order</button>
+                            <button className="desktop orderBt" onClick={() => this.props.orderHandler(dish)}>Order</button>
                             <button className="desktop" onClick={() => this.props.toggleReview(dish.id - 1)} >Reviews</button>
                         </div>
                     </ Card>

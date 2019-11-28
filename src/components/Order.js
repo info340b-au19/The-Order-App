@@ -23,7 +23,7 @@ class OrderPage extends Component {
                 return (
                     <tr key={dish.info.foodName}>
                         <td>{dish.info.foodName}</td>
-                        <td>1</td>
+                        <td>{dish.quantity}</td>
                         <td>{dish.info.price}</td>
                     </tr>);
             })

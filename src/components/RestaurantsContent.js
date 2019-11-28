@@ -16,6 +16,10 @@ class HomePage extends Component {
 
     render() {
         return (
+            <div>
+                {/* <div id="header-img-place">
+                 <img src="img/bg-landscape.png" id="header-img" alt="background img" /> 
+                </div> */}
             <div id="restaurants" className="container content">
                 <div className="flexcontainer">
                     <h2>Restaurants around your Location</h2>
@@ -59,6 +63,7 @@ class HomePage extends Component {
                     <button className="expand">expand</button>
                     <hr className="spaceBreak" />
                 </div>
+            </div>
             </div>
         );
     }

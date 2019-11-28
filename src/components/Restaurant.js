@@ -38,21 +38,33 @@ class RestaurantPage extends Component {
         this.state.menus.forEach((element) => {
             if (element.isActive) {
                 // eslint-disable-next-line
-                if (element.id == 0) { restaurantContent = <QueuePage />; }
+                if (element.id === 0) { restaurantContent = <QueuePage />; }
                 // eslint-disable-next-line
                 else if (element.id == 1) { restaurantContent = <ServicePage />; }
                 else { restaurantContent = <MenuPage orderHandler={this.props.orderHandler} success={this.props.success} successIndex={this.props.successIndex} />; }
             }
         });
+        let imgUrl = `img/mcdHome.jpeg`;
+        let headerStyle = {
+            width: "100%",
+            height: "300px",
+            backgroundImage: `url(${ imgUrl })`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            padding:"30px"
+          };
 
         return (
             <div className="container">
+                <div className="restaurant-header" style={ headerStyle }>
+                <div style={{backgroundColor: "white" ,padding:"20px"}}>
                 <p style={{fontWeight: "600", fontSize: "50px"}}>McDonalds <span style={{fontSize: "20px"}}>($$)</span></p>
                 <p style={{fontWeight: "600", fontSize: "20px"}}>(4.5)<FontAwesomeIcon icon={faStar} className="checked" /> based on 1000 reviews</p>
                 <input type="text" style={{width: "310px"}} className="form-control mt-2 ml-3 mr-2" placeholder="Write a review... " />
+                </div>
+                </div>
                 <RestaurantNav {...this.state} navClickHandler={this.navClickHandler.bind(this)} />
 
-                {/* <MenuPage /> */}
                 {restaurantContent}
 
             </div>

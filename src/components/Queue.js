@@ -89,7 +89,7 @@ class Queue extends Component {
                 <>
                     <div id="home" className="content">
                         <div className="card queueCard">
-                            <button id="homeDelivery" className="delivery" onClick={() => this.changeCurrent()}>DINE IN</button>
+                            <button id="homeDelivery" className="delivery" onClick={() => this.changeCurrent()}>DELIVERY</button>
                             <div>
                                 <span id="queueHeader" className="queueInside">Groups in queue: </span>
                                 <span id="queueNumber" className="queueInside">{this.state.deliveryNumber}</span>

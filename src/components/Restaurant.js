@@ -54,12 +54,24 @@ class RestaurantPage extends Component {
             padding:"30px"
           };
 
+          let nameStyle = {
+            fontWeight: "600",
+            fontSize: "50px"
+          };
+
+          let infoStyle = {
+            fontWeight: "600",
+            fontSize: "20px"
+          }
+
+
+
         return (
             <div className="container">
                 <div className="restaurant-header" style={ headerStyle }>
                 <div style={{backgroundColor: "white" ,padding:"20px"}}>
-                <p style={{fontWeight: "600", fontSize: "50px"}}>McDonalds <span style={{fontSize: "20px"}}>($$)</span></p>
-                <p style={{fontWeight: "600", fontSize: "20px"}}>(4.5)<FontAwesomeIcon icon={faStar} className="checked" /> based on 1000 reviews</p>
+                <p style={nameStyle}>McDonalds <span style={{fontSize: "20px"}}>($$)</span></p>
+                <p style={infoStyle}>(4.5)<FontAwesomeIcon icon={faStar} className="checked" /> based on 1000 reviews</p>
                 <input type="text" style={{width: "310px"}} className="form-control mt-2 ml-3 mr-2" placeholder="Write a review... " />
                 </div>
                 </div>

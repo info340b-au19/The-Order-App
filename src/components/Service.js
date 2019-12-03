@@ -7,19 +7,29 @@ class ServicePage extends Component {
         super(props);
         this.state = {
             serviceCount: 0,
-            time: 0
+            time: 0,
+            help: false
         }
     }
 
-    submit = () => {
+    submit() {
         this.setState({
-            time: this.state.time + 3
+            time: this.state.time + 3,
+            help: true
         })
+    }
+
+    help() {
+        if (this.state.help) {
+            return "alert alert-success";
+        } else {
+            return "alert alert-success hidden"
+        }
     }
 
     render() {
         return (
-            /* Check boxes with the help from W3 Schools (NOT FULLY IMPLEMENTED YET)!!!!!!!!!!!! */
+            /* Check boxes with the help from W3 Schools */
             <div id="service" className="content">
                 <Card className="serviceCard">
                     <label className="service-container">Notify someone for assistance
@@ -39,20 +49,8 @@ class ServicePage extends Component {
                         <span className="checkmark"></span>
                     </label>
                     <button id="submit-service" className="desktop mt-3" onClick={() => this.submit()}>Submit</button>
-                    <div id="service-message" className="alert alert-danger hidden"><strong>STOP!</strong> Wait a little to add more requests</div>
+                    <div id="service-message" className={this.help()}><strong>SUCCESS!</strong> Wait-time for requests: {this.state.time}mins</div>
                 </Card>
-                <div id="service-output" className="card serviceCard">
-                    <div className="row">
-                        <div id="service-description" className="col-lg">
-                        </div>
-                        <div id="service-time" className="col-lg">
-                        </div>
-                        <div className="col-lg">
-                            <div className="service-style">Wait-time (mins:secs)</div>
-                            <div id="service-timeleft" className="service-style" value="0">{this.state.time}</div>
-                        </div>
-                    </div>
-                </div>
             </div>
         );
     }

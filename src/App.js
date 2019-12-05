@@ -6,6 +6,9 @@ import HomePage from "./components/RestaurantsContent";
 import RestaurantPage from "./components/Restaurant";
 import OrderPage from "./components/Order.js";
 import { Route, Switch, Redirect } from 'react-router-dom';
+import Footer from "./components/Footer.js";
+import About from "./components/About.js";
+import AboutProfile from './components/AboutProfile';
 
 class App extends Component {
 	constructor(props) {
@@ -103,8 +106,11 @@ class App extends Component {
 						<Route exact path='/' render={(props) => <HomePage changeCurrent={this.changeCurrent} />} />
 						<Route exact path='/home' render={(props) => <RestaurantPage changeCurrent={this.changeCurrent} orderHandler={this.orderHandler.bind(this)} success={this.state.success} successIndex={this.state.successIndex} />} />
 						<Route exact path='/order' render={(props) => <OrderPage changeCurrent={this.changeCurrent} orderedDishes={this.state.orderedDishes} checkoutHandler={this.checkoutHandler.bind(this)} />} />
+						<Route exact path='/about' render={(props) => <About />} />
+						<Route path="/about/:name" component={AboutProfile} />
 						<Redirect to='/' />
 					</Switch>
+					<Footer />
 				</content>
 			</div>
 		)

@@ -837,6 +837,55 @@ font-size: 100px
   height:100%;
 }
 
+/* FOOTER */
+
+footer {
+  background-color: #ffeb3886;
+  height: 7vh;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+  font-weight: bold;
+}
+
+.about:hover {
+  font-weight: bold;
+}
+
+/* ABOUT */
+
+.standardContainer {
+  height: 85vh;
+  width: 80%;
+  padding: 30px;
+}
+
+.aboutTitle {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.developer {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.aboutCard {
+  height: 150px;
+  border-bottom: 10px solid #ff6666;
+  box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5);
+}
+
+.aboutCard:hover {
+  color: white;
+  background-color: #ff6666;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.devPic {
+  height: 500px;
+  width: 350px;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 1380px) {

@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Eric",
+        "fullName": "Eric Ng",
+        "img": "eric.jpg",
+        "age": "21",
+        "ethnicity": "Chinese",
+        "occupation": "Sharetea Store Manager / Lead Barista",
+        "passion": "Computer Science / Software Developement",
+        "likes": "Samoyed dogs, Milk tea, Hotpot",
+        "hates": "Ginger"
+    },
+    {
+        "name": "Mingyi",
+        "fullName": "Mingyi Yang",
+        "img": "xx",
+        "age": "XX",
+        "ethnicity": "XX",
+        "occupation": "XX",
+        "passion": "XX",
+        "likes": "XX",
+        "hates": "XX"
+    }
+]

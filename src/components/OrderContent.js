@@ -10,12 +10,14 @@ class OrderContent extends Component {
         }
     }
 
+    // Adds  1 to the quantity
     add = () => {
         this.setState({
             value: this.state.value + 1
         })
     }
 
+    // Subtracts 1 to the quantity
     subtract = () => {
         if (this.state.value - 1 !== -1) {
             this.setState({

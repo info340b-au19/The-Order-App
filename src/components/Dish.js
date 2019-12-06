@@ -6,6 +6,7 @@ import { Card, Col } from "reactstrap";
 
 class DishCard extends Component {
 
+    // Function when a user clicks on the order button
     success = () => {
         if (this.props.success && this.props.successIndex === this.props.dish.id - 1) {
             return (

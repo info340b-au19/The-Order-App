@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Card } from "reactstrap";
 import "../App.css";
+import Options from "./ServiceOptions.js";
 
 class ServicePage extends Component {
     constructor(props) {
@@ -12,6 +13,7 @@ class ServicePage extends Component {
         }
     }
 
+    // Function for the submit button
     submit() {
         this.setState({
             time: this.state.time + 3,
@@ -19,6 +21,7 @@ class ServicePage extends Component {
         })
     }
 
+    // Helper function that shows the alert when button is clicked
     help() {
         if (this.state.help) {
             return "alert alert-success";
@@ -32,22 +35,10 @@ class ServicePage extends Component {
             /* Check boxes with the help from W3 Schools */
             <div id="service" className="content">
                 <Card className="serviceCard">
-                    <label className="service-container">Notify someone for assistance
-                        <input type="checkbox" className="form-check-input" id="service-opt1" />
-                        <span className="checkmark"></span>
-                    </label>
-                    <label className="service-container">Add more to your current order
-                        <input type="checkbox" className="form-check-input" id="service-opt2" />
-                        <span className="checkmark"></span>
-                    </label>
-                    <label className="service-container">Want to change the current order / problem with an order
-                        <input type="checkbox" className="form-check-input" id="service-opt3" />
-                        <span className="checkmark"></span>
-                    </label>
-                    <label className="service-container">Other
-                        <input type="checkbox" className="form-check-input" id="service-opt4" />
-                        <span className="checkmark"></span>
-                    </label>
+                    <Options option="Notify someone for assistance" />
+                    <Options option="Add more to your current order" />
+                    <Options option="Want to change the current order / problem with an order" />
+                    <Options option="Other" />
                     <button id="submit-service" className="desktop mt-3" onClick={() => this.submit()}>Submit</button>
                     <div id="service-message" className={this.help()}><strong>SUCCESS!</strong> Wait-time for requests: {this.state.time}mins</div>
                 </Card>

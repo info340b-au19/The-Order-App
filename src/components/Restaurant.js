@@ -13,21 +13,22 @@ class RestaurantPage extends Component {
         super(props);
         this.state = {
             menus: [
-                { id: 0, menu: "Queue Up", isActive: true }, 
-                { id: 1, menu: "Service", isActive: false }, 
+                { id: 0, menu: "Queue Up", isActive: true },
+                { id: 1, menu: "Service", isActive: false },
                 { id: 2, menu: "Menu", isActive: false }
             ]
         }
     }
 
-    navClickHandler = e => {
+    // Function helper for the navigation
+    navClickHandler = element => {
         this.setState(
             {
                 menus:
-                    this.state.menus.map((m) => {
+                    this.state.menus.map((menu) => {
                         // eslint-disable-next-line
-                        m.isActive = (e.target.id == m.id);
-                        return m;
+                        menu.isActive = (element.target.id == menu.id);
+                        return menu;
                     })
             }
         );
@@ -44,36 +45,15 @@ class RestaurantPage extends Component {
                 else { restaurantContent = <MenuPage orderHandler={this.props.orderHandler} success={this.props.success} successIndex={this.props.successIndex} />; }
             }
         });
-        let imgUrl = `img/mcdHome.jpeg`;
-        let headerStyle = {
-            width: "100%",
-            height: "300px",
-            backgroundImage: `url(${ imgUrl })`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            padding:"30px"
-          };
-
-          let nameStyle = {
-            fontWeight: "600",
-            fontSize: "50px"
-          };
-
-          let infoStyle = {
-            fontWeight: "600",
-            fontSize: "20px"
-          }
-
-
 
         return (
             <div className="container">
-                <div className="restaurant-header" style={ headerStyle }>
-                <div style={{backgroundColor: "white" ,padding:"20px"}}>
-                <p style={nameStyle}>McDonalds <span style={{fontSize: "20px"}}>($$)</span></p>
-                <p style={infoStyle}>(4.5)<FontAwesomeIcon icon={faStar} className="checked" /> based on 1000 reviews</p>
-                <input type="text" style={{width: "310px"}} className="form-control mt-2 ml-3 mr-2" placeholder="Write a review... " />
-                </div>
+                <div className="restaurant-header" id="headerStyle">
+                    <div className="restBackground">
+                        <p id="nameStyle">McDonalds <span id="priceRangeStyle">($$)</span></p>
+                        <p id="infoStyle">(4.5)<FontAwesomeIcon icon={faStar} className="checked" /> based on 1000 reviews</p>
+                        <input type="text" className="form-control mt-2 ml-3 mr-2 restReview" placeholder="Write a review... " />
+                    </div>
                 </div>
                 <RestaurantNav {...this.state} navClickHandler={this.navClickHandler.bind(this)} />
 

@@ -74,6 +74,11 @@ content {
   font-weight: bold;
 }
 
+#styleHam {
+  color: red;
+  cursor: pointer;
+}
+
 /* SIDE BAR CSS */
 
 #sidebar {
@@ -170,14 +175,6 @@ content {
 
 /* UNIVERSAL CONTENT CSS */
 
- /* .content {
-  min-width: 75%;
-  max-width: 80%;
-  margin-left: 20%;
-  padding: 1%;
-  overflow-x: hidden;
-}  */
-
 .row {
   display: flex;
   flex-direction: row;
@@ -208,11 +205,7 @@ content {
   width: 100%;
   height: 40vh;
   background-size: cover;
-  /* background-image: url("img/bg-landscape.png"); */
   background-color: rgb(248, 248, 200);
-}
-#header-img {
-  
 }
 
 .homeCard {
@@ -294,6 +287,39 @@ content {
 .restaurantName {
   font-weight: 600;
   font-size: 22px;
+}
+
+.restReview {
+  width: 80%;
+}
+
+.restBackground {
+  background-color: #fff;
+  padding: 20px;
+}
+
+#nameStyle {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+#priceRangeStyle {
+  font-size: 20px;
+}
+
+#infoStyle {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#headerStyle {
+  width: 100%;
+  height: 300px;
+  background-image: url(/img/mcdHome.jpeg);
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+
 }
 
 /* HOME CONTENT */
@@ -379,10 +405,6 @@ content {
 }
 
 /* Menu Content CSS */
-
-/* #menu {
-  margin-left: 19%;
-} */
 
 .menuCard {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -760,7 +782,7 @@ user-select: none;
 cursor: pointer;
 font-size: 22px;
 padding-left: 35px;
-margin-bottom: 12px;
+margin-bottom: 12px !important;
 }
 
 .service-container input {
@@ -840,6 +862,7 @@ font-size: 100px
 /* FOOTER */
 
 footer {
+  margin-top: 50px;
   background-color: #ffeb3886;
   height: 7vh;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
@@ -850,7 +873,7 @@ footer {
   font-weight: bold;
 }
 
-/* ABOUT */
+/* ABOUT PAGE */
 
 .standardContainer {
   height: 85vh;
@@ -882,8 +905,31 @@ footer {
 }
 
 .devPic {
-  height: 500px;
-  width: 350px;
+  height: 600px;
+  width: 400px;
+  float: left;
+  margin-right: 50px;
+}
+
+.aboutName {
+  font-size: 50px;
+  font-weight: 600;
+
+}
+
+.aboutInfo {
+  font-size: 30px;
+}
+
+.aboutInfo p:hover {
+  color: #ff6666;
+  cursor: none;
+}
+
+
+/* NOTE: THIS WAS A WORK AROUND BECAUSE CLASSNAME WASNT WORKING BUT ID WAS */
+#styleLink1, #styleLink2, #styleLink3, #styleLink4, #styleLink5 {
+  text-decoration: none;
 }
 
 /* MEDIA QUERIES */
@@ -909,6 +955,7 @@ footer {
   }
 }
 
+/* iPhone X */
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) {
   #search-desktop #desktop-search {
     display: none;
@@ -978,10 +1025,154 @@ footer {
   #review-price {
     font-size: 15px;
   }
+
+  .devPic {
+    height: 300px;
+    width: 200px;
+    float: left;
+  }
+  
+  .aboutName {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  
+  .aboutInfo {
+    font-size: 15px;
+  }
+
+  #nameStyle {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  
+  #priceRangeStyle {
+    font-size: 15px;
+  }
+  
+  #infoStyle {
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .desktop, .delivery {
+    width: 100px;
+    height: 50px;
+  }
+}
+
+/* Samsung S10+ */
+@media only screen and (min-device-width: 412px) and (max-device-height: 869px) {
+  #search-desktop #desktop-search {
+    display: none;
+  }
+
+  #mag {
+    display: block;
+    margin-left: 150px;
+    margin-top: 10px;
+  }
+
+  .closed-text {
+      font-size: 30px;
+  }
+
+  .sbHead {
+    font-size: 20px !important;
+  }
+
+  #topnav {
+    visibility: visible;
+  }
+
+  #sidebutton:hover {
+    background-color: #ff6666;
+    color: white;
+    transition: 0.5s ease;
+  }
+
+  .service-container {
+    font-size: 17px;
+    margin: 0;
+  }
+
+  #service-description, #service-time {
+    display: none;
+  }
+
+  .service-style {
+    font-size: 30px;
+    margin-bottom: 60px;
+  }
+
+  #service-timeleft {
+    font-size: 60px !important;
+  }
+
+  #review-mobile-quantity {
+    display: block;
+  }
+
+  #service-message {
+    margin-top: 0px;
+  }
+
+  .middle {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    height: 200px;
+  }
+
+  #reviewName {
+    font-size: 25px;
+  }
+
+  #review-price {
+    font-size: 15px;
+  }
+
+  .devPic {
+    height: 300px;
+    width: 200px;
+    float: left;
+  }
+  
+  .aboutName {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  
+  .aboutInfo {
+    font-size: 15px;
+  }
+
+  #nameStyle {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  
+  #priceRangeStyle {
+    font-size: 15px;
+  }
+  
+  #infoStyle {
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .desktop, .delivery {
+    width: 100px;
+    height: 50px;
+  }
 }
 
 @media (max-width: 800px) {
   #sidebar {
       min-width: 40%;
+  }
+
+  .service-container {
+    font-size: 18px;
   }
 }

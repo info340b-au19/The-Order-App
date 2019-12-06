@@ -16,6 +16,7 @@ class Queue extends Component {
         }
     }
 
+    // Resets the data when going through modes
     changeCurrent = () => {
         this.setState({
             dineIn: !this.state.dineIn,
@@ -29,12 +30,14 @@ class Queue extends Component {
         })
     }
 
+    // Disables the input when in queue
     changeInput = (event) => {
         this.setState({
             input: event.target.value.replace(/\D/, '')
         })
     }
 
+    // Changes the queue number when in queue
     changeQueueNumber = () => {
         if (!this.state.isDisabled) {
             if (this.state.dineIn && this.state.input !== 0) {
@@ -61,6 +64,7 @@ class Queue extends Component {
         }
     }
 
+    // Changes the current mode
     current = () => {
         if (this.state.dineIn) {
             return (
@@ -69,16 +73,16 @@ class Queue extends Component {
                         <div className="card queueCard">
                             <button id="homeDelivery" className="desktop" onClick={() => this.changeCurrent()}>DINE IN</button>
                             <div>
-                                <span id="queueHeader" className="queueInside">Groups in queue: </span>
+                                <span id="queueHeader" className="queueInside"># in queue for dine-in: </span>
                                 <span id="queueNumber" className="queueInside">{this.state.queueNumber}</span>
                             </div>
                             <div>
-                                <span className="queueInside">Wait-time (mins): </span>
+                                <span className="queueInside">Wait-time of queue (mins): </span>
                                 <span id="queueWait" className="queueInside">{this.state.dineInWaittime}</span>
                             </div>
                             <div className="input-group mt-3">
                                 <input id="groupNumber" placeholder="# of people" value={this.state.input} onChange={this.changeInput} disabled={this.state.isDisabled} />
-                                <button id="queue" className="desktop dhover ml-2" onClick={() => this.changeQueueNumber()} >Queue Up</button>
+                                <button id="queue" className="desktop dhover ml-2" onClick={() => this.changeQueueNumber()} >Join the Queue</button>
                             </div>
                         </div>
                     </div>
@@ -91,16 +95,16 @@ class Queue extends Component {
                         <div className="card queueCard">
                             <button id="homeDelivery" className="delivery" onClick={() => this.changeCurrent()}>DELIVERY</button>
                             <div>
-                                <span id="queueHeader" className="queueInside">Groups in queue: </span>
+                                <span id="queueHeader" className="queueInside"># in queue for delivery: </span>
                                 <span id="queueNumber" className="queueInside">{this.state.deliveryNumber}</span>
                             </div>
                             <div>
-                                <span className="queueInside">Wait-time (mins): </span>
+                                <span className="queueInside">Wait-time of queue (mins): </span>
                                 <span id="queueWait" className="queueInside">{this.state.deliveryWaittime}</span>
                             </div>
                             <div className="input-group mt-3">
                                 <input id="groupNumber" placeholder="# of people" value={this.state.input} onChange={this.changeInput} disabled={this.state.isDisabled} />
-                                <button id="queue" className="delivery ml-2" onClick={() => this.changeQueueNumber()} >Queue Up</button>
+                                <button id="queue" className="delivery ml-2" onClick={() => this.changeQueueNumber()} >Join the Queue</button>
                             </div>
                         </div>
                     </div>

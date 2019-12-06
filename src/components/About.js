@@ -5,9 +5,6 @@ import { Link } from "react-router-dom";
 
 class About extends Component {
     render() {
-        let styleLink = {
-            textDecoration: "none"
-        }    
         return (
             <>
                 <div className="standardContainer">
@@ -15,7 +12,7 @@ class About extends Component {
                     <p className="developer">Developers</p>
                     <Row>
                         <Col sm="12" md="6" lg="4">
-                            <Link to="/about/Eric" style={styleLink} >
+                            <Link to="/about/Eric" id="styleLink1" >
                                 <Card>
                                     <CardBody className="aboutCard">
                                         <CardTitle><strong>Eric Ng</strong></CardTitle>
@@ -25,7 +22,7 @@ class About extends Component {
                             </Link>
                         </Col>
                         <Col sm="12" md="6" lg="4">
-                            <Link to="/about/Mingyi" style={styleLink} >
+                            <Link to="/about/Mingyi" id="styleLink2" >
                                 <Card>
                                     <CardBody className="aboutCard">
                                         <CardTitle><strong>Mingyi Yang</strong></CardTitle>

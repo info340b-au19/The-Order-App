@@ -20,6 +20,9 @@ class Sidebar extends Component {
                         <li>
                             <NavLink exact to="/order" style={{ textDecoration: 'none' }}><button className={this.props.current === 2 ? "sbButton current" : "sbButton"} onClick={() => this.props.changeCurrent(2)}>My Order</button></NavLink>
                         </li>
+                        <li>
+                            <NavLink exact to="/user" style={{ textDecoration: 'none' }}><button className={this.props.current === 3 ? "sbButton current" : "sbButton"} onClick={() => this.props.changeCurrent(3)}>My Profile</button></NavLink>
+                        </li>
                     </ul>
                 </nav>
                 <div id="sidebarOverlay" className={active} onClick={() => this.props.handleSidebar()}></div>

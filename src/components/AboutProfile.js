@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "../App.css";
 import developers from "../developers.json";
 import _ from "lodash";
-import { Alert } from "reactstrap";
+import { Alert,Container,Row,Col} from "reactstrap";
 
 class AboutProfile extends Component {
     constructor(props) {
@@ -19,8 +19,12 @@ class AboutProfile extends Component {
         if (developer) {
             return (
                 <>
-                    <div className="standardContainer">
+                    <Container className="standardContainer">
+                        <Row>
+                            <Col md="6">
                         <img src={"/img/" + developer.img} alt={developer.fullName} className="devPic" />
+                        </Col>
+                        <Col md="6">
                         <div className="aboutInfo">
                             <p className="aboutName">{developer.fullName}</p>
                             <p>{"Age: " + developer.age}</p>
@@ -30,7 +34,9 @@ class AboutProfile extends Component {
                             <p>{"Likes: " + developer.likes}</p>
                             <p>{"Hates: " + developer.hates}</p>
                         </div>
-                    </div>
+                        </Col>
+                        </Row>
+                    </Container>
                 </>
             );
         } else {

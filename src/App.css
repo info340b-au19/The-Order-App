@@ -45,16 +45,11 @@ header {
 #logo-notext {
   height: 50px;
 }
-
-#prof {
-  width: 35px;
-}
-
 input::placeholder {
   font-size:1rem;
 }
 
-content {
+main {
   position: absolute;
   top: 75px;
   left: 0px;
@@ -63,20 +58,12 @@ content {
   overflow-y: scroll;
 }
 
-.search-button {
-  margin-right: 20px;
-  height: 35px;
-  margin-top: 7px;
-  background-color: #ff6666;
-  border: 1px solid #ff5050;
-  color: white;
-  width: 80px;
-  font-weight: bold;
-}
-
-#styleHam {
-  color: red;
-  cursor: pointer;
+.header-avatar {
+  width:38px;
+	height:38px;
+  border-radius: 50%;
+  margin-right: .5em;
+  margin-bottom: .5em;
 }
 
 /* SIDE BAR CSS */
@@ -872,16 +859,6 @@ font-size: 100px
   padding:5vw;
 }
 
-/* .sign-page-content {
-  /* The image used */
-  /* background-image: url("/img/bg-landscape.png");
-  height:100%; */
-
-  /* Center and scale the image nicely */
-  /* background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
-/* } */ 
 /* FOOTER */
 
 footer {
@@ -899,9 +876,8 @@ footer {
 /* ABOUT PAGE */
 
 .standardContainer {
-  height: 85vh;
-  width: 80%;
-  padding: 30px;
+  height: 100vh;
+  
 }
 
 .aboutTitle {
@@ -928,20 +904,18 @@ footer {
 }
 
 .devPic {
-  height: 600px;
-  width: 400px;
-  float: left;
-  margin-right: 50px;
+  width: 30vw;
+  display: block;
+  margin: 0 auto;
 }
 
 .aboutName {
   font-size: 50px;
   font-weight: 600;
-
 }
 
 .aboutInfo {
-  font-size: 30px;
+  font-size: 15px;
 }
 
 .aboutInfo p:hover {

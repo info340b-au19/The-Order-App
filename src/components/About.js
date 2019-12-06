@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import "../App.css";
-import { Card, CardTitle, CardText, CardBody, Col, Row } from "reactstrap";
+import { Card, CardTitle, CardText, CardBody, Col, Row, Container } from "reactstrap";
 import { Link } from "react-router-dom";
 
 class About extends Component {
     render() {
         return (
-            <>
-                <div className="standardContainer">
+                <Container className="standardContainer">
                     <p className="aboutTitle">About Us</p>
                     <p className="developer">Developers</p>
                     <Row>
@@ -32,8 +31,7 @@ class About extends Component {
                             </Link>
                         </Col>
                     </Row>
-                </div>
-            </>
+                </Container>
         );
     }
 }

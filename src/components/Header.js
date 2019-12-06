@@ -4,7 +4,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import "../App.css"
 import { NavLink } from 'react-router-dom';
 import { FiSearch } from "react-icons/fi"
-import { Badge} from 'reactstrap';
+import { Badge } from 'reactstrap';
 import { FaRegUserCircle } from "react-icons/fa";
 
 class Header extends Component {
@@ -33,6 +33,7 @@ class Header extends Component {
 
 	render() {
 		let ori = this.state.screenOrientation;
+
 		if (ori === 'portrait') {
 			return (
 				<header className="mt-3 container">
@@ -51,6 +52,12 @@ class Header extends Component {
 			);
 
 		} else {
+			let avatar = null;
+			if (!this.props.user) { //if logged out, show default user picture
+				avatar = (<NavLink exact to="/user" style={{ textDecoration: 'none' }}><FaRegUserCircle className="mt-2 ml-3" size={34} /></NavLink>)
+			} else {
+				avatar = (<NavLink exact to="/user" style={{ textDecoration: 'none' }}><img className="header-avatar mt-2 ml-3" src={this.props.user.photoURL} alt={this.props.user.displayName} /></NavLink>)
+			}
 			return (
 				<header className="mt-3 container">
 					<div className="input-group">
@@ -60,13 +67,15 @@ class Header extends Component {
 						</input>
 
 						<FiSearch className="mt-2" size={30} />
-						
+
 
 						<div>
 							<NavLink exact to="/order" style={{ textDecoration: 'none' }}><FiShoppingCart className="mt-2 ml-3" size={32} /></NavLink>
 							<Badge color="danger" pill className={this.props.nOfOrdered ? "" : "hide"}>{this.props.nOfOrdered}</Badge>
 						</div>
-						<NavLink exact to="/user" style={{ textDecoration: 'none' }}><FaRegUserCircle className="mt-2 ml-3" size={34} /></NavLink>
+						{avatar}
+
+
 					</div>
 				</header>
 			);

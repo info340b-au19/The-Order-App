@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Eric",
+        "fullName": "Eric Ng",
+        "img": "eric.png",
+        "age": "21",
+        "ethnicity": "Chinese",
+        "occupation": "Sharetea Store Manager / Lead Barista",
+        "passion": "Computer Science / Software Developement",
+        "likes": "Samoyed dogs, Milk tea, Hotpot",
+        "hates": "Ginger"
+    },
+    {
+        "name": "Mingyi",
+        "fullName": "Mingyi Yang",
+        "img": "Mingyi.jpeg",
+        "age": "23",
+        "ethnicity": "Chinese",
+        "occupation": "EE Master stident at UW",
+        "passion": "Computer Vision / Painting / Designing",
+        "likes": "Matcha Ice Cream, Mangosteen, Tofu",
+        "hates": "Artemisia annua :("
+    }
+]

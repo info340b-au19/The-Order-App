@@ -98,6 +98,7 @@ class SignUpForm extends Component {
 							</div>
 						</form>
 					</Col>
+
 					<Col md="6" className="sign-form">
 						<h1>Already have an account? Sign In</h1>
 						<form>
@@ -130,6 +131,7 @@ class SignUpForm extends Component {
 						</form>
 					</Col>
 				</Row>
+				
 			</Container>
 			</div>
 		)

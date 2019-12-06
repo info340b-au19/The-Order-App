@@ -11,6 +11,7 @@ class ReviewContent extends Component {
         };
     }
 
+    // Creates the review rows with the JSON file
     reviewRows = () => {
         let reviews = this.state.dishes[this.props.index].review;
         let reviewRows = reviews.map((element) => {
@@ -27,7 +28,8 @@ class ReviewContent extends Component {
     render() {
         let dish = this.state.dishes[this.props.index];
 
-        // CSS FOR REVIEW BARS
+        // CSS FOR REVIEW BARS (ONLY ONE NECESSARY FOR INLINE BECAUSE OF DIFFERENT VALUES FROM JSON)
+        // Not possible to put into css!
         let bar5 = {
             width: dish.info.ratings.fivestar + "%",
             height: "18px",
@@ -60,22 +62,6 @@ class ReviewContent extends Component {
 
         return (
             <>
-                {/*}
-                <div id="order-container" className="hidden">
-                    <div id="order-screen">
-                        <div id="quantity-screen">
-                            <button id="quantity-sub" className="quantity-setter sub">-</button>
-                            <input id="quantity" type="text" value="1" />
-                            <button id="quantity-add" className="quantity-setter">+</button>
-                        </div>
-                        <div className="order-center">
-                            <button id="quantity-addBtn">ADD</button>
-                        </div>
-                        <div id="message" className="order-center alert alert-success hidden"><strong>SUCCESS!</strong></div>
-                    </div>
-                </div>
-                <div id="order-overlay" className="hidden"></div>
-                {*/}
                 <div id="overlay">
                     <div id="review">
                         <div>
@@ -88,15 +74,6 @@ class ReviewContent extends Component {
                                 <ReviewStar number={4} />
                             </div>
                             <p id="review-description">{dish.info.averageRating + " average based on " + dish.info.ratingCount + " reviews."}</p>
-                            {/*}
-                            <div id="review-mobile-quantity">
-                                <button id="mobile-quantity-sub" className="quantity-setter sub">-</button>
-                                <input id="mobile-quantity" type="text" value="1" />
-                                <button id="mobile-quantity-add" className="quantity-setter">+</button>
-                            </div>
-                            <button id="mobile-quantity-addBtn" className="mobileOrder">Order</button>
-                            <div id="mobile-message" className="order-center alert alert-success hidden"><strong>SUCCESS!</strong></div>
-                            {*/}
                         </div>
 
                         <hr className="break" />

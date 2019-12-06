@@ -18,6 +18,7 @@ class MenuPage extends Component {
         };
     }
 
+    // Function opens review page
     toggleReview = (index) => {
         this.setState({
             reviewState: true,
@@ -25,13 +26,14 @@ class MenuPage extends Component {
         });
     }
 
+    // Function opens order quantity page
     toggleOrder = () => {
-        console.log("hello");
         this.setState({
             orderState: !this.state.orderState
         })
     }
 
+    // Function closes review page
     back = () => {
         this.setState({
             reviewState: false,
@@ -39,12 +41,14 @@ class MenuPage extends Component {
         });
     }
 
+    // Function for the review page state
     review = () => {
         if (this.state.reviewState) {
             return <ReviewContent dishes={this.state.dishes} index={this.state.reviewIndex} back={this.back} />
         }
     }
 
+    // Function for the order page state
     order = () => {
         if (this.state.orderState) {
             return <OrderContent toggleOrder={this.toggleOrder} />

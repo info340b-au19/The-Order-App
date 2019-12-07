@@ -5,6 +5,8 @@ In the restaurant industry, the only popular app that are commonly used are Uber
 
 **NOTE: This app is current designed mainly for: Desktop, iPhone X, and Samsung Galaxy S10+. Other sizes may have some issues, but it is ultimately recommended to use this app on the devices listed until more are implemented.** 
 
+
+
 ## Current Features:
 1. With location, the app finds local restaurants and new restaurants for the user to try.
 2. Upon choosing a restaurant, the user is able to join the queue for dining in or for take out delivery if theres a wait.
@@ -12,7 +14,9 @@ In the restaurant industry, the only popular app that are commonly used are Uber
 4. Dine-in users and delivery users can use the menu tab to explore different dishes on the restaurants menu.
    - In the menu tab, users can order their desire dishes.
    - Each dish on the menu has a review tab that contains reviews of the dishes itself rather than reviews of the restaurant.
-5. Order tab that contains the user's build.
+5. Order tab that contains the user's bill.
+
+
 
 ## Features that will be implemented in the future:
 1. Rather than having estimated time, Real-time tracking for food that is being prepared.

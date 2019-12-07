@@ -395,6 +395,10 @@ main {
   color: black;
 }
 
+.queueInfo {
+  font-size: 13px;
+}
+
 /* Menu Content CSS */
 
 .menuCard {
@@ -608,6 +612,7 @@ main {
   border: 1px solid #ff5050;
   float: right;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .back:hover {
@@ -936,6 +941,14 @@ footer {
 .aboutInfo p:hover {
   color: #ff6666;
   cursor: none;
+}
+
+.signupContainer {
+  height: 79vh;
+}
+
+.welcomeContainer {
+  height: 75vh;
 }
 
 

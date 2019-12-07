@@ -7,11 +7,15 @@ import MenuPage from "./MenuContent";
 import QueuePage from "./Queue";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import RestaurantReviewBox from "./RestaurantReviewBox";
+import RestaurantReviewList from "./RestaurantReviewList";
+import {Button} from "reactstrap";
 
 class RestaurantPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            reviewState: false,
             menus: [
                 { id: 0, menu: "Queue Up", isActive: true },
                 { id: 1, menu: "Service", isActive: false },
@@ -34,6 +38,29 @@ class RestaurantPage extends Component {
         );
     }
 
+
+    // Function opens review page
+    toggleReview = () => {
+        this.setState({
+            reviewState: true,
+        });
+    }
+
+
+    // Function closes review page
+    back = () => {
+        this.setState({
+            reviewState: false,
+        });
+    }
+
+    // Function for the review page state
+    review = () => {
+        if (this.state.reviewState) {
+            return <RestaurantReviewList currentUser={this.props.user} back={this.back}/>
+        }
+    }
+
     render() {
         let restaurantContent = ''
         this.state.menus.forEach((element) => {
@@ -45,23 +72,33 @@ class RestaurantPage extends Component {
                 else { restaurantContent = <MenuPage orderHandler={this.props.orderHandler} success={this.props.success} successIndex={this.props.successIndex} />; }
             }
         });
-
-        return (
-            <div className="container">
-                <div className="restaurant-header" id="headerStyle">
-                    <div className="restBackground">
-                        <p id="nameStyle">McDonalds <span id="priceRangeStyle">($$)</span></p>
-                        <p id="infoStyle">(4.5)<FontAwesomeIcon icon={faStar} className="checked" /> based on 1000 reviews</p>
-                        <input type="text" className="form-control mt-2 ml-3 mr-2 restReview" placeholder="Write a review... " />
+        if (this.props.loading) {
+            return (<div className="text-center">
+                <i className="fa fa-spinner fa-spin fa-3x" aria-label="Connecting..."></i>
+            </div>);
+        } else {
+            return (
+                <div className="container">
+                    <div className="restaurant-header" id="headerStyle">
+                        <div className="restBackground">
+                            <p id="nameStyle">McDonalds <span id="priceRangeStyle">($$)</span></p>
+                            <div id="infoStyle">
+                                <span>(4.5)<FontAwesomeIcon icon={faStar} className="checked" /></span> 
+                                <span > based on 1000 reviews</span>
+                                <Button className="ml-3" onClick={() => this.toggleReview()}>See all reviews</Button>
+                                {this.review()}
+                                </div>
+                            <RestaurantReviewBox currentUser={this.props.user} />
+                        </div>
                     </div>
+                    <RestaurantNav {...this.state} navClickHandler={this.navClickHandler.bind(this)} />
+
+                    {restaurantContent}
+
                 </div>
-                <RestaurantNav {...this.state} navClickHandler={this.navClickHandler.bind(this)} />
 
-                {restaurantContent}
-
-            </div>
-
-        );
+            );
+        }
     }
 }
 

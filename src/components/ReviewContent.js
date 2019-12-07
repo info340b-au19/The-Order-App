@@ -67,6 +67,7 @@ class ReviewContent extends Component {
                         <div>
                             <img src={"img/" + dish.info.src} alt={dish.info.alt} id="reviewImage" />
                             <button className="back" onClick={this.props.back.bind(this)}>BACK</button>
+                            <p></p>
                             <p id="reviewName">{dish.info.foodName}</p>
                             <p id="review-price">{"($" + dish.info.price + ")"}</p>
                             <div id="review-rating" aria-hidden="true">

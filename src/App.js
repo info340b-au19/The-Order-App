@@ -161,9 +161,9 @@ class App extends Component {
 					/>
 					<Switch>
 						<Route exact path='/' render={(props) => <HomePage changeCurrent={this.changeCurrent} />} />
-						<Route exact path='/home' render={(props) => <RestaurantPage changeCurrent={this.changeCurrent} orderHandler={this.orderHandler.bind(this)} success={this.state.success} successIndex={this.state.successIndex} />} />
+						<Route exact path='/home' render={(props) => <RestaurantPage changeCurrent={this.changeCurrent} user={this.state.user} loading={this.state.loading} orderHandler={this.orderHandler.bind(this)} success={this.state.success} successIndex={this.state.successIndex} />} />
 						<Route exact path='/order' render={(props) => <OrderPage changeCurrent={this.changeCurrent} orderedDishes={this.state.orderedDishes} checkoutHandler={this.checkoutHandler.bind(this)} />} />
-						<Route exact path='/user' render={(props) => <ProfilePage changeCurrent={this.changeCurrent} user={this.state.user} errorMessage={this.state.errorMessage} handleSignUp={this.handleSignUp.bind(this)} handleSignOut={this.handleSignOut.bind(this)} handleSignIn={this.handleSignIn.bind(this)} />} />
+						<Route exact path='/user' render={(props) => <ProfilePage changeCurrent={this.changeCurrent} user={this.state.user} loading={this.state.loading} errorMessage={this.state.errorMessage} handleSignUp={this.handleSignUp.bind(this)} handleSignOut={this.handleSignOut.bind(this)} handleSignIn={this.handleSignIn.bind(this)} />} />
 						<Route exact path='/about' render={(props) => <About />} />
 						<Route exact path="/about/:name" component={AboutProfile} />
 						<Redirect to='/' />

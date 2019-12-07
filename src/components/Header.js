@@ -33,7 +33,12 @@ class Header extends Component {
 
 	render() {
 		let ori = this.state.screenOrientation;
-
+		let avatar = null;
+		if (!this.props.user) { //if logged out, show default user picture
+			avatar = (<NavLink exact to="/user" style={{ textDecoration: 'none' }}><FaRegUserCircle className="mt-2 ml-3" size={34} /></NavLink>)
+		} else {
+			avatar = (<NavLink exact to="/user" style={{ textDecoration: 'none' }}><img className="header-avatar mt-2 ml-3" src={this.props.user.photoURL} alt={this.props.user.displayName} /></NavLink>)
+		}
 		if (ori === 'portrait') {
 			return (
 				<header className="mt-3 container">
@@ -46,18 +51,12 @@ class Header extends Component {
 							placeholder="Search restaurants... ">
 						</input>
 						<FiSearch className="mt-2" size={30} />
-						<FaRegUserCircle className="mt-2 ml-3" size={30} />
+						{avatar}
 					</div>
 				</header>
 			);
 
 		} else {
-			let avatar = null;
-			if (!this.props.user) { //if logged out, show default user picture
-				avatar = (<NavLink exact to="/user" style={{ textDecoration: 'none' }}><FaRegUserCircle className="mt-2 ml-3" size={34} /></NavLink>)
-			} else {
-				avatar = (<NavLink exact to="/user" style={{ textDecoration: 'none' }}><img className="header-avatar mt-2 ml-3" src={this.props.user.photoURL} alt={this.props.user.displayName} /></NavLink>)
-			}
 			return (
 				<header className="mt-3 container">
 					<div className="input-group">
@@ -67,8 +66,6 @@ class Header extends Component {
 						</input>
 
 						<FiSearch className="mt-2" size={30} />
-
-
 						<div>
 							<NavLink exact to="/order" style={{ textDecoration: 'none' }}><FiShoppingCart className="mt-2 ml-3" size={32} /></NavLink>
 							<Badge color="danger" pill className={this.props.nOfOrdered ? "" : "hide"}>{this.props.nOfOrdered}</Badge>

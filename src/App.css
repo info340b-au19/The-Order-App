@@ -524,8 +524,37 @@ main {
   align-items: center;
   justify-content: center;
 }
+/* RESTAURANT REVIEW*/
+.handle {
+	font-size:1.25em;
+	font-weight: 700;
+}
 
+.time {
+	color: #9d9d9d;
+}
 
+::placeholder { font-size: 18px; }
+
+#review-link:hover {
+  text-decoration: underline;
+}
+
+#review-link:link {
+  text-decoration: none;
+}
+
+#review-link:visited {
+  text-decoration: none;
+}
+
+#review-link:hover {
+  text-decoration: underline;
+}
+
+#review-link:active {
+  text-decoration: underline;
+}
 /* REVIEW */
 
 #overlay {

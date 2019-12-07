@@ -52,7 +52,7 @@ class ProfilePage extends Component {
 class WelcomeHeader extends Component {
     render() {
         return (
-            <header className="container">
+            <header className="container welcomeContainer">
                 <h1>
                     Welcome {this.props.user.displayName}!
             {' '}

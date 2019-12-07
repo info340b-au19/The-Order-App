@@ -27,7 +27,7 @@ class MenuPage extends Component {
     }
 
     // Function opens order quantity page
-    toggleOrder = () => {
+    toggleOrder() {
         this.setState({
             orderState: !this.state.orderState
         })
@@ -42,14 +42,14 @@ class MenuPage extends Component {
     }
 
     // Function for the review page state
-    review = () => {
+    review() {
         if (this.state.reviewState) {
             return <ReviewContent dishes={this.state.dishes} index={this.state.reviewIndex} back={this.back} />
         }
     }
 
     // Function for the order page state
-    order = () => {
+    order() {
         if (this.state.orderState) {
             return <OrderContent toggleOrder={this.toggleOrder} />
         }

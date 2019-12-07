@@ -12,7 +12,7 @@ class ReviewContent extends Component {
     }
 
     // Creates the review rows with the JSON file
-    reviewRows = () => {
+    reviewRows() {
         let reviews = this.state.dishes[this.props.index].review;
         let reviewRows = reviews.map((element) => {
             return (

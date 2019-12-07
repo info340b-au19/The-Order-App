@@ -395,11 +395,6 @@ main {
   color: black;
 }
 
-.queueInfo {
-  font-size: 13px;
-  font-style: italic;
-}
-
 /* Menu Content CSS */
 
 .menuCard {
@@ -545,25 +540,7 @@ main {
 
 ::placeholder { font-size: 18px; }
 
-#review-link:hover {
-  text-decoration: underline;
-}
 
-#review-link:link {
-  text-decoration: none;
-}
-
-#review-link:visited {
-  text-decoration: none;
-}
-
-#review-link:hover {
-  text-decoration: underline;
-}
-
-#review-link:active {
-  text-decoration: underline;
-}
 /* REVIEW */
 
 #overlay {
@@ -897,14 +874,6 @@ font-size: 100px
   padding:5vw;
 }
 
-.signupContainer {
-  height: 79vh;
-}
-
-.welcomeContainer {
-  height: 75vh;
-}
-
 /* FOOTER */
 
 footer {
@@ -923,6 +892,7 @@ footer {
 
 .standardContainer {
   height: 100vh;
+  
 }
 
 .aboutTitle {

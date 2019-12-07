@@ -15,7 +15,7 @@ class Header extends Component {
 		this.state = portrait ? { screenOrientation: 'portrait' } : { screenOrientation: 'landscape' };
 	}
 
-	setScreenOrientation() {
+	setScreenOrientation = ()=> {
 		if (window.matchMedia("(orientation: portrait)").matches) {
 			this.setState({
 				screenOrientation: 'portrait'

@@ -50,7 +50,7 @@ class ReviewItem extends Component {
 
 		return (
 			<div className="row py-4 bg-white border">
-				<div className="col-1">
+				<div className="col-2">
 					<img className="avatar" src={review.userPhoto} alt={review.userName + ' avatar'} />
 				</div>
 				<div className="col">

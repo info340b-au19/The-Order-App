@@ -17,7 +17,7 @@ class Queue extends Component {
     }
 
     // Resets the data when going through modes
-    changeCurrent = () => {
+    changeCurrent() {
         this.setState({
             dineIn: !this.state.dineIn,
             queuedIn: false,
@@ -38,7 +38,7 @@ class Queue extends Component {
     }
 
     // Changes the queue number when in queue
-    changeQueueNumber = () => {
+    changeQueueNumber() {
         if (!this.state.isDisabled) {
             if (this.state.dineIn && this.state.input !== 0) {
                 this.setState({
@@ -46,7 +46,7 @@ class Queue extends Component {
                     dineInWaittime: this.state.dineInWaittime + 3,
                     isDisabled: true
                 })
-            } else if (!this.state.dineIn && this.state.input !== 0) {
+            } else if (!this.state.dineIn) {
                 this.setState({
                     deliveryNumber: 4,
                     deliveryWaittime: this.state.deliveryWaittime + 2,
@@ -64,8 +64,25 @@ class Queue extends Component {
         }
     }
 
+    queueButton() {
+        if (this.state.isDisabled) {
+            return "Dequeue";
+        } else {
+            return "Join the Queue"
+        }
+    }
+
+    deliveryActive() {
+        if (this.state.isDisabled) {
+            return "delivery ml-2 deliveryActive";
+        } else {
+            return "delivery ml-2"
+        }
+    }
+
+
     // Changes the current mode
-    current = () => {
+    current() {
         if (this.state.dineIn) {
             return (
                 <>
@@ -82,8 +99,9 @@ class Queue extends Component {
                             </div>
                             <div className="input-group mt-3">
                                 <input id="groupNumber" placeholder="# of people" value={this.state.input} onChange={this.changeInput} disabled={this.state.isDisabled} />
-                                <button id="queue" className="desktop dhover ml-2" onClick={() => this.changeQueueNumber()} >Join the Queue</button>
+                                <button id="queue" className="desktop dhover ml-2" onClick={() => this.changeQueueNumber()} >{this.queueButton()}</button>
                             </div>
+                            <p className="queueInfo">Number of members in your party</p>
                         </div>
                     </div>
                 </>
@@ -103,8 +121,7 @@ class Queue extends Component {
                                 <span id="queueWait" className="queueInside">{this.state.deliveryWaittime}</span>
                             </div>
                             <div className="input-group mt-3">
-                                <input id="groupNumber" placeholder="# of people" value={this.state.input} onChange={this.changeInput} disabled={this.state.isDisabled} />
-                                <button id="queue" className="delivery ml-2" onClick={() => this.changeQueueNumber()} >Join the Queue</button>
+                                <button id="queue" className={this.deliveryActive()} onClick={() => this.changeQueueNumber()}>{this.queueButton()}</button>
                             </div>
                         </div>
                     </div>

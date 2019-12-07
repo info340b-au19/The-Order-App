@@ -21,7 +21,7 @@ class RestaurantPage extends Component {
     }
 
     // Function helper for the navigation
-    navClickHandler = element => {
+    navClickHandler = (element) => {
         this.setState(
             {
                 menus:

@@ -41,7 +41,7 @@ class SignUpForm extends Component {
 
 	render() {
 		return (
-			<div className="sign-page-content">
+			<div className="sign-page-content signupContainer">
 			<Container>
 				<Row>
 
